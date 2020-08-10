@@ -1,0 +1,14 @@
+---
+title: 'Projects'
+---
+This is my projects section for Geography 176A. This is my first attempt at building a website using RStudio and GitHub.
+
+
+# A few things I've learned from Lab 1:
+
+  - create a new repository on GitHub
+  - using a yml file to give R directions on how to assemble a website
+  - using Rmarkdown to add information, and Knitting it to a webpage
+
+
+

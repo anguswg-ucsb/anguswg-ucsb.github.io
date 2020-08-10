@@ -1,0 +1,16 @@
+name: "Angus' Website"
+output_dir: '.'
+navbar:
+  title: "Angus' website"
+  left:
+    - text: "Home"
+      icon: fas-home
+      href: index.html
+    - text: "GIS Work"
+      icon: fa-home
+      href: geog176A.html
+    - text: "CV"
+      href: CV.html
+output:
+  html_document:
+    theme: darkly
