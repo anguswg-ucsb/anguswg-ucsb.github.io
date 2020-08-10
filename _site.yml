@@ -1,15 +1,16 @@
-name: "Angus' Website"
+name: "Angus Watters"
 output_dir: '.'
 navbar:
   title: "Angus' website"
   left:
     - text: "Home"
-      icon: fas-home
+      icon: fa-home
       href: index.html
     - text: "GIS Work"
-      icon: fa-home
+      icon: fa-globe-americas
       href: geog176A.html
-    - text: "CV"
+    - text: "Resume"
+      icon: fa-leaf
       href: CV.html
 output:
   html_document:

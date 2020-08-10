@@ -1,10 +1,10 @@
 ---
-title: "About me"
+title: "About me:"
 ---
 
 <center>
-## Hello, my name is Angus.
+## Hello, my name is Angus
 </center>
 
-[I'd like to see the Northern lights](https://www.hurtigruten.com/globalassets/photos/inspiration/northern-lights/hub/aurora-borealis-above-snowy-island-vestvagoya-lofoten_swen-stroop.jpg?width=1900&height=950&center=0.57,0.51&transform=DownResizeCrop)
-I am 23 years old and was born and raised in Santa Barbara, California.I am in my final year at UCSB. My interests include running, biking, making art, computer science, and GIS. I am looking forward to learning as much as I can from 176A and the rest of the remote sensing courses. 
+
+I am 23 years old and was born and raised in Santa Barbara, California.I am in my final year at UCSB. My interests include running, biking, making art, computer science, and GIS. I am looking forward to learning as much as I can from 176A and the rest of the remote sensing courses. [This is the next item on my bucket list!](https://www.hurtigruten.com/globalassets/photos/inspiration/northern-lights/hub/aurora-borealis-above-snowy-island-vestvagoya-lofoten_swen-stroop.jpg?width=1900&height=950&center=0.57,0.51&transform=DownResizeCrop)
