@@ -312,13 +312,693 @@ $(document).ready(function () {
 
 
 <p>This is my projects section for Geography 176A. This is my first attempt at building a website using RStudio and GitHub.</p>
-<div id="a-few-things-ive-learned-from-lab-1" class="section level1">
-<h1>A few things I’ve learned from Lab 1:</h1>
+<div id="lab-01-learning-points" class="section level1">
+<h1>Lab 01 learning points:</h1>
 <ul>
 <li>create a new repository on GitHub</li>
 <li>using a yml file to give R directions on how to assemble a website</li>
-<li>using Rmarkdown to add information, and Knitting it to a webpage</li>
+<li>using R Markdown to add information</li>
+<li>knitting it to a webpage</li>
 </ul>
+</div>
+<div id="lab-02-learning-points" class="section level1">
+<h1>Lab 02 learning points:</h1>
+<ul>
+<li>reading in data using readr</li>
+<li>Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)</li>
+<li>join functions to combine data sets</li>
+<li>knitr::kable and pull()</li>
+<li>calculate number of New cases using lag()</li>
+<li>ggplot (add data, layers, labels, themes, facets)</li>
+<li>testing ’message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown</li>
+</ul>
+</div>
+<div id="lab-03-learning-points" class="section level1">
+<h1>Lab 03 learning points:</h1>
+<ul>
+<li>using Sf package:
+<ul>
+<li>st_as_sf to create a special feature object from a data fram</li>
+<li>st_transform to change CRS from angular measurements to meters</li>
+<li>st_distance to calculate the distance from points to Multilinestrings</li>
+</ul></li>
+<li>using units package:
+<ul>
+<li>set units() from meters to km</li>
+<li>drop_units()</li>
+</ul></li>
+<li>assigning labels to specified points on plot</li>
+</ul>
+<p>#Lab 2 COVID-19 Pandemic</p>
+</div>
+<div id="question-1" class="section level1">
+<h1>Question 1:</h1>
+<p>The 5 counties with most cumulative cases are shown in the table below.</p>
+<pre class="r"><code>library(tidyverse)
+library(knitr)
+library(readxl)
+library(zoo)
+library(ggthemes)
+library(scales)
+
+pop = read_excel(&#39;../geog-176A-labs/data/PopulationEstimates.xls&#39;, skip = 2) %&gt;%
+  select(pop2019 = POP_ESTIMATE_2019, fips = FIPStxt)
+
+
+covid_url = &#39;https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv&#39;
+
+covid = read_csv(covid_url)
+
+state_1 = &#39;California&#39;</code></pre>
+</div>
+<div id="question-1-1" class="section level1">
+<h1>Question 1:</h1>
+<pre class="r"><code>newData = inner_join(pop, covid, by = &#39;fips&#39;) %&gt;%
+  filter(state == state_1) %&gt;%
+  group_by(county) %&gt;%
+  mutate(new_cases = cases - lag(cases))</code></pre>
+<p>The 5 counties with the most cases is shown below.</p>
+<pre class="r"><code>mostCases = newData %&gt;%
+  group_by(county) %&gt;%
+  summarise(cases = sum(cases, na.rm = TRUE)) %&gt;%
+  ungroup() %&gt;%
+  arrange(-cases) %&gt;%
+  slice_max(cases, n = 5)
+
+knitr::kable(mostCases, caption = paste(state_1, &#39;counties with the most cumulative cases&#39;), col.names = c(&#39;County&#39;, &#39;Cases&#39;))</code></pre>
+<table>
+<caption>California counties with the most cumulative cases</caption>
+<thead>
+<tr class="header">
+<th align="left">County</th>
+<th align="right">Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Los Angeles</td>
+<td align="right">13742989</td>
+</tr>
+<tr class="even">
+<td align="left">Riverside</td>
+<td align="right">2594416</td>
+</tr>
+<tr class="odd">
+<td align="left">Orange</td>
+<td align="right">2346333</td>
+</tr>
+<tr class="even">
+<td align="left">San Diego</td>
+<td align="right">2073522</td>
+</tr>
+<tr class="odd">
+<td align="left">San Bernardino</td>
+<td align="right">2047850</td>
+</tr>
+</tbody>
+</table>
+<p>The counties with the most new cases is shown below.</p>
+<pre class="r"><code>mostNewCases = newData %&gt;%
+  select(county, new_cases) %&gt;%
+  group_by(county) %&gt;%
+  summarise(new_cases = sum(new_cases, na.rm = TRUE)) %&gt;%
+  arrange(-new_cases) %&gt;%
+  slice_max(new_cases, n = 5)
+
+knitr::kable(mostNewCases, caption = paste(state_1, &#39;counties with the most new cases&#39;),
+             col.names = c(&#39;County&#39;, &#39;New Cases&#39;))</code></pre>
+<table>
+<caption>California counties with the most new cases</caption>
+<thead>
+<tr class="header">
+<th align="left">County</th>
+<th align="right">New Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Los Angeles</td>
+<td align="right">233776</td>
+</tr>
+<tr class="even">
+<td align="left">Riverside</td>
+<td align="right">51199</td>
+</tr>
+<tr class="odd">
+<td align="left">Orange</td>
+<td align="right">46641</td>
+</tr>
+<tr class="even">
+<td align="left">San Bernardino</td>
+<td align="right">45665</td>
+</tr>
+<tr class="odd">
+<td align="left">San Diego</td>
+<td align="right">37056</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="summary-of-safe-counties" class="section level1">
+<h1>Summary of safe counties:</h1>
+<p>The state of California has determined that counties in which there have been more than 100 new cases per 100,000 residents over the past 14 days are to placed on a watch list that monitors for worsening coronavirus trends. There are 13 counties determined to be safe by this criteria. The 14 safe counties are:</p>
+<pre class="r"><code>last14days = newData %&gt;%
+  filter(date &gt; max(date) - 13) %&gt;%
+  group_by(county, pop2019) %&gt;%
+  summarise(new_cases = sum(new_cases)) %&gt;%
+  ungroup() %&gt;%
+  mutate(casePer100 = new_cases / (pop2019 / 100000)) %&gt;%
+  filter(casePer100 &lt;= 100) %&gt;%
+  pull(county) 
+
+last14days</code></pre>
+<pre><code>##  [1] &quot;Alpine&quot;    &quot;Amador&quot;    &quot;Del Norte&quot; &quot;El Dorado&quot; &quot;Humboldt&quot;  &quot;Lake&quot;     
+##  [7] &quot;Lassen&quot;    &quot;Mariposa&quot;  &quot;Modoc&quot;     &quot;Mono&quot;      &quot;Nevada&quot;    &quot;Plumas&quot;   
+## [13] &quot;Shasta&quot;    &quot;Sierra&quot;    &quot;Siskiyou&quot;  &quot;Trinity&quot;   &quot;Tuolumne&quot;</code></pre>
+<pre class="r"><code>knitr::kable(last14days, caption = paste(&#39;Safe counties in&#39;, state_1),
+             col.names = c(&#39;County&#39;))</code></pre>
+<table>
+<caption>Safe counties in California</caption>
+<thead>
+<tr class="header">
+<th align="left">County</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Alpine</td>
+</tr>
+<tr class="even">
+<td align="left">Amador</td>
+</tr>
+<tr class="odd">
+<td align="left">Del Norte</td>
+</tr>
+<tr class="even">
+<td align="left">El Dorado</td>
+</tr>
+<tr class="odd">
+<td align="left">Humboldt</td>
+</tr>
+<tr class="even">
+<td align="left">Lake</td>
+</tr>
+<tr class="odd">
+<td align="left">Lassen</td>
+</tr>
+<tr class="even">
+<td align="left">Mariposa</td>
+</tr>
+<tr class="odd">
+<td align="left">Modoc</td>
+</tr>
+<tr class="even">
+<td align="left">Mono</td>
+</tr>
+<tr class="odd">
+<td align="left">Nevada</td>
+</tr>
+<tr class="even">
+<td align="left">Plumas</td>
+</tr>
+<tr class="odd">
+<td align="left">Shasta</td>
+</tr>
+<tr class="even">
+<td align="left">Sierra</td>
+</tr>
+<tr class="odd">
+<td align="left">Siskiyou</td>
+</tr>
+<tr class="even">
+<td align="left">Trinity</td>
+</tr>
+<tr class="odd">
+<td align="left">Tuolumne</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="question-2" class="section level1">
+<h1>Question 2:</h1>
+<p><img src="../geog-176A-labs/img/daily-new-cases-in-fourStates.png" /></p>
+<p><img src="../geog-176A-labs/img/daily-new-cases-per-capita-in-fourStates.png" /></p>
+</div>
+<div id="analysis" class="section level1">
+<h1>Analysis:</h1>
+<p>In the second plot we scaled for population and you can that although California has a large number of new cases, the number of new cases per capita is lower compared to Florida and Louisiana which are experiencing a large number of new cases with respect to population.</p>
+</div>
+<div id="lab-03-distances-and-the-border-zone" class="section level1">
+<h1>Lab 03: Distances and the Border Zone</h1>
+<pre class="r"><code>library(tidyverse)
+library(sf)
+library(units)
+library(USAboundaries)
+library(rnaturalearth)
+library(gghighlight)
+library(ggrepel)
+library(knitr)</code></pre>
+<p>#Question 1:</p>
+<pre class="r"><code># 1.1 Define a Projection
+
+eqdc = &#39;+proj=eqdc +lat_0=40 +lon_0=-96 +lat_1=20 +lat_2=60 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs&#39;
+
+
+# 1.2 - Get USA state boundaries
+conus = us_states() %&gt;%
+  st_as_sf(coords = c(&#39;lng&#39;, &#39;lat&#39;), crs = 4326) %&gt;%
+  filter(!name %in% c(&#39;Puerto Rico&#39;, &#39;Alaska&#39;, &#39;Hawaii&#39;))
+
+
+
+# 1.3 - Get country boundaries for Mexico, the United States of America, and Canada
+country = countries110 %&gt;%
+  st_as_sf(coords = c(&#39;lng&#39;, &#39;lat&#39;), crs = 4326) %&gt;%
+  filter(admin %in% c(&#39;Mexico&#39;, &#39;United States of America&#39;, &#39;Canada&#39;))
+
+
+
+# 1.4 - Get city locations from the CSV file
+cities = read_csv(&#39;../geog-176A-labs/data/uscities.csv&#39;) %&gt;%
+  st_as_sf(coords = c(&#39;lng&#39;, &#39;lat&#39;), crs = 4326) %&gt;%
+  filter(!state_name %in% c(&#39;Puerto Rico&#39;, &#39;Alaska&#39;, &#39;Hawaii&#39;))
+
+
+
+# transform cities, conus, country projections to eqdc
+cities = st_transform(cities, eqdc)
+conus = st_transform(conus, eqdc)
+country = st_transform(country, eqdc)</code></pre>
+</div>
+<div id="question-2-1" class="section level1">
+<h1>Question 2:</h1>
+<pre class="r"><code># 2.1 - Distance to USA Border (km)
+
+#exterior US border
+conus_u = st_union(conus) %&gt;%
+  st_cast(&#39;MULTILINESTRING&#39;)
+
+# distance from US cities to US border
+cities_b = cities %&gt;%
+  mutate(dist_border = st_distance(cities, conus_u), dist_border = set_units(dist_border, &#39;km&#39;), dist_border = drop_units(dist_border)) %&gt;%
+  select(city, state_name, dist_border) %&gt;%
+  arrange(-dist_border)
+
+# 5 citiest furthest from US border, geometry dropped
+cities_b_five_nogeom = cities_b %&gt;%
+  st_drop_geometry() %&gt;% 
+  head(5)
+
+
+knitr::kable(cities_b_five_nogeom, caption = &#39;5 citiest farthest from US border&#39;, col.names = c(&#39;City&#39;, &#39;State&#39;, &#39;Distance to border&#39;))</code></pre>
+<table>
+<caption>5 citiest farthest from US border</caption>
+<thead>
+<tr class="header">
+<th align="left">City</th>
+<th align="left">State</th>
+<th align="right">Distance to border</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dresden</td>
+<td align="left">Kansas</td>
+<td align="right">1012.317</td>
+</tr>
+<tr class="even">
+<td align="left">Herndon</td>
+<td align="left">Kansas</td>
+<td align="right">1007.750</td>
+</tr>
+<tr class="odd">
+<td align="left">Hill City</td>
+<td align="left">Kansas</td>
+<td align="right">1005.147</td>
+</tr>
+<tr class="even">
+<td align="left">Atwood</td>
+<td align="left">Kansas</td>
+<td align="right">1004.734</td>
+</tr>
+<tr class="odd">
+<td align="left">Jennings</td>
+<td align="left">Kansas</td>
+<td align="right">1003.646</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># 5 citiest furthest from US border
+cities_b_five = cities_b %&gt;%
+  head(5)
+
+
+# 2.2 - Distance to States (km)
+conus_c = st_combine(conus) %&gt;%
+  st_cast(&#39;MULTILINESTRING&#39;)
+
+
+# distance from US cities to  US state
+cities_s = cities %&gt;%
+  mutate(dist_state = st_distance(cities, conus_c), dist_state = set_units(dist_state, &#39;km&#39;), dist_state = drop_units(dist_state)) %&gt;%
+  select(city, state_name, dist_state) %&gt;%
+  arrange(-dist_state)
+
+
+# 5 citiest furthest from state border, geometry dropped
+cities_s_five_nogeom = cities_s %&gt;%
+  st_drop_geometry() %&gt;%
+  head(5)
+
+knitr::kable(cities_s_five_nogeom, caption = &#39;5 citiest farthest from US border&#39;, col.names = c(&#39;City&#39;, &#39;State&#39;, &#39;Distance to state border&#39;))</code></pre>
+<table>
+<caption>5 citiest farthest from US border</caption>
+<thead>
+<tr class="header">
+<th align="left">City</th>
+<th align="left">State</th>
+<th align="right">Distance to state border</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Lampasas</td>
+<td align="left">Texas</td>
+<td align="right">308.9216</td>
+</tr>
+<tr class="even">
+<td align="left">Bertram</td>
+<td align="left">Texas</td>
+<td align="right">302.8190</td>
+</tr>
+<tr class="odd">
+<td align="left">Kempner</td>
+<td align="left">Texas</td>
+<td align="right">302.5912</td>
+</tr>
+<tr class="even">
+<td align="left">Harker Heights</td>
+<td align="left">Texas</td>
+<td align="right">298.8125</td>
+</tr>
+<tr class="odd">
+<td align="left">Florence</td>
+<td align="left">Texas</td>
+<td align="right">298.6804</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># 5 citiest furthest from US state border
+cities_s_five = cities_s %&gt;%
+  head(5)
+
+
+# 2.3 - Distance to Mexico (km)
+
+# mexico border
+mexico = country %&gt;%
+  filter(admin %in% &#39;Mexico&#39;) %&gt;%
+  st_union() %&gt;%
+  st_cast(&#39;MULTILINESTRING&#39;)
+
+
+# distance US cities to Mexico border, geometry dropped
+mex_cities_nogeom = cities %&gt;%
+  mutate(dist_mex = st_distance(cities, mexico), dist_mex = set_units(dist_mex, &#39;km&#39;), dist_mex = drop_units(dist_mex)) %&gt;%
+  select(city, state_name, dist_mex) %&gt;%
+  arrange(-dist_mex) %&gt;%
+  st_drop_geometry() %&gt;% 
+  head(5)
+
+knitr::kable(mex_cities_nogeom, caption = &#39;5 citiest farthest from Mexico border&#39;, col.names = c(&#39;City&#39;, &#39;State&#39;, &#39;Distance to Mexico border&#39;))</code></pre>
+<table>
+<caption>5 citiest farthest from Mexico border</caption>
+<thead>
+<tr class="header">
+<th align="left">City</th>
+<th align="left">State</th>
+<th align="right">Distance to Mexico border</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Caribou</td>
+<td align="left">Maine</td>
+<td align="right">3250.334</td>
+</tr>
+<tr class="even">
+<td align="left">Presque Isle</td>
+<td align="left">Maine</td>
+<td align="right">3234.570</td>
+</tr>
+<tr class="odd">
+<td align="left">Calais</td>
+<td align="left">Maine</td>
+<td align="right">3134.348</td>
+</tr>
+<tr class="even">
+<td align="left">Eastport</td>
+<td align="left">Maine</td>
+<td align="right">3125.624</td>
+</tr>
+<tr class="odd">
+<td align="left">Old Town</td>
+<td align="left">Maine</td>
+<td align="right">3048.366</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># distance from US cities to Mexico border
+mex_cities = cities %&gt;%
+  mutate(dist_mex = st_distance(cities, mexico), dist_mex = set_units(dist_mex, &#39;km&#39;), dist_mex = drop_units(dist_mex)) %&gt;%
+  select(city, state_name, dist_mex) %&gt;%
+  arrange(-dist_mex) %&gt;%
+  head(5)
+
+
+
+# 2.4 - Distance to Canada (km)
+
+# canada border
+canada = country %&gt;%
+  filter(admin %in% &#39;Canada&#39;) %&gt;%
+  st_union() %&gt;%
+  st_cast(&#39;MULTILINESTRING&#39;)
+
+# distance US cities to Canadian border, geometry dropped
+canada_cities_nogeom = cities %&gt;%
+  mutate(dist_can = st_distance(cities, canada), dist_can = set_units(dist_can, &#39;km&#39;), dist_can = drop_units(dist_can)) %&gt;%
+  select(city, state_name, dist_can) %&gt;%
+  arrange(-dist_can) %&gt;%
+  st_drop_geometry() %&gt;% 
+  head(5)
+
+knitr::kable(canada_cities_nogeom, caption = &#39;5 citiest farthest from Canadian border&#39;, col.names = c(&#39;City&#39;, &#39;State&#39;, &#39;Distance to Canada border&#39;))</code></pre>
+<table>
+<caption>5 citiest farthest from Canadian border</caption>
+<thead>
+<tr class="header">
+<th align="left">City</th>
+<th align="left">State</th>
+<th align="right">Distance to Canada border</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Guadalupe Guerra</td>
+<td align="left">Texas</td>
+<td align="right">2206.455</td>
+</tr>
+<tr class="even">
+<td align="left">Sandoval</td>
+<td align="left">Texas</td>
+<td align="right">2205.641</td>
+</tr>
+<tr class="odd">
+<td align="left">Fronton</td>
+<td align="left">Texas</td>
+<td align="right">2204.784</td>
+</tr>
+<tr class="even">
+<td align="left">Fronton Ranchettes</td>
+<td align="left">Texas</td>
+<td align="right">2202.118</td>
+</tr>
+<tr class="odd">
+<td align="left">Evergreen</td>
+<td align="left">Texas</td>
+<td align="right">2202.020</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># distance from US cities to Canada border
+canada_cities = cities %&gt;%
+  mutate(dist_can = st_distance(cities, canada), dist_can = set_units(dist_can, &#39;km&#39;), dist_can = drop_units(dist_can)) %&gt;%
+  select(city, state_name, dist_can) %&gt;%
+  arrange(-dist_can) %&gt;%
+  head(5)</code></pre>
+</div>
+<div id="question-3" class="section level1">
+<h1>Question 3:</h1>
+</div>
+<div id="most-populated-us-cities" class="section level1">
+<h1>3.1 Most populated US cities</h1>
+<pre class="r"><code># 3.1 Data
+
+# 10 most populated US cities
+big_cities = cities %&gt;%
+  select(city, state_name, population) %&gt;%
+  arrange(-population) %&gt;%
+  head(10)
+
+# ggplot of ten most populated cities in US
+most_pop_cities_ggplot = ggplot() +
+  geom_sf(data = conus, fill = &#39;cornflowerblue&#39;, alpha = .5, size = .5) +
+  geom_sf(data = mexico, lty = 1) +
+  geom_sf(data = canada, lty = 1) +
+  geom_sf(data = big_cities, aes(city, state_name), col = &#39;black&#39;, size = 3) +
+  geom_label_repel(data = big_cities, aes(geometry = geometry, label = city), stat = &#39;sf_coordinates&#39;) +
+  labs(title = &#39;Ten most populated US cities&#39;,
+       x = &#39;Longitude&#39;,
+       y = &#39;Latitude&#39;)</code></pre>
+<p><img src="../geog-176A-labs/img/10-most-pop-US-cities.png" /></p>
+</div>
+<div id="city-distance-from-the-border" class="section level1">
+<h1>3.2 City Distance from the Border</h1>
+<pre class="r"><code># ggplot of cities distance from border
+distance_to_border_ggplot = ggplot() +
+  geom_sf(data = conus_c) +
+  geom_sf(data = cities_b, aes(col = dist_border), size = .1) +
+  scale_color_gradient(low = &#39;orange&#39;, high = &#39;darkred&#39;) +
+  geom_sf(data = cities_b_five, aes(city, state_name), col = &#39;black&#39;, size = 3) +
+  geom_label_repel(data = cities_b_five, aes(geometry = geometry, label = city), stat = &#39;sf_coordinates&#39;) +
+  labs(title = &#39;US cities distances from the border&#39;,
+       x = &#39;Longitude&#39;,
+       y = &#39;Latitude&#39;,
+       color = &#39;Distance (km)&#39;,
+       subtitle = &#39;5 citiest furthest from the border&#39;) +
+  theme(aspect.ratio = .5)</code></pre>
+<p><img src="../geog-176A-labs/img/cities-distance-US-border.png" /></p>
+</div>
+<div id="city-distance-from-nearest-state" class="section level1">
+<h1>3.3 City Distance from Nearest State</h1>
+<pre class="r"><code># ggplot of cities distance from state border
+distance_to_states_ggplot = ggplot() +
+  geom_sf(data = conus_c) +
+  geom_sf(data = cities_s, aes(col = dist_state), size = .1) +
+  scale_color_gradient(low = &#39;orange&#39;, high = &#39;darkred&#39;) +
+  geom_sf(data = cities_s_five, aes(city, state_name), col = &#39;black&#39;, size = 2) +
+  geom_label_repel(data = cities_s_five, aes(geometry = geometry, label = city), stat = &#39;sf_coordinates&#39;) +
+  labs(title = &#39;US cities distances from state border&#39;,
+       x = &#39;Longitude&#39;,
+       y = &#39;Latitude&#39;,
+       color = &#39;Distance (km)&#39;,
+       subtitle = &#39;5 cities furthest from state border&#39;) +
+  theme(aspect.ratio = .5)</code></pre>
+<p><img src="../geog-176A-labs/img/cities-distance-state-border.png" /></p>
+</div>
+<div id="equidistance-boundary-from-mexico-and-canada" class="section level1">
+<h1>3.4 Equidistance boundary from Mexico and Canada</h1>
+<pre class="r"><code>eqd_cities = cities %&gt;%
+  mutate(dist_can = st_distance(cities, canada), dist_can = set_units(dist_can, &#39;km&#39;), dist_can = drop_units(dist_can)) %&gt;%
+  mutate(dist_mex = st_distance(cities, mexico), dist_mex = set_units(dist_mex, &#39;km&#39;), dist_mex = drop_units(dist_mex)) %&gt;%
+  mutate(mex_can = abs(dist_mex - dist_can)) %&gt;%
+  select(city, state_name, mex_can, population) %&gt;%
+  filter(mex_can &lt;= 100)
+
+eqd_cities_pop = eqd_cities %&gt;%
+  select(city, state_name, population) %&gt;%
+  arrange(-population) %&gt;%
+  head(5)
+
+# ggplot of cities equidistance from Mexico-Canada
+equidist_ggplot = ggplot() +
+  geom_sf(data = conus_c, size = .5) +
+  geom_sf(data = cities, col = &#39;orange&#39;, size = .1) +
+  geom_sf(data = eqd_cities, col = &#39;darkred&#39;, size = .5) +
+  gghighlight(mex_can &lt;= 100) +
+  geom_label_repel(data = eqd_cities_pop, aes(geometry = geometry, label = city), col = &#39;black&#39;, stat = &#39;sf_coordinates&#39;) +
+  labs(title = &#39;US cities equidistance between Mexico and Canada&#39;,
+       x = &#39;Longitude&#39;,
+       y = &#39;Latitude&#39;,
+       subtitle = &#39;5 most populous equidistant cities&#39;) +
+  theme(aspect.ratio = .5)</code></pre>
+<p><img src="../geog-176A-labs/img/cities-equidistance-from-Mex-Can.png" /></p>
+</div>
+<div id="question-4" class="section level1">
+<h1>Question 4:</h1>
+</div>
+<div id="quantifing-border-zone" class="section level1">
+<h1>4.1 Quantifing Border Zone</h1>
+<pre class="r"><code># table of number cities in border zone, border pop, percentage total pop
+border_zone_stats = cities %&gt;%
+  st_drop_geometry() %&gt;%
+  mutate(total_pop = sum(population)) %&gt;%
+  mutate(cities_zone = st_distance(cities, conus_u), cities_zone = set_units(cities_zone, &#39;km&#39;), cities_zone = drop_units(cities_zone)) %&gt;%
+  filter(cities_zone &lt;= 160) %&gt;%
+  summarise(border_pop = sum(population), border_pop_percentage = (border_pop/total_pop)*100, num_cities = n()) %&gt;%
+  head(1)
+
+knitr::kable(border_zone_stats, caption = &#39;Quantifing the Border Zone&#39;, col.names = c(&#39;Border zone population&#39;, &#39;Percent of total US population&#39;, &#39;Number of cities&#39;))</code></pre>
+<table>
+<caption>Quantifing the Border Zone</caption>
+<thead>
+<tr class="header">
+<th align="right">Border zone population</th>
+<th align="right">Percent of total US population</th>
+<th align="right">Number of cities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">259935815</td>
+<td align="right">65.43979</td>
+<td align="right">12283</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="comparison-with-aclu-figures" class="section level1">
+<h1>Comparison with ACLU figures:</h1>
+<p>The values I found match the values given by the ACLU for the border zone population, the percentage of the total US population, and the number of border zone cities.</p>
+</div>
+<div id="mapping-border-zone" class="section level1">
+<h1>4.2 Mapping Border Zone</h1>
+<pre class="r"><code>#cities within 160 km of border
+border_zone = cities %&gt;%
+  st_as_sf(coords = c(&#39;lng&#39;, &#39;lat&#39;), crs = 4326) %&gt;%
+  mutate(dist_to_border = st_distance(cities, conus_u), dist_to_border = set_units(dist_to_border, &#39;km&#39;), dist_to_border = drop_units(dist_to_border)) %&gt;%
+  filter(dist_to_border &lt;= 160) %&gt;%
+  select(city, state_name, dist_to_border, population)
+
+# 10 most populated cities in border zone
+most_pop_cities = border_zone %&gt;%
+  select(state_name, population, city) %&gt;%
+  arrange(-population) %&gt;%
+  head(10)
+
+# most populated city in each state within the border zone
+most_pop_states = border_zone %&gt;% 
+  group_by(state_name) %&gt;% 
+  filter(population == max(population)) 
+  
+
+# ggplot of cities in border zone
+border_zone_ggplot = ggplot() +
+  geom_sf(data = conus_c) +
+  geom_sf(data = cities, col = &#39;grey&#39;, size = .1) +
+  geom_sf(data = border_zone, aes(col = dist_to_border), size = .5) +
+  gghighlight(dist_to_border &lt;= 160) +
+  scale_color_gradient(low = &#39;orange&#39;, high = &#39;darkred&#39;) +
+  geom_sf(data = most_pop_states, aes(city, state_name), col = &#39;black&#39;, size = 3) +
+  geom_label_repel(data = most_pop_states, aes(geometry = geometry, label = city), stat = &#39;sf_coordinates&#39;) +
+  labs(title = &#39;US cities within 160 km of the US border&#39;,
+       x = &#39;Longitude&#39;,
+       y = &#39;Latitude&#39;,
+       color = &#39;Distance (km)&#39;,
+       subtitle = &#39;Most populated city in each state within the border zone&#39;) +
+  theme(aspect.ratio = .5)</code></pre>
+<p><img src="../geog-176A-labs/img/border-zone-cities.png" /></p>
 </div>
 
 
