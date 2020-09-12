@@ -4,7 +4,7 @@ title: 'Projects'
 This is my projects section for Geography 176A. This is my first attempt at building a website using RStudio and GitHub.
 
 
-# Lab 1 learning points:
+##### Lab 1 learning points:
 
   - create a new repository on GitHub
   - using a yml file to give R directions on how to assemble a website
@@ -13,7 +13,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
 
 
 [Lab 2: Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
-# learning points:
+
+##### Learning points:
 
   - reading in data using readr
   - Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)
@@ -24,7 +25,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - testing 'message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown
 
 [Lab 3: Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
-# learning points:
+
+##### Learning points:
 
   - using Sf package:
     - st_as_sf to create a special feature object from a data fram
@@ -36,7 +38,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - assigning labels to specified points on plot
   
 [Lab 4: Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
-# learning points:
+
+##### Learning points:
 
   - generated centroids as anchor points for tessellations
     - st_as_sf to create a special feature object from a data fram
@@ -55,7 +58,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
 
 
 [Lab 05: Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
-# learning points:
+
+##### Learning points:
 
   - create rasters
     - raster stacks and raster bricks
@@ -67,7 +71,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - kmeans analysis
 
 [Lab 6: Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
-# learning points:
+
+##### Learning points:
 
   - Open Street Map
     - Performed Overpass queries on key, tag combinations
