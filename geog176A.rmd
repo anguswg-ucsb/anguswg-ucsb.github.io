@@ -12,8 +12,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - knitting it to a webpage
 
 
-[Lab 2](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
-# Lab 2 learning points:
+[Lab 2: Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
+# learning points:
 
   - reading in data using readr
   - Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)
@@ -23,8 +23,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - ggplot (add data, layers, labels, themes, facets)
   - testing 'message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown
 
-[Lab 3](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
-# Lab 3 learning points:
+[Lab 3: Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
+# learning points:
 
   - using Sf package:
     - st_as_sf to create a special feature object from a data fram
@@ -35,8 +35,8 @@ This is my projects section for Geography 176A. This is my first attempt at buil
     - drop_units()
   - assigning labels to specified points on plot
   
-[Lab 4](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
-# Lab 4 learning points:
+[Lab 4: Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
+# learning points:
 
   - generated centroids as anchor points for tessellations
     - st_as_sf to create a special feature object from a data fram
@@ -54,32 +54,29 @@ This is my projects section for Geography 176A. This is my first attempt at buil
   - Point-in-polygon analysis
 
 
-[Lab 5](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
-# Lab 5 learning points:
+[Lab 05: Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
+# learning points:
 
-  - 
-    - 
-    - 
-    - 
-  - 
-    -
-    -
-  - 
-    -
-    -  
-    
-# Lab 6 learning points:
+  - create rasters
+    - raster stacks and raster bricks
+    - bounty boxes
+    - extent, resolution, dimensions of a raster
+  - LSAT imagery and rasters
+    - RGB colors to empasize certain image traits
+  - Applying thresholds to raster images
+  - kmeans analysis
 
-  - 
-    - 
-    - 
-    - 
-  - 
-    - 
-    - 
-  - 
-    -
-    -
+[Lab 6: Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
+# learning points:
+
+  - Open Street Map
+    - Performed Overpass queries on key, tag combinations
+    - Extracted polygon and lines features from OSM database
+  - Whitebox tools
+    - Slope, aspect, contour, and HAND rasters
+  - Terrain analysis
+  - Flood Impact assessment 
+    - Impacted buildings
 
 
 
