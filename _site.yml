@@ -14,4 +14,4 @@ navbar:
       href: CV.html
 output:
   html_document:
-    theme: darkly
+    theme: journal

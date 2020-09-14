@@ -2,9 +2,17 @@
 title: "About me:"
 ---
 
-<center>
-## Hello, my name is Angus
-</center>
+My name is Angus Watters and I am senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am proficient in both R and Python and able to work with large data sets to perform statistical and data analysis. I am interested in working in the field of water resources and environmental conservation. 
+
+I am 23 years old and was born and raised in Santa Barbara, California. My interests include running, biking, art, computer science, and GIS. 
+
+Email: adwattersgrubstein@umail.ucsb.edu
+
+GitHub: https://github.com/anguswg-ucsb
 
 
-I am 23 years old and was born and raised in Santa Barbara, California.I am in my final year at UCSB. My interests include running, biking, making art, computer science, and GIS. I am looking forward to learning as much as I can from 176A and the rest of the remote sensing courses. [This is the next item on my bucket list!](https://www.hurtigruten.com/globalassets/photos/inspiration/northern-lights/hub/aurora-borealis-above-snowy-island-vestvagoya-lofoten_swen-stroop.jpg?width=1900&height=950&center=0.57,0.51&transform=DownResizeCrop)
+
+
+
+
+![](img/UCSB-about-me.jpg)

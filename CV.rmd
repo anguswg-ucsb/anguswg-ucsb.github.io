@@ -1,63 +1,68 @@
 ---
-title: 'Resume'
+title: 'Resume:'
 ---
+
+
+
 <center>
 # ANGUS WATTERS
 </center>
 
 <center>
-#### 2021 Castillo St. Santa Barbara, CA 93105| 805.895.1590| adwattersgrubstein@ucsb.edu
+#### 2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| adwattersgrubstein@ucsb.edu
 </center>
 
-<center>
-## Work Objective:
-</center>
 
-#### I am a college Senior looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
 
-## Experience
 
-- #### SORAA INC. Goleta, CA, *Intern* (**Spring 2015**)
-  - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs to pinpoint specific points in the reaction
+
+
+## **Work Objective**:
+
+#### I am senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
+
+## **Experience:**
   
-- #### THE GARDEN MARKET Carpinteria, CA *Cashier & Server* (**2017**)
-  - Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically 
+  - #### SORAA INC. Goleta, CA, *Intern* (**Spring 2015**)
+    - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs to pinpoint specific points in the reaction
   
-- #### GALLUP & STRIBLING ORCHIDS Carpinteria, CA *Sales Representative* (**2018**)
-  -	Provided exceptional customer service while processing phone orders
-  -	Provided support during hectic Mother’s Day season
-  -	Collaborated with the flower production floor and truck drivers receiving orders, maintaining clear communication between all parties
+  - #### THE GARDEN MARKET Carpinteria, CA *Cashier & Server* (**2017**)
+    - Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically 
   
-- #### SANTA BARBARA RUNNING Santa Barbara, CA, *Sales Representative* (**2019 - present**)
-  -	Provided information and options on shoes based on an individual’s goals and needs 
-  -	During busy hours, I comfortably multitask, ensuring each customer’s requests are acknowledged and attended to
+  - #### GALLUP & STRIBLING ORCHIDS Carpinteria, CA *Sales Representative* (**2018**)
+    -	Provided exceptional customer service while processing phone orders
+    -	Provided support during hectic Mother’s Day season
+    -	Collaborated with the flower production floor and truck drivers receiving orders, maintaining clear communication between all parties
   
-## Volunteering Experience
-- #### LAGUNA BLANCA SPORTS DRIVE,  *Organizer* (**2011-2015**)
-  -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club 
+  - #### SANTA BARBARA RUNNING Santa Barbara, CA, *Sales Representative* (**2019 - present**)
+    -	Provided information and options on shoes based on an individual’s goals and needs 
+    -	During busy hours, I comfortably multitask, ensuring each customer’s requests are acknowledged and attended to
   
-- #### SANTA BARBARA FOODBANK’S BACKYARD BOUNTY, *Community Outreach & volunteer fundraiser* (**2014 – 2018**)
-  -	tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank
+## **Volunteering Experience**:
+  - #### LAGUNA BLANCA SPORTS DRIVE,  *Organizer* (**2011-2015**)
+    -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club 
   
-## Education 
-- #### UNIVERSITY OF CALIFORNIA, SANTA BARBARA – (**2019 – present | Expected graduation Spring 2021**)
-  - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
+  - #### SANTA BARBARA FOODBANK’S BACKYARD BOUNTY, *Community Outreach & volunteer fundraiser* (**2014 – 2018**)
+    -	tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank
+  
+## **Education**:
+  - #### UNIVERSITY OF CALIFORNIA, SANTA BARBARA – (**2019 – present | Expected graduation Spring 2021**)
+    - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
 		
-- #### SANTA BARBARA CITY COLLEGE – (**2016- 2018**)	
+  - #### SANTA BARBARA CITY COLLEGE – (**2016- 2018**)	
 
-- #### LAGUNA BLANCA SCHOOL – (**Graduated 2015**)
+  - #### LAGUNA BLANCA SCHOOL – (**Graduated 2015**)
 
-## Skills + Additional Interests
+## **Skills + Additional Interests**:
   -	Proficient in Microsoft Excel and Word
   -	Proficient in Python and R 
-    -Experience using vectors and raster data to perform spatial analysis 
+    - Experience using vectors and raster data to perform spatial analysis 
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
   
-## References
-- Joe DeVreese, Santa Barbara Running – (805) 729-0138
-- Mike Johnson, UCSB phD candidate, instructor in R Spatial analysis - jmj00@ucsb.edu
-- Sherrie Todd, The Garden Market – (805) 708-6428
-- Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
-- Robert Palmer, Robert Palmer Training — (214) 850-5710
-- Cate Hogan, Liv. Rip. Waterfowl Conservancy – chogan@lrwc.net  – (860) 567-2062
-- Alexa Senter, Backyard Bounty – (805) 403-8327
+## **References**:
+  - Joe DeVreese, Santa Barbara Running – (805) 729-0138
+  - Mike Johnson, UCSB phD candidate, instructor in R Spatial analysis - jmj00@ucsb.edu
+  - Sherrie Todd, The Garden Market – (805) 708-6428
+  - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
+  - Cate Hogan, Liv. Rip. Waterfowl Conservancy – chogan@lrwc.net  – (860) 567-2062
+  - Alexa Senter, Backyard Bounty – (805) 403-8327

@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -104,33 +104,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 60px;
+  padding-top: 61px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 66px;
+  margin-top: -66px;
 }
 .dropdown-submenu {
   position: relative;
@@ -311,24 +311,26 @@ $(document).ready(function () {
 </div>
 
 
-<p>This is my projects section for Geography 176A. This is my first attempt at building a website using RStudio and GitHub.</p>
+<div id="this-is-my-projects-section-for-geography-176a." class="section level3">
+<h3>This is my projects section for Geography 176A.</h3>
 <div id="lab-1-learning-points" class="section level5">
 <h5>Lab 1 learning points:</h5>
 <ul>
-<li>create a new repository on GitHub</li>
-<li>using a yml file to give R directions on how to assemble a website</li>
-<li>using R Markdown to add information</li>
-<li>knitting it to a webpage</li>
+<li>In this lab we creatd a new repository in Github and used Rmd and yml files to create the outline for this webpage.</li>
+<li>yml files give directions to R on how to assemble a website</li>
+<li>R Markdown adds information to the website</li>
+<li>After making changes in an Rmd, knitting the file will submit the changes to the website.</li>
 </ul>
 <p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html">Lab 2: Data Wrangling</a></p>
 </div>
 <div id="learning-points" class="section level5">
 <h5>Learning points:</h5>
 <ul>
+<li>In this lab we sourced data from the NY Times on the COVID-19 pandemic in USA, we then explored this data with a data science approach</li>
 <li>reading in data using readr</li>
 <li>Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)</li>
 <li>join functions to combine data sets</li>
-<li>knitr::kable and pull()</li>
+<li>using Knitr to create clean tables</li>
 <li>calculate number of New cases using lag()</li>
 <li>ggplot (add data, layers, labels, themes, facets)</li>
 <li>testing ’message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown</li>
@@ -338,6 +340,7 @@ $(document).ready(function () {
 <div id="learning-points-1" class="section level5">
 <h5>Learning points:</h5>
 <ul>
+<li>In this lab we worked US cities and borders as Sf objects to perform spatial analysis on the USA</li>
 <li>using Sf package:
 <ul>
 <li>st_as_sf to create a special feature object from a data fram</li>
@@ -356,9 +359,10 @@ $(document).ready(function () {
 <div id="learning-points-2" class="section level5">
 <h5>Learning points:</h5>
 <ul>
+<li>In this lab we formed tessellations over the US and then performed PIP analysis on dam locations.</li>
 <li>generated centroids as anchor points for tessellations
 <ul>
-<li>st_as_sf to create a special feature object from a data fram</li>
+<li>st_as_sf to create a special feature object from a data frame</li>
 <li>st_transform to change CRS from angular measurements to meters</li>
 <li>st_distance to calculate the distance from points to Multilinestrings</li>
 </ul></li>
@@ -382,6 +386,7 @@ $(document).ready(function () {
 <div id="learning-points-3" class="section level5">
 <h5>Learning points:</h5>
 <ul>
+<li>In this lab we worked with rasters, RGB color varients, landsat images, and kmeans analysis to visualize regions were flooding has occurred.</li>
 <li>create rasters
 <ul>
 <li>raster stacks and raster bricks</li>
@@ -400,6 +405,7 @@ $(document).ready(function () {
 <div id="learning-points-4" class="section level5">
 <h5>Learning points:</h5>
 <ul>
+<li>In this lab we used OSM to locate buildings and streams and then we used Whitebox tools to analyze the terrain in the region.</li>
 <li>Open Street Map
 <ul>
 <li>Performed Overpass queries on key, tag combinations</li>
@@ -415,6 +421,7 @@ $(document).ready(function () {
 <li>Impacted buildings</li>
 </ul></li>
 </ul>
+</div>
 </div>
 
 
