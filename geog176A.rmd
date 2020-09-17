@@ -1,103 +1,29 @@
 ---
 title: 'Projects'
 ---
-### This is my projects section for Geography 176A. 
 
 
-##### Lab 1 learning points:
+[COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
 
-  - In this lab we creatd a new repository in Github and used Rmd and yml files to create the outline for this webpage.
-  - yml files give directions to R on how to assemble a website
-  - R Markdown adds information to the website
-  - After making changes in an Rmd, knitting the file will submit the changes to the website.
+  - In this project I organized, cleaned and manipulated US COVID-19 case and death data sourced from the NY Times.
+  - In a ggplot I plotted daily new cases and daily new cases per capita for several states and I also overlaid a 7 day rolling mean. 
 
+[US Cities - Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
 
+  - In this project I took US cities and borders, created Sf objects, and then performed spatial analysis.
 
+[US dams - Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
 
-[Lab 2: Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
+  - In this project I formed several tessellations over the US and then performed PIP analysis on dam locations within the US.
 
-##### Learning points:
+[Palo, Iowa Flood - Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
 
-  - In this lab we sourced data from the NY Times on the COVID-19 pandemic in USA, we then explored this data with a data science approach
-  - reading in data using readr
-  - Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)
-  - join functions to combine data sets 
-  - using Knitr to create clean tables 
-  - calculate number of New cases using lag()
-  - ggplot (add data, layers, labels, themes, facets)
-  - testing 'message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown
+  - In this project I worked with rasters, RGB color varients, landsat images, and performed a kmeans analysis to visualize regions were flooding has occurred.
 
+[Santa Barbara, CA Mission Creek Flood - Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
 
-
-[Lab 3: Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
-
-##### Learning points:
-
-  - In this lab we worked US cities and borders as Sf objects to perform spatial analysis on the USA
-  - using Sf package:
-    - st_as_sf to create a special feature object from a data fram
-    - st_transform to change CRS from angular measurements to meters
-    - st_distance to calculate the distance from points to Multilinestrings
-  - using units package:
-    - set units() from meters to km
-    - drop_units()
-  - assigning labels to specified points on plot
+  - In this project I used Open Street Map data to locate buildings and streams within a bounty box and then used Whitebox tools to analyze the terrain in the region.
   
-  
-  
-[Lab 4: Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
-
-##### Learning points:
-
-  - In this lab we formed tessellations over the US and then performed PIP analysis on dam locations.
-  - generated centroids as anchor points for tessellations
-    - st_as_sf to create a special feature object from a data frame
-    - st_transform to change CRS from angular measurements to meters
-    - st_distance to calculate the distance from points to Multilinestrings
-  - Tessellations:
-    - Voroni, triangulation, square grid, and hexagonal grid
-    - understanding the pros and cons of using different tesselations based on desired analysis
-  - using st_intersection to crop our tessellation to only the desired geometry 
-  - Simplified borders to decrease the number of calculation
-    - Decreased time to run and demand on hardware and software
-    - rmapshaper::ms_simplify 
-    - mapview:npts
-  - function building
-  - Point-in-polygon analysis
-
-
-
-
-[Lab 05: Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
-
-##### Learning points:
-
-  - In this lab we worked with rasters, RGB color varients, landsat images, and kmeans analysis to visualize regions were flooding has occurred.
-  - create rasters
-    - raster stacks and raster bricks
-    - bounty boxes
-    - extent, resolution, dimensions of a raster
-  - LSAT imagery and rasters
-    - RGB colors to empasize certain image traits
-  - Applying thresholds to raster images
-  - kmeans analysis
-
-
-
-
-[Lab 6: Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
-
-##### Learning points:
-
-  - In this lab we used OSM to locate buildings and streams and then we used Whitebox tools to analyze the terrain in the region.
-  - Open Street Map
-    - Performed Overpass queries on key, tag combinations
-    - Extracted polygon and lines features from OSM database
-  - Whitebox tools
-    - Slope, aspect, contour, and HAND rasters
-  - Terrain analysis
-  - Flood Impact assessment 
-    - Impacted buildings
 
 
 

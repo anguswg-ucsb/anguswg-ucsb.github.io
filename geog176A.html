@@ -311,118 +311,27 @@ $(document).ready(function () {
 </div>
 
 
-<div id="this-is-my-projects-section-for-geography-176a." class="section level3">
-<h3>This is my projects section for Geography 176A.</h3>
-<div id="lab-1-learning-points" class="section level5">
-<h5>Lab 1 learning points:</h5>
+<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html">COVID-19 Pandemic - Data Wrangling</a></p>
 <ul>
-<li>In this lab we creatd a new repository in Github and used Rmd and yml files to create the outline for this webpage.</li>
-<li>yml files give directions to R on how to assemble a website</li>
-<li>R Markdown adds information to the website</li>
-<li>After making changes in an Rmd, knitting the file will submit the changes to the website.</li>
+<li>In this project I organized, cleaned and manipulated US COVID-19 case and death data sourced from the NY Times.</li>
+<li>In a ggplot I plotted daily new cases and daily new cases per capita for several states and I also overlaid a 7 day rolling mean.</li>
 </ul>
-<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html">Lab 2: Data Wrangling</a></p>
-</div>
-<div id="learning-points" class="section level5">
-<h5>Learning points:</h5>
+<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html">US Cities - Projections, Distances, and Mapping</a></p>
 <ul>
-<li>In this lab we sourced data from the NY Times on the COVID-19 pandemic in USA, we then explored this data with a data science approach</li>
-<li>reading in data using readr</li>
-<li>Dplyer verbs(select, filter, mutate, group_by, summarize, arrange)</li>
-<li>join functions to combine data sets</li>
-<li>using Knitr to create clean tables</li>
-<li>calculate number of New cases using lag()</li>
-<li>ggplot (add data, layers, labels, themes, facets)</li>
-<li>testing ’message = FALSE, warning = FALSE, eval = FALSE, echo = FALSE in R Markdown</li>
+<li>In this project I took US cities and borders, created Sf objects, and then performed spatial analysis.</li>
 </ul>
-<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html">Lab 3: Projections, Distances, and Mapping</a></p>
-</div>
-<div id="learning-points-1" class="section level5">
-<h5>Learning points:</h5>
+<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html">US dams - Tesselations, Spatial Joins, and Point-in-Polygon</a></p>
 <ul>
-<li>In this lab we worked US cities and borders as Sf objects to perform spatial analysis on the USA</li>
-<li>using Sf package:
-<ul>
-<li>st_as_sf to create a special feature object from a data fram</li>
-<li>st_transform to change CRS from angular measurements to meters</li>
-<li>st_distance to calculate the distance from points to Multilinestrings</li>
-</ul></li>
-<li>using units package:
-<ul>
-<li>set units() from meters to km</li>
-<li>drop_units()</li>
-</ul></li>
-<li>assigning labels to specified points on plot</li>
+<li>In this project I formed several tessellations over the US and then performed PIP analysis on dam locations within the US.</li>
 </ul>
-<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html">Lab 4: Tesselations, Spatial Joins, and Point-in-Polygon</a></p>
-</div>
-<div id="learning-points-2" class="section level5">
-<h5>Learning points:</h5>
+<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html">Palo, Iowa Flood - Rasters analysis and Remote Sensing</a></p>
 <ul>
-<li>In this lab we formed tessellations over the US and then performed PIP analysis on dam locations.</li>
-<li>generated centroids as anchor points for tessellations
-<ul>
-<li>st_as_sf to create a special feature object from a data frame</li>
-<li>st_transform to change CRS from angular measurements to meters</li>
-<li>st_distance to calculate the distance from points to Multilinestrings</li>
-</ul></li>
-<li>Tessellations:
-<ul>
-<li>Voroni, triangulation, square grid, and hexagonal grid</li>
-<li>understanding the pros and cons of using different tesselations based on desired analysis</li>
-</ul></li>
-<li>using st_intersection to crop our tessellation to only the desired geometry</li>
-<li>Simplified borders to decrease the number of calculation
-<ul>
-<li>Decreased time to run and demand on hardware and software</li>
-<li>rmapshaper::ms_simplify</li>
-<li>mapview:npts</li>
-</ul></li>
-<li>function building</li>
-<li>Point-in-polygon analysis</li>
+<li>In this project I worked with rasters, RGB color varients, landsat images, and performed a kmeans analysis to visualize regions were flooding has occurred.</li>
 </ul>
-<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html">Lab 05: Rasters analysis and Remote Sensing</a></p>
-</div>
-<div id="learning-points-3" class="section level5">
-<h5>Learning points:</h5>
+<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html">Santa Barbara, CA Mission Creek Flood - Terrain Analysis</a></p>
 <ul>
-<li>In this lab we worked with rasters, RGB color varients, landsat images, and kmeans analysis to visualize regions were flooding has occurred.</li>
-<li>create rasters
-<ul>
-<li>raster stacks and raster bricks</li>
-<li>bounty boxes</li>
-<li>extent, resolution, dimensions of a raster</li>
-</ul></li>
-<li>LSAT imagery and rasters
-<ul>
-<li>RGB colors to empasize certain image traits</li>
-</ul></li>
-<li>Applying thresholds to raster images</li>
-<li>kmeans analysis</li>
+<li>In this project I used Open Street Map data to locate buildings and streams within a bounty box and then used Whitebox tools to analyze the terrain in the region.</li>
 </ul>
-<p><a href="https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html">Lab 6: Terrain Analysis</a></p>
-</div>
-<div id="learning-points-4" class="section level5">
-<h5>Learning points:</h5>
-<ul>
-<li>In this lab we used OSM to locate buildings and streams and then we used Whitebox tools to analyze the terrain in the region.</li>
-<li>Open Street Map
-<ul>
-<li>Performed Overpass queries on key, tag combinations</li>
-<li>Extracted polygon and lines features from OSM database</li>
-</ul></li>
-<li>Whitebox tools
-<ul>
-<li>Slope, aspect, contour, and HAND rasters</li>
-</ul></li>
-<li>Terrain analysis</li>
-<li>Flood Impact assessment
-<ul>
-<li>Impacted buildings</li>
-</ul></li>
-</ul>
-</div>
-</div>
 
 
 
