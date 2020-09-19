@@ -6,12 +6,14 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "GIS Work"
+    - text: "Projects"
       icon: fa-globe-americas
       href: geog176A.html
     - text: "Resume"
       icon: fa-leaf
       href: CV.html
 output:
-  html_document:
-    theme: journal
+  mikedown::ucsb:
+    toc: TRUE
+    number_sections: FALSE
+    code_folding: "hide"

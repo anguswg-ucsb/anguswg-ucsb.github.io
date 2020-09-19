@@ -1,29 +1,45 @@
 ---
 title: 'Projects'
+output:
+  mikedown::ucsb:
+    toc: TRUE
+    number_sections: FALSE
+    code_folding: "hide"
 ---
+```{r, message= FALSE, warning = FALSE, echo = FALSE}
+library(tidyverse)
+library(rmarkdown)     # You need this library to run this template.
+library(mikedown)   
+```
 
+***
+<br>
 
 [COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
 
   - In this project I organized, cleaned and manipulated US COVID-19 case and death data sourced from the NY Times.
   - In a ggplot I plotted daily new cases and daily new cases per capita for several states and I also overlaid a 7 day rolling mean. 
+<br>
 
 [US Cities - Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
 
   - In this project I took US cities and borders, created Sf objects, and then performed spatial analysis.
+<br>
 
 [US dams - Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
 
   - In this project I formed several tessellations over the US and then performed PIP analysis on dam locations within the US.
+<br>
 
 [Palo, Iowa Flood - Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
 
   - In this project I worked with rasters, RGB color varients, landsat images, and performed a kmeans analysis to visualize regions were flooding has occurred.
+<br>
 
 [Santa Barbara, CA Mission Creek Flood - Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
 
   - In this project I used Open Street Map data to locate buildings and streams within a bounty box and then used Whitebox tools to analyze the terrain in the region.
-  
+<br> 
 
 
 

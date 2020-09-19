@@ -1,23 +1,36 @@
 ---
-title: 'Resume:'
+title: 'Resume'
+output:
+  mikedown::ucsb:
+    toc: TRUE
+    number_sections: FALSE
+    code_folding: "hide"
 ---
+```{r, message= FALSE, warning = FALSE, echo = FALSE}
+library(tidyverse)
+library(rmarkdown)     # You need this library to run this template.
+library(mikedown)   
+```
 
+***
+<br>
 
-
-
-
-
-
-# ANGUS WATTERS
-
+# **ANGUS WATTERS**
 #### 2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| adwattersgrubstein@ucsb.edu
 
 
+<br>
+
 ## **Work Objective**:
+
+***
 
 #### I am senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
 
+
 ## **Experience:**
+
+***
   
   - #### SORAA INC. Goleta, CA, *Intern* (**Spring 2015**)
     - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs to pinpoint specific points in the reaction
@@ -33,15 +46,24 @@ title: 'Resume:'
   - #### SANTA BARBARA RUNNING Santa Barbara, CA, *Sales Representative* (**2019 - present**)
     -	Provided information and options on shoes based on an individual’s goals and needs 
     -	During busy hours, I comfortably multitask, ensuring each customer’s requests are acknowledged and attended to
-  
+
+
 ## **Volunteering Experience**:
+
+***
+
   - #### LAGUNA BLANCA SPORTS DRIVE,  *Organizer* (**2011-2015**)
     -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club 
   
   - #### SANTA BARBARA FOODBANK’S BACKYARD BOUNTY, *Community Outreach & volunteer fundraiser* (**2014 – 2018**)
     -	tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank
-  
+
+***
+
 ## **Education**:
+
+***
+
   - #### UNIVERSITY OF CALIFORNIA, SANTA BARBARA – (**2019 – present | Expected graduation Spring 2021**)
     - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
 		
@@ -50,12 +72,20 @@ title: 'Resume:'
   - #### LAGUNA BLANCA SCHOOL – (**Graduated 2015**)
 
 ## **Skills + Additional Interests**:
+
+***
+
   -	Proficient in Microsoft Excel and Word
   -	Proficient in Python and R 
     - Experience using vectors and raster data to perform spatial analysis 
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
-  
+
+***
+
 ## **References**:
+
+***
+
   - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Mike Johnson, UCSB phD candidate, instructor in R Spatial analysis - jmj00@ucsb.edu
   - Sherrie Todd, The Garden Market – (805) 708-6428
