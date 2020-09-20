@@ -1,10 +1,9 @@
 ---
 title: 'Projects'
 output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
+  html_document:
+    includes:
+      after_body: footer.html
 ---
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)

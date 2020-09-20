@@ -1,10 +1,9 @@
 ---
 title: 'Resume'
 output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
+  html_document:
+    includes:
+      after_body: footer.html
 ---
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
@@ -76,8 +75,8 @@ library(mikedown)
 ***
 
   -	Proficient in Microsoft Excel and Word
-  -	Proficient in Python and R 
-    - Experience using vectors and raster data to perform spatial analysis 
+  -	Proficient in Python and R coding languages
+    - Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
 
 ***
@@ -85,9 +84,8 @@ library(mikedown)
 ## **References**:
 
 ***
-
-  - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Mike Johnson, UCSB phD candidate, instructor in R Spatial analysis - jmj00@ucsb.edu
+  - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Sherrie Todd, The Garden Market – (805) 708-6428
   - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
   - Cate Hogan, Liv. Rip. Waterfowl Conservancy – chogan@lrwc.net  – (860) 567-2062
