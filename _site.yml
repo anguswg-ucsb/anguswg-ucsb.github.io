@@ -13,5 +13,7 @@ navbar:
       icon: fa-leaf
       href: CV.html
 output:
-  html_document:
-    theme: lumen
+  mikedown::ucsb:
+    toc: TRUE
+    number_sections: FALSE
+    code_folding: "hide"
