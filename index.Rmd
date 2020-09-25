@@ -1,10 +1,5 @@
 ---
 title: "About me"
-output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
 ---
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
