@@ -7,7 +7,7 @@ navbar:
       icon: fa-home
       href: index.html
     - text: "Projects"
-      icon: fa-globe-americas
+      icon: fa-globerma
       href: geog176A.html
     - text: "Resume"
       icon: fa-leaf
