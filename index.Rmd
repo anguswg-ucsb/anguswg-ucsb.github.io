@@ -14,7 +14,7 @@ library(mikedown)
 
 ***
 
-  I am senior majoring in Geography with an emphasis on GIS at the University of California, Santa Barbara with an expected graduation date of Spring 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
+  I am a senior majoring in Geography with an emphasis on GIS at the University of California, Santa Barbara with an expected graduation date of Spring 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
   
   As I near graduation, I am searching for opportunities where I can both apply and improve my skills in  cleaning, organizing, and analyzing spatial and non-spatial data.  I hope to find a position which matches my interest in environmental conservation, resource management, and data curation. 
   
