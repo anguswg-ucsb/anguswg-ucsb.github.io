@@ -20,74 +20,125 @@ library(mikedown)
 
 
 <br>
+<br>
+<br>
+<br>
 
-## **Work Objective**:
+## **WORK OBJECTIVE**
+
+***
+
+#### I am a senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
+
+<br>
+<br>  
+
+## **EDUCATION**
 
 ***
 
-#### I am senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
+  - #### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA –** (2019 – present | Expected graduation Spring 2021)
+    - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
+		
+  - #### **SANTA BARBARA CITY COLLEGE –** (2016- 2018)	
 
+  - #### **LAGUNA BLANCA SCHOOL –** (Graduated 2015)
 
-## **Experience:**
+<br>
+<br>  
+
+## **RELEVANT EXPERIENCE**
+***
+  - #### **US GROUNDWATER RESEARCH**, Santa Barbara, CA 
+ *Research Assistant*, Professor Perrone, Debra **(2019 - present)**
+    -	Spatial and non spatial analysis in R using USGS and state groundwater data 
+    -	Focus on the analysis of groundwater well depths and pumping 
+    - Analysis of the results of different state level sustainable groundwater management approaches
+
+<br>
+
+  - #### **FLOOD MAPPING RESEARCH**, Santa Barbara, CA 
+ *Research group member*, PhD candidate Johnson, Mike **(2019 - present)**
+    -	Focus of this research is on mapping terrain based flood extents, specifically comparing known FEMA flood extents with a 'bucket' HAND model
+    - Analysis of different raster resolution levels to find the optimal balance between accurate representation of flood extents and computational processing time
+    -	Goal of the research is to produce a continental flood map that can be used in real time for EMS
+
+<br>  
+<br>
+    
+## **WORK EXPERIENCE**
 
 ***
-  
-  - #### SORAA INC. Goleta, CA, *Intern* (**Spring 2015**)
-    - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs to pinpoint specific points in the reaction
-  
-  - #### THE GARDEN MARKET Carpinteria, CA *Cashier & Server* (**2017**)
-    - Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically 
-  
-  - #### GALLUP & STRIBLING ORCHIDS Carpinteria, CA *Sales Representative* (**2018**)
+  - #### **SANTA BARBARA RUNNING**, Santa Barbara, CA, 
+  *Sales Representative* **(2019 - present)**
+    -	Provided information and options on shoes based on an individual’s goals and needs 
+    -	Comfortably multitask, ensuring optimal response to customers’ requests
+
+<br>
+
+  - #### **GALLUP & STRIBLING ORCHIDS**, Carpinteria, CA 
+ *Sales Representative* **(2018)**
     -	Provided exceptional customer service while processing phone orders
     -	Provided support during hectic Mother’s Day season
     -	Collaborated with the flower production floor and truck drivers receiving orders, maintaining clear communication between all parties
+
+<br>
+
+  - #### **THE GARDEN MARKET**, Carpinteria, CA 
+  *Cashier & Server* **(2017)**
+    - Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically
+
+<br>
+
+  - #### **SORAA INC.**, Goleta, CA, 
+  *Intern* **(Spring 2015)**
+    - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs in Excel files.
+
+<br>  
+<br>
+
+## **VOLUNTEERING EXPERIENCE**
+
+***
+  - #### **SANTA BARBARA FOODBANK’S BACKYARD BOUNTY** 
+  *Community Outreach & volunteer fundraiser* **(2014 – 2018)**
+    -	tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank.
+    
+    <br>
+    
+  - #### **LAGUNA BLANCA SPORTS DRIVE**  
+  *Organizer* **(2011-2015)**
+    -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club.
   
-  - #### SANTA BARBARA RUNNING Santa Barbara, CA, *Sales Representative* (**2019 - present**)
-    -	Provided information and options on shoes based on an individual’s goals and needs 
-    -	During busy hours, I comfortably multitask, ensuring each customer’s requests are acknowledged and attended to
+<br>
 
 
-## **Volunteering Experience**:
 
-***
-
-  - #### LAGUNA BLANCA SPORTS DRIVE,  *Organizer* (**2011-2015**)
-    -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club 
-  
-  - #### SANTA BARBARA FOODBANK’S BACKYARD BOUNTY, *Community Outreach & volunteer fundraiser* (**2014 – 2018**)
-    -	tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank
+## **SKILLS + ADDITIONAL INTERESTS**
 
 ***
 
-## **Education**:
-
-***
-
-  - #### UNIVERSITY OF CALIFORNIA, SANTA BARBARA – (**2019 – present | Expected graduation Spring 2021**)
-    - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
-		
-  - #### SANTA BARBARA CITY COLLEGE – (**2016- 2018**)	
-
-  - #### LAGUNA BLANCA SCHOOL – (**Graduated 2015**)
-
-## **Skills + Additional Interests**:
-
-***
-
-  -	Proficient in Microsoft Excel and Word
+  -	Proficient in Microsoft Word and Excel
   -	Proficient in Python and R coding languages
-    - Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
+    - Strong abilities in using R as a platform for GIS and data analysis:
+      * Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
+      * Able to create visualization of spacial data in R 
+      * Experienced in creating reproducible code and workflow in R 
+      * Experienced working with large, 'messy' government data sets, shape files, and time series data
+      * Experienced in using GitHub to push and pull projects 
+      * Able to create web sites in R using rmarkdown format and hosting by GitHub pages
+      * **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
 
-***
+<br>
 
-## **References**:
+## **REFERENCES**
 
 ***
-  - Mike Johnson, UCSB phD candidate, instructor in R Spatial analysis - jmj00@ucsb.edu
+  - Mike Johnson, UCSB phD candidate, GIS instructor + Research Partner - jmj00@ucsb.edu
+  - Debra Perrone, UCSB Bren School of ESM, Assistant Professor - perrone@ucsb.edu  
   - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Sherrie Todd, The Garden Market – (805) 708-6428
   - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
-  - Cate Hogan, Liv. Rip. Waterfowl Conservancy – chogan@lrwc.net  – (860) 567-2062
+  - Cate Hogan, Ripley Waterfowl Conservancy – chogan@ripleyconservancy.org – (860) 567-2062
   - Alexa Senter, Backyard Bounty – (805) 403-8327
