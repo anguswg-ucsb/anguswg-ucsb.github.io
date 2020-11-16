@@ -136,7 +136,7 @@ library(mikedown)
 
 ***
   - Mike Johnson, UCSB phD candidate, GIS instructor + Research Partner - jmj00@ucsb.edu
-  - Debra Perrone, UCSB Bren School of ESM, Assistant Professor - perrone@ucsb.edu  
+  - Debra Perrone, UCSB Bren School of ESM,rm Assistant Professor - perrone@ucsb.edu  
   - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Sherrie Todd, The Garden Market – (805) 708-6428
   - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
