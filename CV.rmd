@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Resume'
 output:
   mikedown::ucsb:
     toc: TRUE
@@ -39,13 +39,17 @@ library(mikedown)
 
 ----
 
-  - #### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA –** (2019 – present | Expected graduation Spring 2021)
-    - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
-		
-  - #### **SANTA BARBARA CITY COLLEGE –** (2016- 2018)	
+#### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA –** (2019 – present | Expected graduation Spring 2021)
+  - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
 
-  - #### **LAGUNA BLANCA SCHOOL –** (Graduated 2015)
+<br>
 
+#### **SANTA BARBARA CITY COLLEGE –** (2016- 2018)	
+
+<br>
+
+#### **LAGUNA BLANCA SCHOOL –** (Graduated 2015)
+rmark
 <br>
 <br>  
 
@@ -131,6 +135,7 @@ library(mikedown)
 ##### **Interests:**
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
 
+<br>
 <br>
 
 ## **REFERENCES**
