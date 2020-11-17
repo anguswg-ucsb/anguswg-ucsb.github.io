@@ -46,9 +46,7 @@ library(mikedown)
 
 #### **SANTA BARBARA CITY COLLEGE –** (2016- 2018)	
 
-<br>
 
-#### **LAGUNA BLANCA SCHOOL –** (Graduated 2015)
 
 <br>
 <br>  
@@ -100,7 +98,7 @@ library(mikedown)
 <br>  
 <br>
 
-## **VOLUNTEERING EXPERIENCE**
+## **VOLUNTEER EXPERIENCE**
 
 ----
 
@@ -109,7 +107,7 @@ library(mikedown)
     
 <br>
     
-#### **LAGUNA BLANCA SPORTS DRIVE**<br/>*Organizer* **(2011-2015)**
+#### **LAGUNA BLANCA SPORTS DRIVE**<br/>*Volunteer* **(2011-2015)**
   -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club.
   
 <br>
@@ -125,7 +123,7 @@ library(mikedown)
   -	Proficient in Python and R coding languages
     - Experienced using R as a platform for GIS and data analysis:
     - Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
-    - Able to create visualization of spacial data in R 
+    - Able to create visualization of spatial data in R 
     - Experienced in creating reproducible code and workflow in R 
     -  Experienced working with large, 'messy' government data sets, shape files, and time series data
     - Experienced in using GitHub to push and pull projects 
@@ -142,8 +140,8 @@ library(mikedown)
 
 ----
 
+  - Debra Perrone, UCSB Bren School of ESM, Assistant Professor - perrone@ucsb.edu  
   - Mike Johnson, UCSB phD candidate, GIS instructor + Research Partner - jmj00@ucsb.edu
-  - Debra Perrone, UCSB Bren School of ESM,rm Assistant Professor - perrone@ucsb.edu  
   - Joe DeVreese, Santa Barbara Running – (805) 729-0138
   - Sherrie Todd, The Garden Market – (805) 708-6428
   - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
