@@ -49,7 +49,7 @@ library(mikedown)
 <br>
 
 #### **LAGUNA BLANCA SCHOOL –** (Graduated 2015)
-rmark
+
 <br>
 <br>  
 
