@@ -13,6 +13,13 @@ library(mikedown)
 ```
 
 ***
+
+
+[US Groundwater research](https://anguswg-ucsb.github.io/groundwater_2/index.html)
+
+  - Work in progress 
+  - Data source: *USGS National Water Information System*
+  
 <br>
 
 [COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
@@ -47,10 +54,7 @@ library(mikedown)
 
 <br> 
 
-[Arizona groundwater research](https://anguswg-ucsb.github.io/groundwater-research/gw_tmp.html)
 
-  - Work in progress 
-  - Data source: *USGS National Water Information System*
 
 
 
