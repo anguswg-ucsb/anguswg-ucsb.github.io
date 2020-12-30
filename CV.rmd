@@ -121,11 +121,13 @@ library(mikedown)
 ##### **Skills:**
   -	Proficient in Microsoft Word and Excel
   -	Proficient in Python and R coding languages
+    - Proficient in dplyr, tidyr, and ggplot2 packages
     - Experienced using R as a platform for GIS and data analysis:
     - Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
     - Able to create visualization of spatial data in R 
+    - Able to scrape data from html webpages
     - Experienced in creating reproducible code and workflow in R 
-    -  Experienced working with large, 'messy' government data sets, shape files, and time series data
+    - Experienced working with large, 'messy' government data sets, shape files, and time series data
     - Experienced in using GitHub to push and pull projects 
     - Able to create web sites in R using rmarkdown format and hosting by GitHub pages
     - **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 

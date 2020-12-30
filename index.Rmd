@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: ""
 output:
   mikedown::ucsb:
     toc: TRUE
@@ -12,25 +12,26 @@ library(rmarkdown)     # You need this library to run this template.
 library(mikedown)   
 ```
 
+
+
+# About me
+
 ***
+
+
+### ***Welcome!<br>My name is Angus Watters, and this is my website!***
+
 <br>
-
-### **Hello! My name is Angus Watters and welcome to my website!**
-
-***
 
 I am a senior at the University of California, Santa Barbara. I am majoring in Geography with an emphasis on GIS and I expect to graduate in the Spring of 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
 
-As I near graduation, I am searching for opportunities where I can both apply and improve my skills in cleaning, organizing, and analyzing spatial and non-spatial data. I hope to find a position which matches my interest in environmental conservation, resource management, and data curation.
-  
+ As I near graduation, I am searching for opportunities where I can both apply and improve my skills in cleaning, organizing, and analyzing spatial and non-spatial data. I hope to find a position which matches my interest in environmental conservation, resource management, and data curation.
+
 In my free time I enjoy spending time running, biking, drawing, gardening, and cooking.
 
 ***  
 
-Email: adwattersgrubstein@umail.ucsb.edu
-
-
-GitHub: https://github.com/anguswg-ucsb
+>**`Email: adwattersgrubstein@umail.ucsb.edu`**<br>**`GitHub: https://github.com/anguswg-ucsb`**
 
 <br>
 
