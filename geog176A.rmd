@@ -7,7 +7,6 @@ output:
     code_folding: "hide"
 ---
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
-library(tidyverse)
 library(rmarkdown)     # You need this library to run this template.
 library(mikedown)   
 ```
@@ -17,7 +16,6 @@ library(mikedown)
 
 [US Groundwater research](https://anguswg-ucsb.github.io/groundwater_2/index.html)
 
-  - Work in progress 
   - Data source: *USGS National Water Information System*
   
 <br>

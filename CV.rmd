@@ -55,21 +55,51 @@ library(mikedown)
 
 ----
 
-#### **US GROUNDWATER RESEARCH**, Santa Barbara, CA<br/>*Research Assistant*, Professor Perrone, Debra **(2019 - present)**
-  -	Spatial and non spatial analysis in R using USGS and state groundwater data 
+#### **US GROUNDWATER RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, Professor Perrone, Debra **(2019 - present)**
+  -	Analyzing spatial and non-spatial US Geological Survey and state groundwater data in R 
   -	Focus on the analysis of groundwater well depths and pumping 
   - Analysis of the results of different state level sustainable groundwater management approaches
 
 <br>
 
-#### **FLOOD MAPPING RESEARCH**, Santa Barbara, CA<br/>*Research group member*, PhD candidate Johnson, Mike **(2019 - present)**
-  -	Focus of this research is on mapping terrain based flood extents, specifically comparing known FEMA flood extents with a 'bucket' HAND model
-  - Analysis of different raster resolution levels to find the optimal balance between accurate representation of flood extents and computational processing time
-  -	Goal of the research is to produce a continental flood map that can be used in real time for EMS
+#### **FLOOD MAPPING RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, PhD candidate Johnson, Mike **(2019 - present)**
+  -	Mapping terrain-based flood extents, with the goal of produce a continental flood map that can be used in real time for Emergency Medical Services specifically comparing known FEMA flood extents with a 'bucket', Height Above Nearest Drainage model 
+  - Comparison of known FEMA flood extents with a 'bucket' HAND model using raster data 
+
+<br>
+
+#### **INSTRUCTIONAL ASSISTANT**, University of California, Santa Barbara, CA<br/>***ENVS 193*** Professor Perrone, Debra **(Winter 2020)**
+  -	I am an instructional assistant in a class focused on teaching students how to organize, clean, manipulate and analyze large hydrological data sets using R
+  - With my expertise in R, I provide technical programming support, contribute to writing labs, and leading portions of labs
 
 <br>  
 <br>
-    
+
+## **SKILLS + INTERESTS**
+
+----
+
+##### **Skills:**
+  -	Experienced using R as a platform for GIS and data analysis:
+    - Using **dplyr**, **tidyr**, **ggplot2**, **sp**, **sf**, and **leaflet** packages
+    - Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data 
+    - Creating visualization of spatial data in R 
+    - Creating reproducible code and workflow in R 
+    - Working with large, 'messy' government data sets, shape files, and time series data
+    - Scrapping data from the web
+    - Working in GitHub repositories  
+    - Experienced working with large, 'messy' government data sets, shape files, and time series data
+    - Creating web sites in R using rmarkdown format and hosting by GitHub pages 
+    - Creating shiny dashboard apps
+    - **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 
+  -	Proficient in Microsoft Word and Excel
+  
+##### **Interests:**
+  -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
+  
+<br>
+<br>
+
 ## **WORK EXPERIENCE**
 
 ----
@@ -119,19 +149,19 @@ library(mikedown)
 ----
 
 ##### **Skills:**
-  -	Proficient in Microsoft Word and Excel
-  -	Proficient in Python and R coding languages
-    - Proficient in dplyr, tidyr, and ggplot2 packages
-    - Experienced using R as a platform for GIS and data analysis:
-    - Able to clean, organize, aggregate, and analyze both spatial and non-spatial data 
-    - Able to create visualization of spatial data in R 
-    - Able to scrape data from html webpages
-    - Experienced in creating reproducible code and workflow in R 
+  -	Experienced using R as a platform for GIS and data analysis:
+    - Using dplyr, tidyr, ggplot2, sp, sf, and leaflet packages
+    - Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data 
+    - Creating visualization of spatial data in R 
+    - Creating reproducible code and workflow in R 
+    - Working with large, 'messy' government data sets, shape files, and time series data
+    - Scrapping data from the web
+    - Working in GitHub repositories  
     - Experienced working with large, 'messy' government data sets, shape files, and time series data
-    - Experienced in using GitHub to push and pull projects 
-    - Able to create web sites in R using rmarkdown format and hosting by GitHub pages
+    - Creating web sites in R using rmarkdown format and hosting by GitHub pages 
+    - Creating shiny dashboard apps
     - **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 
-      
+  -	Proficient in Microsoft Word and Excel
 ##### **Interests:**
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
 

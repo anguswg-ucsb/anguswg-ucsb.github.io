@@ -19,7 +19,7 @@ library(mikedown)
 ***
 
 
-### ***Welcome!<br>My name is Angus Watters, and this is my website!***
+### **Welcome!<br>My name is Angus Watters, and this is my website!**
 
 <br>
 
