@@ -19,6 +19,12 @@ library(mikedown)
   - Data source: *USGS National Water Information System*
   
 <br>
+  
+[Shiny app - Arizona groundwater](https://angus-watters.shinyapps.io/groundwater-dash/)
+
+  - Data source: *USGS National Water Information System*
+  
+<br>
 
 [COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
 
