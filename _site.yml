@@ -8,7 +8,7 @@ navbar:
       href: index.html
     - text: "Projects"
       icon: fa-globe-americas
-      href: geog176A.html
+      href: projects.html
     - text: "Resume"
       icon: fa-leaf
       href: CV.html
