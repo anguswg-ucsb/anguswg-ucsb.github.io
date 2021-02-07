@@ -2,7 +2,7 @@
 title: 'Projects'
 output:
   mikedown::ucsb:
-    toc: TRUE
+    toc: FALSE
     number_sections: FALSE
     code_folding: "hide"
 ---
@@ -12,70 +12,107 @@ library(mikedown)
 ```
 
 ***
-[COVID-19 dashboard](https://angus-watters.shinyapps.io/covid-dashboard/)
+### **[COVID-19](https://angus-watters.shinyapps.io/covid-dashboard/)**
 
-  - A R-Shiny dashboard tracking the COVID-19 pandemic in the US 
+  - Built using R-Shiny dashboard
+
+  - Tracking the COVID-19 pandemic in the United States
+
+  - Built using R-Shiny dashboard
   
   - Independent project 
-
-  - Built using R-Shiny dashboard
+  
+  - Data source: [New York Times](https://github.com/nytimes/covid-19-data)
 
 <br>
 
-[Shiny app - US groundwater research](https://angus-watters.shinyapps.io/groundwater-dash/)
+  <center>
+![](img/covid_shiny_v2.png)
+</center>
+
+<br>
+<br>
+<br>
+
+### **[USGS Groundwater](https://angus-watters.shinyapps.io/groundwater-dash/)**
+
+  - Built using R-Shiny dashboard
+  
+  - Groundwater research under [Dr. Perrone](https://www.es.ucsb.edu/debra-perrone)
+  
+  - Data source: [USGS National Water Information System](https://waterdata.usgs.gov/nwis)
+
+<br>
+
+<center>
+![](img/groundwater_shiny.png)
+</center>
+  
+<br>  
+<br>
+<br>
+
+### **[USGS Groundwater](https://anguswg-ucsb.github.io/groundwater_2/index.html)**
+
+  - R Markdown
 
   - Groundwater research under [Dr. Perrone](https://www.es.ucsb.edu/debra-perrone)
   
-  - Built using R-Shiny dashboard
+  - Identical data and research shown in the USGS Groundwater Shiny dashboard project but this is written up in an rmarkdown document and deployed using GitHub Pages
   
-  - Data source: *USGS National Water Information System*
-  
-<br>
-
-[US Groundwater research](https://anguswg-ucsb.github.io/groundwater_2/index.html)
-
-  - Groundwater research under [Dr. Perrone](https://www.es.ucsb.edu/debra-perrone)
-  
-  - This is the same investigative research as the above project but this is written up in an rmarkdown document and deployed using GitHub Pages
-  
-  - Data source: *USGS National Water Information System*
+  - Data source: [USGS National Water Information System](https://waterdata.usgs.gov/nwis)
   
 <br>
 
-[COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)
+### **[US dams](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)**
 
-  - In this project I organized, cleaned and manipulated US COVID-19 case and death data sourced from the NY Times.
-  - In a ggplot I plotted daily new cases and daily new cases per capita for several states and I also overlaid a 7 day rolling mean. 
-  - Written using rmarkdown and deployed using GitHub Pages
+  - R Markdown
+
+  - In this project I formed several tessellations over the US and then performed PIP analysis on dam locations within the US.
+  
+  - Methods used: Tesselations, Spatial Joins, Point-in-Polygon analysis, MAUP simplification
+
+  - Data source: [National Dam Inventory, US Army Corps of Engineers](https://nid.sec.usace.army.mil/ords/f?p=105:1::::::)
+
+<br>
+
+### **[Palo, Iowa Flood - Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)**
+
+  - R Markdown
+
+  - In this project I worked with rasters, RGB color variants, landsat images, and performed a K-means analysis to visualize regions were flooding has occurred.
+  
+  - Methods: Landsat raster extraction, Clustering, K-means analysis
+
+<br>
+
+### **[Santa Barbara, CA Mission Creek Flood - Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)**
+
+  - R Markdown
+
+  - In this project I used Open Street Map data to locate buildings and streams within a bounty box and then used Whitebox tools to analyze the terrain in the region.
+  
+  - Data source: [USGS National Water Information System](https://waterdata.usgs.gov/nwis)
+
+<br> 
+
+### **[COVID-19 Pandemic - Data Wrangling](https://anguswg-ucsb.github.io/geog-176A-labs/lab-02.html)**
+
+  - R Markdown
+  
+  - Identical data and research shown in the COVID-19 Shiny dashboard project but written up in an rmarkdown document and deployed using GitHub Pages
+  
+  - Data source: [New York Times](https://github.com/nytimes/covid-19-data)
   
 <br>
 
+### **[US Cities - Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)**
 
-[US Cities - Projections, Distances, and Mapping](https://anguswg-ucsb.github.io/geog-176A-labs/lab-03.html)
+  - R Markdown
 
   - In this project I took US cities and borders, created Sf objects, and then performed spatial analysis.
 
 <br>
-
-[US dams - Tesselations, Spatial Joins, and Point-in-Polygon](https://anguswg-ucsb.github.io/geog-176A-labs/lab-04.html)
-
-  - In this project I formed several tessellations over the US and then performed PIP analysis on dam locations within the US.
-
-<br>
-
-[Palo, Iowa Flood - Rasters analysis and Remote Sensing](https://anguswg-ucsb.github.io/geog-176A-labs/lab-05.html)
-
-  - In this project I worked with rasters, RGB color varients, landsat images, and performed a kmeans analysis to visualize regions were flooding has occurred.
-
-<br>
-
-[Santa Barbara, CA Mission Creek Flood - Terrain Analysis](https://anguswg-ucsb.github.io/geog-176A-labs/lab-06.html)
-
-  - In this project I used Open Street Map data to locate buildings and streams within a bounty box and then used Whitebox tools to analyze the terrain in the region.
-
-<br> 
-
-
 
 
 
