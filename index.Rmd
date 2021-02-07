@@ -18,7 +18,6 @@ library(mikedown)
 
 ***
 
-
 ### **My name is Angus Watters, welcome to my website!**
 
 <br>

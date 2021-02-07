@@ -14,15 +14,9 @@ library(mikedown)
 
 ----
 
-<br>
-
-
 # **ANGUS WATTERS**
 #### 2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| adwattersgrubstein@ucsb.edu
 
-
-<br>
-<br>
 <br>
 <br>
 
@@ -33,6 +27,7 @@ library(mikedown)
 #### I am a senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
 
 <br>
+<br>  
 <br>  
 
 ## **EDUCATION**
@@ -50,30 +45,33 @@ library(mikedown)
 
 <br>
 <br>  
+<br>
 
 ## **RELEVANT EXPERIENCE**
 
 ----
 
-#### **US GROUNDWATER RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, Professor Perrone, Debra **(2019 - present)**
+#### **US GROUNDWATER RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, [Professor Perrone, Debra](https://www.es.ucsb.edu/debra-perrone) **(2019 - present)**
   -	Analyzing spatial and non-spatial US Geological Survey and state groundwater data in R 
   -	Focus on the analysis of groundwater well depths and pumping 
   - Analysis of the results of different state level sustainable groundwater management approaches
 
 <br>
 
-#### **FLOOD MAPPING RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, PhD candidate Johnson, Mike **(2019 - present)**
+
+#### **FLOOD MAPPING RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, [Mike Johnson, UCSB PhD candidate](https://mikejohnson51.github.io/) **(2020 - present)**
   -	Mapping terrain-based flood extents, with the goal of produce a continental flood map that can be used in real time for Emergency Medical Services specifically comparing known FEMA flood extents with a 'bucket', Height Above Nearest Drainage model 
   - Comparison of known FEMA flood extents with a 'bucket' HAND model using raster data 
 
 <br>
 
-#### **INSTRUCTIONAL ASSISTANT**, University of California, Santa Barbara, CA<br/>***ENVS 193*** Professor Perrone, Debra **(Winter 2020)**
+#### **INSTRUCTIONAL ASSISTANT**, University of California, Santa Barbara, CA<br/>***ENVS 193*** [Profesor Perrone, Debra](https://www.es.ucsb.edu/debra-perrone) **(Winter Quarter 2021)**
   -	I am an instructional assistant in a class focused on teaching students how to organize, clean, manipulate and analyze large hydrological data sets using R
   - With my expertise in R, I provide technical programming support, contribute to writing labs, and leading portions of labs
-
 <br>  
 <br>
+<br>
+<br>  
 
 ## **SKILLS + INTERESTS**
 
@@ -81,7 +79,7 @@ library(mikedown)
 
 ##### **Skills:**
   -	Experienced using R as a platform for GIS and data analysis:
-    - Using **dplyr**, **tidyr**, **ggplot2**, **sp**, **sf**, and **leaflet** packages
+    - Using **dplyr**, **tidyr**, **ggplot2**, **sp**, **sf**, **shiny**, and **leaflet** packages
     - Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data 
     - Creating visualization of spatial data in R 
     - Creating reproducible code and workflow in R 
@@ -90,15 +88,17 @@ library(mikedown)
     - Working in GitHub repositories  
     - Experienced working with large, 'messy' government data sets, shape files, and time series data
     - Creating web sites in R using rmarkdown format and hosting by GitHub pages 
-    - Creating shiny dashboard apps
-    - **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 
+    - Creating Shiny dashboard apps
+    - [**Data science portfolio**](https://anguswg-ucsb.github.io/projects.html)
   -	Proficient in Microsoft Word and Excel
+  - Experienced using ArcGIS Pro
   
 ##### **Interests:**
   -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
   
 <br>
 <br>
+<br>  
 
 ## **WORK EXPERIENCE**
 
@@ -127,6 +127,7 @@ library(mikedown)
 
 <br>  
 <br>
+<br>  
 
 ## **VOLUNTEER EXPERIENCE**
 
@@ -141,30 +142,6 @@ library(mikedown)
   -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club.
   
 <br>
-<br>
-
-
-## **SKILLS + INTERESTS**
-
-----
-
-##### **Skills:**
-  -	Experienced using R as a platform for GIS and data analysis:
-    - Using dplyr, tidyr, ggplot2, sp, sf, and leaflet packages
-    - Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data 
-    - Creating visualization of spatial data in R 
-    - Creating reproducible code and workflow in R 
-    - Working with large, 'messy' government data sets, shape files, and time series data
-    - Scrapping data from the web
-    - Working in GitHub repositories  
-    - Experienced working with large, 'messy' government data sets, shape files, and time series data
-    - Creating web sites in R using rmarkdown format and hosting by GitHub pages 
-    - Creating shiny dashboard apps
-    - **GIS portfolio:** https://anguswg-ucsb.github.io/geog176A.html 
-  -	Proficient in Microsoft Word and Excel
-##### **Interests:**
-  -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
-
 <br>
 <br>
 
