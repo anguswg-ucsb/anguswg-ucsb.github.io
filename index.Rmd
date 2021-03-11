@@ -14,15 +14,12 @@ library(mikedown)
 
 
 
-# About me
+# ANGUS WATTERS
 
 ***
 
-### **My name is Angus Watters, welcome to my website!**
-
-<br>
-
-I am a senior at the University of California, Santa Barbara. I am majoring in Geography with an emphasis on GIS and I expect to graduate in the Spring of 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
+### **Welcome to my website!**
+My name is Angus Watters. I am a senior at the University of California, Santa Barbara. I am majoring in Geography with an emphasis on GIS and I expect to graduate in the Spring of 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
 
  As I near graduation, I am searching for opportunities where I can both apply and improve my skills in cleaning, organizing, and analyzing spatial and non-spatial data. I hope to find a position which matches my interest in environmental conservation, resource management, and data curation.
 
@@ -30,7 +27,9 @@ In my free time I enjoy spending time running, biking, drawing, gardening, and c
 
 ***  
 
-#### **`Email: adwattersgrubstein@umail.ucsb.edu`**<br>**`GitHub: https://github.com/anguswg-ucsb`**
+#### **`Email:` **adwattersgrubstein@umail.ucsb.edu**<br>
+<br>
+`GitHub:` https://github.com/anguswg-ucsb**
 
 <br>
 

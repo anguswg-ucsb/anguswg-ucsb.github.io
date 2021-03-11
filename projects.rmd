@@ -12,13 +12,31 @@ library(mikedown)
 ```
 
 ***
+### **[National Water Model](https://angus-watters.shinyapps.io/nwmHistoric/)**
+
+  - Built using R-Shiny flexdashboard
+  
+  - On-call shiny app for data exploration
+  
+  - Facilitates access to NOAA National Water Model reanalysis data through a convenient Shiny GUI.
+  
+  - Data source: [NOAA](https://water.noaa.gov/about/nwm)
+
+<br>
+
+  <center>
+![](img/nwm_shiny.png)
+</center>
+
+<br>
+<br>
+<br>
+
 ### **[COVID-19](https://angus-watters.shinyapps.io/covid-dashboard/)**
 
   - Built using R-Shiny dashboard
 
   - Tracking the COVID-19 pandemic in the United States
-
-  - Built using R-Shiny dashboard
   
   - Independent project 
   
