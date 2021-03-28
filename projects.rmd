@@ -52,6 +52,26 @@ library(mikedown)
 <br>
 <br>
 
+### **[Fantasy football player analysis](https://angus-watters.shinyapps.io/ffball/?_ga=2.46140647.1560190175.1616704255-1187783417.1609440081)**
+
+  - Built using R-Shiny flexdashboard
+
+  - A dashboard that allows the user to view NFL player data from the last 20 NFL seasons and explore various fantasy football advanced metrics
+
+  - Independent project, work in progress 
+  
+  - NFL webscraping data obtained through [nflfasrR package created by mrcaseb](https://github.com/mrcaseb/nflfastR)
+
+<br>
+
+  <center>
+![](img/ffball_shiny.png)
+</center>
+
+<br>
+<br>
+<br>
+
 ### **[USGS Groundwater](https://angus-watters.shinyapps.io/groundwater-dash/)**
 
   - Built using R-Shiny dashboard
