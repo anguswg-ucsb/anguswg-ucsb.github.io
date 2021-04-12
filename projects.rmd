@@ -12,6 +12,26 @@ library(mikedown)
 ```
 
 ***
+### **[NWIS Water use](https://angus-watters.shinyapps.io/WaterUse/?_ga=2.243022978.1093189296.1618237032-1187783417.1609440081)**
+
+  - Built using R-Shiny flexdashboard
+  
+  - On-call shiny app for US water sector withdrawals by county
+  
+  - Accesses and visualizes NWIS Water use data in a Shiny GUI.
+  
+  - Data source: [USGS](https://waterdata.usgs.gov/nwis/wu)
+
+<br>
+
+  <center>
+![](img/water_use.png)
+</center>
+
+<br>
+<br>
+<br>
+
 ### **[National Water Model](https://angus-watters.shinyapps.io/nwmHistoric/)** **( UNDER CONSTRUCTION )**
 
   - Built using R-Shiny flexdashboard
