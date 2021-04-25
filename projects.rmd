@@ -52,7 +52,7 @@ library(mikedown)
 <br>
 <br>
 
-### **[COVID-19](https://angus-watters.shinyapps.io/covid-dashboard/)**
+### **[COVID-19](https://angus-watters.shinyapps.io/covid-tracker/?_ga=2.209713810.1652100718.1619291563-1187783417.1609440081)**
 
   - Built using R-Shiny dashboard
 
@@ -65,7 +65,7 @@ library(mikedown)
 <br>
 
   <center>
-![](img/covid_dash_2.png)
+![](img/covid_tracker.png)
 </center>
 
 <br>
