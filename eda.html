@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<!-- Github Logo -->
+
+
+
+
+
+<title>CPO</title>
+
+<script src="eda_files/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="eda_files/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="eda_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="eda_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="eda_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="eda_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="eda_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="eda_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="eda_files/navigation-1.1/tabsets.js"></script>
+<script src="eda_files/navigation-1.1/codefolding.js"></script>
+<script src="eda_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="eda_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="eda_files/pagedtable-1.1/js/pagedtable.js"></script>
+<script src="eda_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="eda_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="eda_files/datatables-binding-0.16/datatables.js"></script>
+<link href="eda_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="eda_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="eda_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="eda_files/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="eda_files/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="eda_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="eda_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode {
+  overflow-x: visible;
+}
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="C:/Users/angus/OneDrive/Documents/R/win-library/4.0/mikedown/rmarkdown/templates/ucsb/resources/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+    <img style="margin-bottom: 20px" src="https://github.com/mikejohnson51/mikedown/raw/master/inst/rmarkdown/templates/ucsb/resources/ucsb-navy-white.png" alt="logo">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Angus Watters</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="projects.html">
+    <span class="fas fa-globe-americas"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
+  <a href="CV.html">
+    <span class="fas fa-leaf"></span>
+     
+    Resume
+  </a>
+</li>
+<li>
+  <a href="eda.html">
+    <span class="fas fa-leaf"></span>
+     
+    CPO
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">CPO</h1>
+
+</div>
+
+
+<div id="explority-data-analysis" class="section level1">
+<h1>Explority data analysis</h1>
+</div>
+<div id="angus-watters" class="section level1">
+<h1>Angus Watters</h1>
+</div>
+<div id="section" class="section level1">
+<h1>06/09/2021</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">library</span>(tidymodels) <span class="co"># modeling</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">library</span>(jtools) <span class="co"># Linear regression exploration</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">library</span>(vip) <span class="co"># Variable importance </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">library</span>(sensemakr) <span class="co"># sensitivty analysis </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">library</span>(psych) <span class="co"># correlation functions</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>df &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;C:/Users/angus/OneDrive/Desktop/lynker/CPO/data/model_data/model_data_non_spatial.rds&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">month =</span> lubridate<span class="op">::</span><span class="kw">month</span>(date), <span class="dt">year =</span> lubridate<span class="op">::</span><span class="kw">year</span>(date)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">season =</span> <span class="kw">case_when</span>(</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    month <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>) <span class="op">~</span><span class="st"> &quot;growing&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    month <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>) <span class="op">~</span><span class="st">&quot;not_growing&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  )</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="st">  </span><span class="kw">group_by</span>(year, season, district) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># calculate averages during growing and not growing seasons</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="st">  </span><span class="kw">summarize</span>(</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="dt">short_mean =</span> <span class="kw">mean</span>(short),</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="dt">prcp_mean =</span> <span class="kw">mean</span>(prcp),</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="dt">soilm_mean =</span> <span class="kw">mean</span>(soilm),</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    <span class="dt">pdsi_mean =</span> <span class="kw">mean</span>(pdsi_terra),</span>
+<span id="cb3-14"><a href="#cb3-14"></a>    <span class="dt">tavg_mean =</span> <span class="kw">mean</span>(tavg_c),</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="dt">swe_max =</span> <span class="kw">max</span>(swe), </span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="dt">spi1_mean =</span> <span class="kw">mean</span>(spi1),</span>
+<span id="cb3-17"><a href="#cb3-17"></a>    <span class="dt">spi12_mean =</span> <span class="kw">mean</span>(spi12),</span>
+<span id="cb3-18"><a href="#cb3-18"></a>    <span class="dt">water_deficit_mean =</span> <span class="kw">mean</span>(water_deficit),</span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="dt">aet_mean =</span> <span class="kw">mean</span>(aet)</span>
+<span id="cb3-20"><a href="#cb3-20"></a>  ) </span>
+<span id="cb3-21"><a href="#cb3-21"></a></span>
+<span id="cb3-22"><a href="#cb3-22"></a>df<span class="op">$</span>season &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df<span class="op">$</span>season)</span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="co"># seperate dataframes into growing and not growing, widen dataframe and make average columns for growing and not growing</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>grow &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="st">  </span><span class="kw">filter</span>(season <span class="op">==</span><span class="st"> &quot;growing&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> <span class="st">&quot;season&quot;</span>, <span class="dt">values_from =</span> <span class="kw">c</span>(short_mean<span class="op">:</span>aet_mean))</span>
+<span id="cb3-27"><a href="#cb3-27"></a>not_grow &lt;-<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="st">  </span><span class="kw">filter</span>(season <span class="op">==</span><span class="st"> &quot;not_growing&quot;</span>, year <span class="op">&gt;</span><span class="st"> </span><span class="dv">1979</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> <span class="st">&quot;season&quot;</span>, <span class="dt">values_from =</span> <span class="kw">c</span>(short_mean<span class="op">:</span>aet_mean))</span>
+<span id="cb3-30"><a href="#cb3-30"></a></span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="co"># join wider growing and not growing season dataframes </span></span>
+<span id="cb3-32"><a href="#cb3-32"></a>season_shorts &lt;-<span class="st"> </span><span class="kw">inner_join</span>(grow, not_grow, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;district&quot;</span>, <span class="st">&quot;year&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>season_shorts <span class="op">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">district =</span> <span class="kw">as.character</span>(district)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">fct_reorder</span>(district, short_mean_growing),</span>
+<span id="cb4-4"><a href="#cb4-4"></a>             short_mean_growing,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>             <span class="dt">fill =</span> district</span>
+<span id="cb4-6"><a href="#cb4-6"></a>  )) <span class="op">+</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="st">&quot;District&quot;</span>,</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="dt">y =</span> <span class="st">&quot;Growing season mean shortage&quot;</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  )</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df <span class="op">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">district =</span> <span class="kw">as.character</span>(district)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">fct_reorder</span>(district, short_mean),</span>
+<span id="cb5-4"><a href="#cb5-4"></a>             short_mean,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>             <span class="dt">fill =</span> season</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  )) <span class="op">+</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="st">  </span><span class="kw">coord_flip</span>() <span class="op">+</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="st">  </span><span class="kw">labs</span>(</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="st">&quot;District&quot;</span>,</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="dt">y =</span> <span class="st">&quot;Seasonal shortage mean&quot;</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>  )</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="correlation" class="section level1">
+<h1>Correlation</h1>
+<div id="correlation-matrix" class="section level2">
+<h2>Correlation matrix</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># isolate mean shortage during growing season</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>growing_season &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">select</span>(season_shorts, <span class="op">-</span>short_mean_not_growing) </span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>DT<span class="op">::</span><span class="kw">datatable</span>(<span class="kw">print</span>(<span class="kw">corr.test</span>(growing_season,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>          <span class="dt">use    =</span> <span class="st">&quot;pairwise&quot;</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>          <span class="dt">method =</span> <span class="st">&quot;pearson&quot;</span>,</span>
+<span id="cb6-7"><a href="#cb6-7"></a>          <span class="dt">adjust =</span> <span class="st">&quot;none&quot;</span>), <span class="dt">short =</span> <span class="ot">FALSE</span>))</span></code></pre></div>
+<pre><code>## Call:corr.test(x = growing_season, use = &quot;pairwise&quot;, method = &quot;pearson&quot;, 
+##     adjust = &quot;none&quot;)
+## Correlation matrix 
+##                                 year district short_mean_growing prcp_mean_growing soilm_mean_growing pdsi_mean_growing
+## year                            1.00     0.00               0.20             -0.22              -0.13             -0.28
+## district                        0.00     1.00              -0.24              0.07              -0.01             -0.01
+## short_mean_growing              0.20    -0.24               1.00             -0.45              -0.20             -0.36
+## prcp_mean_growing              -0.22     0.07              -0.45              1.00               0.31              0.56
+## soilm_mean_growing             -0.13    -0.01              -0.20              0.31               1.00              0.42
+## pdsi_mean_growing              -0.28    -0.01              -0.36              0.56               0.42              1.00
+## tavg_mean_growing               0.11    -0.19               0.34             -0.15              -0.74             -0.18
+## swe_max_growing                -0.12     0.12              -0.23              0.19               0.88              0.36
+## spi1_mean_growing              -0.17     0.00              -0.45              0.73               0.15              0.42
+## spi12_mean_growing             -0.22     0.01              -0.41              0.63               0.32              0.79
+## water_deficit_mean_growing      0.17    -0.15               0.45             -0.57              -0.77             -0.47
+## aet_mean_growing               -0.22     0.11              -0.52              0.90               0.45              0.60
+## prcp_mean_not_growing          -0.06    -0.11              -0.13              0.06               0.72              0.20
+## soilm_mean_not_growing         -0.23    -0.05              -0.14              0.21               0.87              0.40
+## pdsi_mean_not_growing          -0.26    -0.01              -0.34              0.47               0.27              0.86
+## tavg_mean_not_growing           0.16    -0.26               0.30             -0.01              -0.56             -0.15
+## swe_max_not_growing            -0.07     0.06              -0.19             -0.02               0.81              0.32
+## spi1_mean_not_growing          -0.11     0.02              -0.17              0.24               0.13              0.33
+## spi12_mean_not_growing         -0.27     0.01              -0.38              0.53               0.24              0.69
+## water_deficit_mean_not_growing  0.01    -0.05               0.15              0.03              -0.52             -0.08
+## aet_mean_not_growing            0.00    -0.27               0.06              0.05               0.05             -0.10
+##                                tavg_mean_growing swe_max_growing spi1_mean_growing spi12_mean_growing
+## year                                        0.11           -0.12             -0.17              -0.22
+## district                                   -0.19            0.12              0.00               0.01
+## short_mean_growing                          0.34           -0.23             -0.45              -0.41
+## prcp_mean_growing                          -0.15            0.19              0.73               0.63
+## soilm_mean_growing                         -0.74            0.88              0.15               0.32
+## pdsi_mean_growing                          -0.18            0.36              0.42               0.79
+## tavg_mean_growing                           1.00           -0.86             -0.24              -0.17
+## swe_max_growing                            -0.86            1.00              0.12               0.25
+## spi1_mean_growing                          -0.24            0.12              1.00               0.60
+## spi12_mean_growing                         -0.17            0.25              0.60               1.00
+## water_deficit_mean_growing                  0.87           -0.80             -0.51              -0.45
+## aet_mean_growing                           -0.32            0.35              0.66               0.60
+## prcp_mean_not_growing                      -0.64            0.70              0.16               0.09
+## soilm_mean_not_growing                     -0.65            0.79              0.12               0.30
+## pdsi_mean_not_growing                      -0.14            0.24              0.47               0.73
+## tavg_mean_not_growing                       0.87           -0.77             -0.05              -0.03
+## swe_max_not_growing                        -0.74            0.88             -0.02               0.17
+## spi1_mean_not_growing                      -0.08            0.14              0.06               0.28
+## spi12_mean_not_growing                     -0.19            0.25              0.57               0.82
+## water_deficit_mean_not_growing              0.71           -0.58             -0.16               0.01
+## aet_mean_not_growing                        0.04           -0.10              0.23              -0.05
+##                                water_deficit_mean_growing aet_mean_growing prcp_mean_not_growing soilm_mean_not_growing
+## year                                                 0.17            -0.22                 -0.06                  -0.23
+## district                                            -0.15             0.11                 -0.11                  -0.05
+## short_mean_growing                                   0.45            -0.52                 -0.13                  -0.14
+## prcp_mean_growing                                   -0.57             0.90                  0.06                   0.21
+## soilm_mean_growing                                  -0.77             0.45                  0.72                   0.87
+## pdsi_mean_growing                                   -0.47             0.60                  0.20                   0.40
+## tavg_mean_growing                                    0.87            -0.32                 -0.64                  -0.65
+## swe_max_growing                                     -0.80             0.35                  0.70                   0.79
+## spi1_mean_growing                                   -0.51             0.66                  0.16                   0.12
+## spi12_mean_growing                                  -0.45             0.60                  0.09                   0.30
+## water_deficit_mean_growing                           1.00            -0.70                 -0.58                  -0.67
+## aet_mean_growing                                    -0.70             1.00                  0.26                   0.38
+## prcp_mean_not_growing                               -0.58             0.26                  1.00                   0.72
+## soilm_mean_not_growing                              -0.67             0.38                  0.72                   1.00
+## pdsi_mean_not_growing                               -0.39             0.51                  0.29                   0.41
+## tavg_mean_not_growing                                0.72            -0.20                 -0.54                  -0.52
+## swe_max_not_growing                                 -0.63             0.27                  0.77                   0.75
+## spi1_mean_not_growing                               -0.18             0.27                  0.28                   0.13
+## spi12_mean_not_growing                              -0.42             0.55                  0.24                   0.36
+## water_deficit_mean_not_growing                       0.59            -0.13                 -0.80                  -0.57
+## aet_mean_not_growing                                 0.00            -0.01                  0.50                   0.14
+##                                pdsi_mean_not_growing tavg_mean_not_growing swe_max_not_growing spi1_mean_not_growing
+## year                                           -0.26                  0.16               -0.07                 -0.11
+## district                                       -0.01                 -0.26                0.06                  0.02
+## short_mean_growing                             -0.34                  0.30               -0.19                 -0.17
+## prcp_mean_growing                               0.47                 -0.01               -0.02                  0.24
+## soilm_mean_growing                              0.27                 -0.56                0.81                  0.13
+## pdsi_mean_growing                               0.86                 -0.15                0.32                  0.33
+## tavg_mean_growing                              -0.14                  0.87               -0.74                 -0.08
+## swe_max_growing                                 0.24                 -0.77                0.88                  0.14
+## spi1_mean_growing                               0.47                 -0.05               -0.02                  0.06
+## spi12_mean_growing                              0.73                 -0.03                0.17                  0.28
+## water_deficit_mean_growing                     -0.39                  0.72               -0.63                 -0.18
+## aet_mean_growing                                0.51                 -0.20                0.27                  0.27
+## prcp_mean_not_growing                           0.29                 -0.54                0.77                  0.28
+## soilm_mean_not_growing                          0.41                 -0.52                0.75                  0.13
+## pdsi_mean_not_growing                           1.00                 -0.12                0.24                  0.36
+## tavg_mean_not_growing                          -0.12                  1.00               -0.67                 -0.19
+## swe_max_not_growing                             0.24                 -0.67                1.00                  0.12
+## spi1_mean_not_growing                           0.36                 -0.19                0.12                  1.00
+## spi12_mean_not_growing                          0.80                 -0.12                0.15                  0.39
+## water_deficit_mean_not_growing                 -0.25                  0.69               -0.56                 -0.24
+## aet_mean_not_growing                            0.14                  0.18               -0.07                  0.23
+##                                spi12_mean_not_growing water_deficit_mean_not_growing aet_mean_not_growing
+## year                                            -0.27                           0.01                 0.00
+## district                                         0.01                          -0.05                -0.27
+## short_mean_growing                              -0.38                           0.15                 0.06
+## prcp_mean_growing                                0.53                           0.03                 0.05
+## soilm_mean_growing                               0.24                          -0.52                 0.05
+## pdsi_mean_growing                                0.69                          -0.08                -0.10
+## tavg_mean_growing                               -0.19                           0.71                 0.04
+## swe_max_growing                                  0.25                          -0.58                -0.10
+## spi1_mean_growing                                0.57                          -0.16                 0.23
+## spi12_mean_growing                               0.82                           0.01                -0.05
+## water_deficit_mean_growing                      -0.42                           0.59                 0.00
+## aet_mean_growing                                 0.55                          -0.13                -0.01
+## prcp_mean_not_growing                            0.24                          -0.80                 0.50
+## soilm_mean_not_growing                           0.36                          -0.57                 0.14
+## pdsi_mean_not_growing                            0.80                          -0.25                 0.14
+## tavg_mean_not_growing                           -0.12                           0.69                 0.18
+## swe_max_not_growing                              0.15                          -0.56                -0.07
+## spi1_mean_not_growing                            0.39                          -0.24                 0.23
+## spi12_mean_not_growing                           1.00                          -0.18                 0.14
+## water_deficit_mean_not_growing                  -0.18                           1.00                -0.46
+## aet_mean_not_growing                             0.14                          -0.46                 1.00
+## Sample Size 
+## [1] 363
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                                year district short_mean_growing prcp_mean_growing soilm_mean_growing pdsi_mean_growing
+## year                           0.00     1.00               0.00              0.00               0.01              0.00
+## district                       1.00     0.00               0.00              0.21               0.90              0.79
+## short_mean_growing             0.00     0.00               0.00              0.00               0.00              0.00
+## prcp_mean_growing              0.00     0.21               0.00              0.00               0.00              0.00
+## soilm_mean_growing             0.01     0.90               0.00              0.00               0.00              0.00
+## pdsi_mean_growing              0.00     0.79               0.00              0.00               0.00              0.00
+## tavg_mean_growing              0.04     0.00               0.00              0.00               0.00              0.00
+## swe_max_growing                0.02     0.03               0.00              0.00               0.00              0.00
+## spi1_mean_growing              0.00     0.94               0.00              0.00               0.00              0.00
+## spi12_mean_growing             0.00     0.80               0.00              0.00               0.00              0.00
+## water_deficit_mean_growing     0.00     0.00               0.00              0.00               0.00              0.00
+## aet_mean_growing               0.00     0.04               0.00              0.00               0.00              0.00
+## prcp_mean_not_growing          0.29     0.03               0.01              0.24               0.00              0.00
+## soilm_mean_not_growing         0.00     0.33               0.01              0.00               0.00              0.00
+## pdsi_mean_not_growing          0.00     0.85               0.00              0.00               0.00              0.00
+## tavg_mean_not_growing          0.00     0.00               0.00              0.81               0.00              0.00
+## swe_max_not_growing            0.21     0.28               0.00              0.71               0.00              0.00
+## spi1_mean_not_growing          0.04     0.77               0.00              0.00               0.01              0.00
+## spi12_mean_not_growing         0.00     0.82               0.00              0.00               0.00              0.00
+## water_deficit_mean_not_growing 0.80     0.31               0.00              0.61               0.00              0.11
+## aet_mean_not_growing           0.99     0.00               0.22              0.31               0.33              0.07
+##                                tavg_mean_growing swe_max_growing spi1_mean_growing spi12_mean_growing
+## year                                        0.04            0.02              0.00               0.00
+## district                                    0.00            0.03              0.94               0.80
+## short_mean_growing                          0.00            0.00              0.00               0.00
+## prcp_mean_growing                           0.00            0.00              0.00               0.00
+## soilm_mean_growing                          0.00            0.00              0.00               0.00
+## pdsi_mean_growing                           0.00            0.00              0.00               0.00
+## tavg_mean_growing                           0.00            0.00              0.00               0.00
+## swe_max_growing                             0.00            0.00              0.03               0.00
+## spi1_mean_growing                           0.00            0.03              0.00               0.00
+## spi12_mean_growing                          0.00            0.00              0.00               0.00
+## water_deficit_mean_growing                  0.00            0.00              0.00               0.00
+## aet_mean_growing                            0.00            0.00              0.00               0.00
+## prcp_mean_not_growing                       0.00            0.00              0.00               0.08
+## soilm_mean_not_growing                      0.00            0.00              0.02               0.00
+## pdsi_mean_not_growing                       0.01            0.00              0.00               0.00
+## tavg_mean_not_growing                       0.00            0.00              0.34               0.53
+## swe_max_not_growing                         0.00            0.00              0.73               0.00
+## spi1_mean_not_growing                       0.12            0.01              0.25               0.00
+## spi12_mean_not_growing                      0.00            0.00              0.00               0.00
+## water_deficit_mean_not_growing              0.00            0.00              0.00               0.87
+## aet_mean_not_growing                        0.48            0.05              0.00               0.30
+##                                water_deficit_mean_growing aet_mean_growing prcp_mean_not_growing soilm_mean_not_growing
+## year                                                 0.00             0.00                  0.29                   0.00
+## district                                             0.00             0.04                  0.03                   0.33
+## short_mean_growing                                   0.00             0.00                  0.01                   0.01
+## prcp_mean_growing                                    0.00             0.00                  0.24                   0.00
+## soilm_mean_growing                                   0.00             0.00                  0.00                   0.00
+## pdsi_mean_growing                                    0.00             0.00                  0.00                   0.00
+## tavg_mean_growing                                    0.00             0.00                  0.00                   0.00
+## swe_max_growing                                      0.00             0.00                  0.00                   0.00
+## spi1_mean_growing                                    0.00             0.00                  0.00                   0.02
+## spi12_mean_growing                                   0.00             0.00                  0.08                   0.00
+## water_deficit_mean_growing                           0.00             0.00                  0.00                   0.00
+## aet_mean_growing                                     0.00             0.00                  0.00                   0.00
+## prcp_mean_not_growing                                0.00             0.00                  0.00                   0.00
+## soilm_mean_not_growing                               0.00             0.00                  0.00                   0.00
+## pdsi_mean_not_growing                                0.00             0.00                  0.00                   0.00
+## tavg_mean_not_growing                                0.00             0.00                  0.00                   0.00
+## swe_max_not_growing                                  0.00             0.00                  0.00                   0.00
+## spi1_mean_not_growing                                0.00             0.00                  0.00                   0.01
+## spi12_mean_not_growing                               0.00             0.00                  0.00                   0.00
+## water_deficit_mean_not_growing                       0.00             0.01                  0.00                   0.00
+## aet_mean_not_growing                                 0.96             0.88                  0.00                   0.01
+##                                pdsi_mean_not_growing tavg_mean_not_growing swe_max_not_growing spi1_mean_not_growing
+## year                                            0.00                  0.00                0.21                  0.04
+## district                                        0.85                  0.00                0.28                  0.77
+## short_mean_growing                              0.00                  0.00                0.00                  0.00
+## prcp_mean_growing                               0.00                  0.81                0.71                  0.00
+## soilm_mean_growing                              0.00                  0.00                0.00                  0.01
+## pdsi_mean_growing                               0.00                  0.00                0.00                  0.00
+## tavg_mean_growing                               0.01                  0.00                0.00                  0.12
+## swe_max_growing                                 0.00                  0.00                0.00                  0.01
+## spi1_mean_growing                               0.00                  0.34                0.73                  0.25
+## spi12_mean_growing                              0.00                  0.53                0.00                  0.00
+## water_deficit_mean_growing                      0.00                  0.00                0.00                  0.00
+## aet_mean_growing                                0.00                  0.00                0.00                  0.00
+## prcp_mean_not_growing                           0.00                  0.00                0.00                  0.00
+## soilm_mean_not_growing                          0.00                  0.00                0.00                  0.01
+## pdsi_mean_not_growing                           0.00                  0.02                0.00                  0.00
+## tavg_mean_not_growing                           0.02                  0.00                0.00                  0.00
+## swe_max_not_growing                             0.00                  0.00                0.00                  0.02
+## spi1_mean_not_growing                           0.00                  0.00                0.02                  0.00
+## spi12_mean_not_growing                          0.00                  0.02                0.00                  0.00
+## water_deficit_mean_not_growing                  0.00                  0.00                0.00                  0.00
+## aet_mean_not_growing                            0.01                  0.00                0.16                  0.00
+##                                spi12_mean_not_growing water_deficit_mean_not_growing aet_mean_not_growing
+## year                                             0.00                           0.80                 0.99
+## district                                         0.82                           0.31                 0.00
+## short_mean_growing                               0.00                           0.00                 0.22
+## prcp_mean_growing                                0.00                           0.61                 0.31
+## soilm_mean_growing                               0.00                           0.00                 0.33
+## pdsi_mean_growing                                0.00                           0.11                 0.07
+## tavg_mean_growing                                0.00                           0.00                 0.48
+## swe_max_growing                                  0.00                           0.00                 0.05
+## spi1_mean_growing                                0.00                           0.00                 0.00
+## spi12_mean_growing                               0.00                           0.87                 0.30
+## water_deficit_mean_growing                       0.00                           0.00                 0.96
+## aet_mean_growing                                 0.00                           0.01                 0.88
+## prcp_mean_not_growing                            0.00                           0.00                 0.00
+## soilm_mean_not_growing                           0.00                           0.00                 0.01
+## pdsi_mean_not_growing                            0.00                           0.00                 0.01
+## tavg_mean_not_growing                            0.02                           0.00                 0.00
+## swe_max_not_growing                              0.00                           0.00                 0.16
+## spi1_mean_not_growing                            0.00                           0.00                 0.00
+## spi12_mean_not_growing                           0.00                           0.00                 0.01
+## water_deficit_mean_not_growing                   0.00                           0.00                 0.00
+## aet_mean_not_growing                             0.01                           0.00                 0.00
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##               raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## year-dstrc        -0.10  0.00      0.10  1.00     -0.19      0.19
+## year-shr__         0.10  0.20      0.29  0.00      0.01      0.37
+## year-prc__        -0.32 -0.22     -0.12  0.00     -0.40     -0.03
+## year-slm__        -0.23 -0.13     -0.03  0.01     -0.31      0.06
+## year-pds__        -0.38 -0.28     -0.19  0.00     -0.45     -0.10
+## year-tvg__         0.01  0.11      0.21  0.04     -0.08      0.29
+## year-sw_m_        -0.22 -0.12     -0.02  0.02     -0.31      0.07
+## year-sp1__        -0.27 -0.17     -0.07  0.00     -0.35      0.02
+## year-sp12__       -0.32 -0.22     -0.12  0.00     -0.40     -0.03
+## year-wt___         0.07  0.17      0.27  0.00     -0.02      0.35
+## year-at_m_        -0.32 -0.22     -0.12  0.00     -0.40     -0.03
+## year-pr___        -0.16 -0.06      0.05  0.29     -0.24      0.14
+## year-sl___        -0.33 -0.23     -0.13  0.00     -0.41     -0.04
+## year-pd___        -0.35 -0.26     -0.16  0.00     -0.43     -0.07
+## year-tv___         0.06  0.16      0.26  0.00     -0.04      0.34
+## year-sw___        -0.17 -0.07      0.04  0.21     -0.25      0.13
+## year-s1___        -0.21 -0.11      0.00  0.04     -0.29      0.09
+## year-s12___       -0.37 -0.27     -0.18  0.00     -0.44     -0.09
+## year-w____        -0.09  0.01      0.12  0.80     -0.18      0.20
+## year-at___        -0.10  0.00      0.10  0.99     -0.19      0.19
+## dstrc-shr__       -0.33 -0.24     -0.14  0.00     -0.41     -0.05
+## dstrc-prc__       -0.04  0.07      0.17  0.21     -0.13      0.25
+## dstrc-slm__       -0.11 -0.01      0.10  0.90     -0.20      0.19
+## dstrc-pds__       -0.12 -0.01      0.09  0.79     -0.20      0.18
+## dstrc-tvg__       -0.29 -0.19     -0.09  0.00     -0.37      0.00
+## dstrc-sw_m_        0.01  0.12      0.22  0.03     -0.08      0.30
+## dstrc-sp1__       -0.11  0.00      0.10  0.94     -0.19      0.19
+## dstrc-sp12__      -0.09  0.01      0.12  0.80     -0.18      0.20
+## dstrc-wt___       -0.25 -0.15     -0.05  0.00     -0.33      0.04
+## dstrc-at_m_        0.00  0.11      0.21  0.04     -0.09      0.29
+## dstrc-pr___       -0.21 -0.11     -0.01  0.03     -0.30      0.08
+## dstrc-sl___       -0.15 -0.05      0.05  0.33     -0.24      0.14
+## dstrc-pd___       -0.11 -0.01      0.09  0.85     -0.20      0.18
+## dstrc-tv___       -0.35 -0.26     -0.16  0.00     -0.43     -0.07
+## dstrc-sw___       -0.05  0.06      0.16  0.28     -0.14      0.25
+## dstrc-s1___       -0.09  0.02      0.12  0.77     -0.18      0.21
+## dstrc-s12___      -0.09  0.01      0.11  0.82     -0.18      0.20
+## dstrc-w____       -0.16 -0.05      0.05  0.31     -0.24      0.14
+## dstrc-at___       -0.37 -0.27     -0.18  0.00     -0.44     -0.09
+## shr__-prc__       -0.53 -0.45     -0.37  0.00     -0.59     -0.29
+## shr__-slm__       -0.30 -0.20     -0.10  0.00     -0.38     -0.01
+## shr__-pds__       -0.44 -0.36     -0.26  0.00     -0.51     -0.18
+## shr__-tvg__        0.24  0.34      0.42  0.00      0.15      0.50
+## shr__-sw_m_       -0.33 -0.23     -0.13  0.00     -0.41     -0.04
+## shr__-sp1__       -0.53 -0.45     -0.37  0.00     -0.59     -0.29
+## shr__-sp12__      -0.49 -0.41     -0.32  0.00     -0.56     -0.24
+## shr__-wt___        0.36  0.45      0.53  0.00      0.28      0.59
+## shr__-at_m_       -0.59 -0.52     -0.44  0.00     -0.65     -0.37
+## shr__-pr___       -0.23 -0.13     -0.03  0.01     -0.31      0.06
+## shr__-sl___       -0.24 -0.14     -0.04  0.01     -0.33      0.05
+## shr__-pd___       -0.42 -0.34     -0.24  0.00     -0.50     -0.15
+## shr__-tv___        0.20  0.30      0.39  0.00      0.12      0.47
+## shr__-sw___       -0.29 -0.19     -0.09  0.00     -0.37      0.00
+## shr__-s1___       -0.27 -0.17     -0.07  0.00     -0.35      0.02
+## shr__-s12___      -0.47 -0.38     -0.29  0.00     -0.53     -0.21
+## shr__-w____        0.05  0.15      0.25  0.00     -0.04      0.33
+## shr__-at___       -0.04  0.06      0.17  0.22     -0.13      0.25
+## prc__-slm__        0.21  0.31      0.40  0.00      0.12      0.47
+## prc__-pds__        0.48  0.56      0.62  0.00      0.41      0.68
+## prc__-tvg__       -0.25 -0.15     -0.05  0.00     -0.33      0.04
+## prc__-sw_m_        0.09  0.19      0.29  0.00      0.00      0.37
+## prc__-sp1__        0.68  0.73      0.78  0.00      0.63      0.81
+## prc__-sp12__       0.57  0.63      0.69  0.00      0.50      0.74
+## prc__-wt___       -0.63 -0.57     -0.49  0.00     -0.69     -0.42
+## prc__-at_m_        0.88  0.90      0.92  0.00      0.86      0.93
+## prc__-pr___       -0.04  0.06      0.16  0.24     -0.13      0.25
+## prc__-sl___        0.11  0.21      0.30  0.00      0.02      0.38
+## prc__-pd___        0.38  0.47      0.54  0.00      0.30      0.60
+## prc__-tv___       -0.12 -0.01      0.09  0.81     -0.20      0.18
+## prc__-sw___       -0.12 -0.02      0.08  0.71     -0.21      0.17
+## prc__-s1___        0.14  0.24      0.33  0.00      0.05      0.41
+## prc__-s12___       0.46  0.53      0.60  0.00      0.38      0.66
+## prc__-w____       -0.08  0.03      0.13  0.61     -0.16      0.22
+## prc__-at___       -0.05  0.05      0.16  0.31     -0.14      0.24
+## slm__-pds__        0.33  0.42      0.50  0.00      0.25      0.56
+## slm__-tvg__       -0.78 -0.74     -0.69  0.00     -0.81     -0.63
+## slm__-sw_m_        0.86  0.88      0.90  0.00      0.83      0.92
+## slm__-sp1__        0.05  0.15      0.25  0.00     -0.04      0.33
+## slm__-sp12__       0.22  0.32      0.41  0.00      0.14      0.48
+## slm__-wt___       -0.81 -0.77     -0.73  0.00     -0.84     -0.68
+## slm__-at_m_        0.36  0.45      0.53  0.00      0.28      0.59
+## slm__-pr___        0.66  0.72      0.76  0.00      0.61      0.80
+## slm__-sl___        0.84  0.87      0.89  0.00      0.82      0.91
+## slm__-pd___        0.18  0.27      0.37  0.00      0.09      0.44
+## slm__-tv___       -0.62 -0.56     -0.48  0.00     -0.68     -0.41
+## slm__-sw___        0.78  0.81      0.85  0.00      0.74      0.87
+## slm__-s1___        0.03  0.13      0.23  0.01     -0.06      0.31
+## slm__-s12___       0.14  0.24      0.33  0.00      0.05      0.41
+## slm__-w____       -0.59 -0.52     -0.44  0.00     -0.65     -0.37
+## slm__-at___       -0.05  0.05      0.15  0.33     -0.14      0.24
+## pds__-tvg__       -0.28 -0.18     -0.08  0.00     -0.36      0.01
+## pds__-sw_m_        0.26  0.36      0.44  0.00      0.18      0.51
+## pds__-sp1__        0.33  0.42      0.50  0.00      0.25      0.57
+## pds__-sp12__       0.75  0.79      0.83  0.00      0.71      0.86
+## pds__-wt___       -0.55 -0.47     -0.39  0.00     -0.61     -0.31
+## pds__-at_m_        0.53  0.60      0.66  0.00      0.46      0.71
+## pds__-pr___        0.10  0.20      0.30  0.00      0.01      0.38
+## pds__-sl___        0.31  0.40      0.48  0.00      0.22      0.55
+## pds__-pd___        0.83  0.86      0.89  0.00      0.80      0.90
+## pds__-tv___       -0.25 -0.15     -0.05  0.00     -0.33      0.04
+## pds__-sw___        0.22  0.32      0.41  0.00      0.13      0.48
+## pds__-s1___        0.23  0.33      0.42  0.00      0.15      0.49
+## pds__-s12___       0.63  0.69      0.74  0.00      0.57      0.78
+## pds__-w____       -0.19 -0.08      0.02  0.11     -0.27      0.11
+## pds__-at___       -0.20 -0.10      0.01  0.07     -0.28      0.10
+## tvg__-sw_m_       -0.89 -0.86     -0.83  0.00     -0.90     -0.80
+## tvg__-sp1__       -0.33 -0.24     -0.14  0.00     -0.41     -0.05
+## tvg__-sp12__      -0.27 -0.17     -0.07  0.00     -0.35      0.02
+## tvg__-wt___        0.84  0.87      0.89  0.00      0.81      0.91
+## tvg__-at_m_       -0.41 -0.32     -0.22  0.00     -0.48     -0.14
+## tvg__-pr___       -0.70 -0.64     -0.57  0.00     -0.74     -0.51
+## tvg__-sl___       -0.71 -0.65     -0.59  0.00     -0.75     -0.53
+## tvg__-pd___       -0.24 -0.14     -0.04  0.01     -0.32      0.05
+## tvg__-tv___        0.85  0.87      0.89  0.00      0.82      0.91
+## tvg__-sw___       -0.78 -0.74     -0.69  0.00     -0.81     -0.63
+## tvg__-s1___       -0.18 -0.08      0.02  0.12     -0.27      0.11
+## tvg__-s12___      -0.29 -0.19     -0.09  0.00     -0.37      0.00
+## tvg__-w____        0.65  0.71      0.76  0.00      0.60      0.79
+## tvg__-at___       -0.07  0.04      0.14  0.48     -0.16      0.23
+## sw_m_-sp1__        0.01  0.12      0.22  0.03     -0.08      0.30
+## sw_m_-sp12__       0.16  0.25      0.35  0.00      0.07      0.42
+## sw_m_-wt___       -0.84 -0.80     -0.77  0.00     -0.86     -0.73
+## sw_m_-at_m_        0.26  0.35      0.44  0.00      0.17      0.51
+## sw_m_-pr___        0.64  0.70      0.75  0.00      0.58      0.78
+## sw_m_-sl___        0.74  0.79      0.82  0.00      0.70      0.85
+## sw_m_-pd___        0.14  0.24      0.34  0.00      0.05      0.41
+## sw_m_-tv___       -0.81 -0.77     -0.73  0.00     -0.84     -0.68
+## sw_m_-sw___        0.85  0.88      0.90  0.00      0.82      0.91
+## sw_m_-s1___        0.04  0.14      0.24  0.01     -0.05      0.32
+## sw_m_-s12___       0.15  0.25      0.34  0.00      0.06      0.42
+## sw_m_-w____       -0.65 -0.58     -0.51  0.00     -0.70     -0.44
+## sw_m_-at___       -0.20 -0.10      0.00  0.05     -0.29      0.09
+## sp1__-sp12__       0.53  0.60      0.66  0.00      0.46      0.71
+## sp1__-wt___       -0.59 -0.51     -0.43  0.00     -0.64     -0.36
+## sp1__-at_m_        0.60  0.66      0.72  0.00      0.54      0.76
+## sp1__-pr___        0.06  0.16      0.26  0.00     -0.03      0.34
+## sp1__-sl___        0.02  0.12      0.22  0.02     -0.07      0.31
+## sp1__-pd___        0.38  0.47      0.54  0.00      0.30      0.60
+## sp1__-tv___       -0.15 -0.05      0.05  0.34     -0.24      0.14
+## sp1__-sw___       -0.12 -0.02      0.08  0.73     -0.21      0.17
+## sp1__-s1___       -0.04  0.06      0.16  0.25     -0.13      0.25
+## sp1__-s12___       0.49  0.57      0.63  0.00      0.42      0.69
+## sp1__-w____       -0.26 -0.16     -0.06  0.00     -0.34      0.03
+## sp1__-at___        0.13  0.23      0.33  0.00      0.04      0.40
+## sp12__-wt___      -0.53 -0.45     -0.36  0.00     -0.59     -0.28
+## sp12__-at_m_       0.53  0.60      0.66  0.00      0.46      0.71
+## sp12__-pr___      -0.01  0.09      0.19  0.08     -0.10      0.28
+## sp12__-sl___       0.21  0.30      0.39  0.00      0.12      0.47
+## sp12__-pd___       0.68  0.73      0.78  0.00      0.63      0.81
+## sp12__-tv___      -0.14 -0.03      0.07  0.53     -0.22      0.16
+## sp12__-sw___       0.06  0.17      0.26  0.00     -0.03      0.35
+## sp12__-s1___       0.18  0.28      0.37  0.00      0.10      0.45
+## sp12__-s12___      0.78  0.82      0.85  0.00      0.74      0.87
+## sp12__-w____      -0.09  0.01      0.11  0.87     -0.18      0.20
+## sp12__-at___      -0.16 -0.05      0.05  0.30     -0.24      0.14
+## wt___-at_m_       -0.75 -0.70     -0.64  0.00     -0.78     -0.58
+## wt___-pr___       -0.64 -0.58     -0.51  0.00     -0.69     -0.43
+## wt___-sl___       -0.72 -0.67     -0.61  0.00     -0.76     -0.55
+## wt___-pd___       -0.47 -0.39     -0.29  0.00     -0.54     -0.21
+## wt___-tv___        0.66  0.72      0.76  0.00      0.61      0.80
+## wt___-sw___       -0.69 -0.63     -0.57  0.00     -0.74     -0.50
+## wt___-s1___       -0.28 -0.18     -0.08  0.00     -0.36      0.01
+## wt___-s12___      -0.50 -0.42     -0.33  0.00     -0.57     -0.25
+## wt___-w____        0.52  0.59      0.65  0.00      0.45      0.70
+## wt___-at___       -0.10  0.00      0.11  0.96     -0.19      0.19
+## at_m_-pr___        0.16  0.26      0.35  0.00      0.07      0.43
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 44 rows ]</code></pre>
+<div id="htmlwidget-0acb26459bdfbf701ab8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0acb26459bdfbf701ab8">{"x":{"filter":"none","data":[["year-dstrc","year-shr__","year-prc__","year-slm__","year-pds__","year-tvg__","year-sw_m_","year-sp1__","year-sp12__","year-wt___","year-at_m_","year-pr___","year-sl___","year-pd___","year-tv___","year-sw___","year-s1___","year-s12___","year-w____","year-at___","dstrc-shr__","dstrc-prc__","dstrc-slm__","dstrc-pds__","dstrc-tvg__","dstrc-sw_m_","dstrc-sp1__","dstrc-sp12__","dstrc-wt___","dstrc-at_m_","dstrc-pr___","dstrc-sl___","dstrc-pd___","dstrc-tv___","dstrc-sw___","dstrc-s1___","dstrc-s12___","dstrc-w____","dstrc-at___","shr__-prc__","shr__-slm__","shr__-pds__","shr__-tvg__","shr__-sw_m_","shr__-sp1__","shr__-sp12__","shr__-wt___","shr__-at_m_","shr__-pr___","shr__-sl___","shr__-pd___","shr__-tv___","shr__-sw___","shr__-s1___","shr__-s12___","shr__-w____","shr__-at___","prc__-slm__","prc__-pds__","prc__-tvg__","prc__-sw_m_","prc__-sp1__","prc__-sp12__","prc__-wt___","prc__-at_m_","prc__-pr___","prc__-sl___","prc__-pd___","prc__-tv___","prc__-sw___","prc__-s1___","prc__-s12___","prc__-w____","prc__-at___","slm__-pds__","slm__-tvg__","slm__-sw_m_","slm__-sp1__","slm__-sp12__","slm__-wt___","slm__-at_m_","slm__-pr___","slm__-sl___","slm__-pd___","slm__-tv___","slm__-sw___","slm__-s1___","slm__-s12___","slm__-w____","slm__-at___","pds__-tvg__","pds__-sw_m_","pds__-sp1__","pds__-sp12__","pds__-wt___","pds__-at_m_","pds__-pr___","pds__-sl___","pds__-pd___","pds__-tv___","pds__-sw___","pds__-s1___","pds__-s12___","pds__-w____","pds__-at___","tvg__-sw_m_","tvg__-sp1__","tvg__-sp12__","tvg__-wt___","tvg__-at_m_","tvg__-pr___","tvg__-sl___","tvg__-pd___","tvg__-tv___","tvg__-sw___","tvg__-s1___","tvg__-s12___","tvg__-w____","tvg__-at___","sw_m_-sp1__","sw_m_-sp12__","sw_m_-wt___","sw_m_-at_m_","sw_m_-pr___","sw_m_-sl___","sw_m_-pd___","sw_m_-tv___","sw_m_-sw___","sw_m_-s1___","sw_m_-s12___","sw_m_-w____","sw_m_-at___","sp1__-sp12__","sp1__-wt___","sp1__-at_m_","sp1__-pr___","sp1__-sl___","sp1__-pd___","sp1__-tv___","sp1__-sw___","sp1__-s1___","sp1__-s12___","sp1__-w____","sp1__-at___","sp12__-wt___","sp12__-at_m_","sp12__-pr___","sp12__-sl___","sp12__-pd___","sp12__-tv___","sp12__-sw___","sp12__-s1___","sp12__-s12___","sp12__-w____","sp12__-at___","wt___-at_m_","wt___-pr___","wt___-sl___","wt___-pd___","wt___-tv___","wt___-sw___","wt___-s1___","wt___-s12___","wt___-w____","wt___-at___","at_m_-pr___","at_m_-sl___","at_m_-pd___","at_m_-tv___","at_m_-sw___","at_m_-s1___","at_m_-s12___","at_m_-w____","at_m_-at___","pr___-sl___","pr___-pd___","pr___-tv___","pr___-sw___","pr___-s1___","pr___-s12___","pr___-w____","pr___-at___","sl___-pd___","sl___-tv___","sl___-sw___","sl___-s1___","sl___-s12___","sl___-w____","sl___-at___","pd___-tv___","pd___-sw___","pd___-s1___","pd___-s12___","pd___-w____","pd___-at___","tv___-sw___","tv___-s1___","tv___-s12___","tv___-w____","tv___-at___","sw___-s1___","sw___-s12___","sw___-w____","sw___-at___","s1___-s12___","s1___-w____","s1___-at___","s12___-w____","s12___-at___","w____-at___"],[-0.1,0.1,-0.32,-0.23,-0.38,0.01,-0.22,-0.27,-0.32,0.07,-0.32,-0.16,-0.33,-0.35,0.06,-0.17,-0.21,-0.37,-0.09,-0.1,-0.33,-0.04,-0.11,-0.12,-0.29,0.01,-0.11,-0.09,-0.25,0,-0.21,-0.15,-0.11,-0.35,-0.05,-0.09,-0.09,-0.16,-0.37,-0.53,-0.3,-0.44,0.24,-0.33,-0.53,-0.49,0.36,-0.59,-0.23,-0.24,-0.42,0.2,-0.29,-0.27,-0.47,0.05,-0.04,0.21,0.48,-0.25,0.09,0.68,0.57,-0.63,0.88,-0.04,0.11,0.38,-0.12,-0.12,0.14,0.46,-0.08,-0.05,0.33,-0.78,0.86,0.05,0.22,-0.81,0.36,0.66,0.84,0.18,-0.62,0.78,0.03,0.14,-0.59,-0.05,-0.28,0.26,0.33,0.75,-0.55,0.53,0.1,0.31,0.83,-0.25,0.22,0.23,0.63,-0.19,-0.2,-0.89,-0.33,-0.27,0.84,-0.41,-0.7,-0.71,-0.24,0.85,-0.78,-0.18,-0.29,0.65,-0.07,0.01,0.16,-0.84,0.26,0.64,0.74,0.14,-0.81,0.85,0.04,0.15,-0.65,-0.2,0.53,-0.59,0.6,0.06,0.02,0.38,-0.15,-0.12,-0.04,0.49,-0.26,0.13,-0.53,0.53,-0.01,0.21,0.68,-0.14,0.06,0.18,0.78,-0.09,-0.16,-0.75,-0.64,-0.72,-0.47,0.66,-0.69,-0.28,-0.5,0.52,-0.1,0.16,0.29,0.43,-0.3,0.17,0.17,0.47,-0.23,-0.11,0.67,0.19,-0.61,0.72,0.19,0.14,-0.84,0.42,0.32,-0.59,0.7,0.03,0.27,-0.64,0.04,-0.22,0.14,0.27,0.76,-0.35,0.04,-0.72,-0.28,-0.22,0.63,0.07,0.02,0.05,-0.63,-0.18,0.3,-0.34,0.13,-0.28,0.04,-0.53],[0,0.2,-0.22,-0.13,-0.28,0.11,-0.12,-0.17,-0.22,0.17,-0.22,-0.06,-0.23,-0.26,0.16,-0.07,-0.11,-0.27,0.01,0,-0.24,0.07,-0.01,-0.01,-0.19,0.12,-0,0.01,-0.15,0.11,-0.11,-0.05,-0.01,-0.26,0.06,0.02,0.01,-0.05,-0.27,-0.45,-0.2,-0.36,0.34,-0.23,-0.45,-0.41,0.45,-0.52,-0.13,-0.14,-0.34,0.3,-0.19,-0.17,-0.38,0.15,0.06,0.31,0.56,-0.15,0.19,0.73,0.63,-0.57,0.9,0.06,0.21,0.47,-0.01,-0.02,0.24,0.53,0.03,0.05,0.42,-0.74,0.88,0.15,0.32,-0.77,0.45,0.72,0.87,0.27,-0.56,0.81,0.13,0.24,-0.52,0.05,-0.18,0.36,0.42,0.79,-0.47,0.6,0.2,0.4,0.86,-0.15,0.32,0.33,0.69,-0.08,-0.1,-0.86,-0.24,-0.17,0.87,-0.32,-0.64,-0.65,-0.14,0.87,-0.74,-0.08,-0.19,0.71,0.04,0.12,0.25,-0.8,0.35,0.7,0.79,0.24,-0.77,0.88,0.14,0.25,-0.58,-0.1,0.6,-0.51,0.66,0.16,0.12,0.47,-0.05,-0.02,0.06,0.57,-0.16,0.23,-0.45,0.6,0.09,0.3,0.73,-0.03,0.17,0.28,0.82,0.01,-0.05,-0.7,-0.58,-0.67,-0.39,0.72,-0.63,-0.18,-0.42,0.59,0,0.26,0.38,0.51,-0.2,0.27,0.27,0.55,-0.13,-0.01,0.72,0.29,-0.54,0.77,0.28,0.24,-0.8,0.5,0.41,-0.52,0.75,0.13,0.36,-0.57,0.14,-0.12,0.24,0.36,0.8,-0.25,0.14,-0.67,-0.19,-0.12,0.69,0.18,0.12,0.15,-0.56,-0.07,0.39,-0.24,0.23,-0.18,0.14,-0.46],[0.1,0.29,-0.12,-0.03,-0.19,0.21,-0.02,-0.07,-0.12,0.27,-0.12,0.05,-0.13,-0.16,0.26,0.04,-0,-0.18,0.12,0.1,-0.14,0.17,0.1,0.09,-0.09,0.22,0.1,0.12,-0.05,0.21,-0.01,0.05,0.09,-0.16,0.16,0.12,0.11,0.05,-0.18,-0.37,-0.1,-0.26,0.42,-0.13,-0.37,-0.32,0.53,-0.44,-0.03,-0.04,-0.24,0.39,-0.09,-0.07,-0.29,0.25,0.17,0.4,0.62,-0.05,0.29,0.78,0.69,-0.49,0.92,0.16,0.3,0.54,0.09,0.08,0.33,0.6,0.13,0.16,0.5,-0.69,0.9,0.25,0.41,-0.73,0.53,0.76,0.89,0.37,-0.48,0.85,0.23,0.33,-0.44,0.15,-0.08,0.44,0.5,0.83,-0.39,0.66,0.3,0.48,0.89,-0.05,0.41,0.42,0.74,0.02,0.01,-0.83,-0.14,-0.07,0.89,-0.22,-0.57,-0.59,-0.04,0.89,-0.69,0.02,-0.09,0.76,0.14,0.22,0.35,-0.77,0.44,0.75,0.82,0.34,-0.73,0.9,0.24,0.34,-0.51,-0,0.66,-0.43,0.72,0.26,0.22,0.54,0.05,0.08,0.16,0.63,-0.06,0.33,-0.36,0.66,0.19,0.39,0.78,0.07,0.26,0.37,0.85,0.11,0.05,-0.64,-0.51,-0.61,-0.29,0.76,-0.57,-0.08,-0.33,0.65,0.11,0.35,0.47,0.58,-0.1,0.36,0.36,0.61,-0.03,0.1,0.77,0.38,-0.46,0.81,0.38,0.33,-0.76,0.58,0.49,-0.44,0.79,0.23,0.45,-0.5,0.24,-0.02,0.33,0.44,0.84,-0.15,0.24,-0.61,-0.08,-0.02,0.74,0.27,0.22,0.25,-0.49,0.03,0.47,-0.14,0.32,-0.08,0.24,-0.37],[1,0,0,0.01,0,0.04,0.02,0,0,0,0,0.29,0,0,0,0.21,0.04,0,0.8,0.99,0,0.21,0.9,0.79,0,0.03,0.94,0.8,0,0.04,0.03,0.33,0.85,0,0.28,0.77,0.82,0.31,0,0,0,0,0,0,0,0,0,0,0.01,0.01,0,0,0,0,0,0,0.22,0,0,0,0,0,0,0,0,0.24,0,0,0.81,0.71,0,0,0.61,0.31,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,0,0.33,0,0,0,0,0,0,0,0,0,0,0,0,0,0.11,0.07,0,0,0,0,0,0,0,0.01,0,0,0.12,0,0,0.48,0.03,0,0,0,0,0,0,0,0,0.01,0,0,0.05,0,0,0,0,0.02,0,0.34,0.73,0.25,0,0,0,0,0,0.08,0,0,0.53,0,0,0,0.87,0.3,0,0,0,0,0,0,0,0,0,0.96,0,0,0,0,0,0,0,0.01,0.88,0,0,0,0,0,0,0,0,0,0,0,0.01,0,0,0.01,0.02,0,0,0,0,0.01,0,0,0.02,0,0,0.02,0,0,0.16,0,0,0,0,0.01,0],[-0.19,0.01,-0.4,-0.31,-0.45,-0.08,-0.31,-0.35,-0.4,-0.02,-0.4,-0.24,-0.41,-0.43,-0.04,-0.25,-0.29,-0.44,-0.18,-0.19,-0.41,-0.13,-0.2,-0.2,-0.37,-0.08,-0.19,-0.18,-0.33,-0.09,-0.3,-0.24,-0.2,-0.43,-0.14,-0.18,-0.18,-0.24,-0.44,-0.59,-0.38,-0.51,0.15,-0.41,-0.59,-0.56,0.28,-0.65,-0.31,-0.33,-0.5,0.12,-0.37,-0.35,-0.53,-0.04,-0.13,0.12,0.41,-0.33,0,0.63,0.5,-0.69,0.86,-0.13,0.02,0.3,-0.2,-0.21,0.05,0.38,-0.16,-0.14,0.25,-0.81,0.83,-0.04,0.14,-0.84,0.28,0.61,0.82,0.09,-0.68,0.74,-0.06,0.05,-0.65,-0.14,-0.36,0.18,0.25,0.71,-0.61,0.46,0.01,0.22,0.8,-0.33,0.13,0.15,0.57,-0.27,-0.28,-0.9,-0.41,-0.35,0.81,-0.48,-0.74,-0.75,-0.32,0.82,-0.81,-0.27,-0.37,0.6,-0.16,-0.08,0.07,-0.86,0.17,0.58,0.7,0.05,-0.84,0.82,-0.05,0.06,-0.7,-0.29,0.46,-0.64,0.54,-0.03,-0.07,0.3,-0.24,-0.21,-0.13,0.42,-0.34,0.04,-0.59,0.46,-0.1,0.12,0.63,-0.22,-0.03,0.1,0.74,-0.18,-0.24,-0.78,-0.69,-0.76,-0.54,0.61,-0.74,-0.36,-0.57,0.45,-0.19,0.07,0.21,0.35,-0.38,0.08,0.08,0.4,-0.32,-0.2,0.62,0.1,-0.66,0.68,0.1,0.05,-0.86,0.35,0.23,-0.65,0.66,-0.06,0.18,-0.69,-0.05,-0.31,0.05,0.18,0.72,-0.42,-0.05,-0.76,-0.36,-0.3,0.58,-0.02,-0.07,-0.04,-0.68,-0.26,0.21,-0.41,0.04,-0.36,-0.05,-0.59],[0.19,0.37,-0.03,0.06,-0.1,0.29,0.07,0.02,-0.03,0.35,-0.03,0.14,-0.04,-0.07,0.34,0.13,0.09,-0.09,0.2,0.19,-0.05,0.25,0.19,0.18,0,0.3,0.19,0.2,0.04,0.29,0.08,0.14,0.18,-0.07,0.25,0.21,0.2,0.14,-0.09,-0.29,-0.01,-0.18,0.5,-0.04,-0.29,-0.24,0.59,-0.37,0.06,0.05,-0.15,0.47,-0,0.02,-0.21,0.33,0.25,0.47,0.68,0.04,0.37,0.81,0.74,-0.42,0.93,0.25,0.38,0.6,0.18,0.17,0.41,0.66,0.22,0.24,0.56,-0.63,0.92,0.33,0.48,-0.68,0.59,0.8,0.91,0.44,-0.41,0.87,0.31,0.41,-0.37,0.24,0.01,0.51,0.57,0.86,-0.31,0.71,0.38,0.55,0.9,0.04,0.48,0.49,0.78,0.11,0.1,-0.8,-0.05,0.02,0.91,-0.14,-0.51,-0.53,0.05,0.91,-0.63,0.11,0,0.79,0.23,0.3,0.42,-0.73,0.51,0.78,0.85,0.41,-0.68,0.91,0.32,0.42,-0.44,0.09,0.71,-0.36,0.76,0.34,0.31,0.6,0.14,0.17,0.25,0.69,0.03,0.4,-0.28,0.71,0.28,0.47,0.81,0.16,0.35,0.45,0.87,0.2,0.14,-0.58,-0.43,-0.55,-0.21,0.8,-0.5,0.01,-0.25,0.7,0.19,0.43,0.54,0.64,-0.01,0.44,0.44,0.67,0.06,0.18,0.8,0.45,-0.39,0.84,0.45,0.41,-0.72,0.63,0.55,-0.37,0.82,0.31,0.52,-0.43,0.32,0.07,0.41,0.51,0.86,-0.06,0.33,-0.55,0.01,0.07,0.78,0.35,0.3,0.33,-0.41,0.12,0.54,-0.05,0.4,0.01,0.33,-0.29]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>raw.lower<\/th>\n      <th>raw.r<\/th>\n      <th>raw.upper<\/th>\n      <th>raw.p<\/th>\n      <th>lower.adj<\/th>\n      <th>upper.adj<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="variable-correlation" class="section level2">
+<h2>Variable correlation</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">pairs</span>(<span class="dt">data =</span> growing_season, short_mean_growing<span class="op">~</span>spi1_mean_growing <span class="op">+</span><span class="st"> </span>spi1_mean_not_growing <span class="op">+</span><span class="st"> </span>swe_max_growing <span class="op">+</span><span class="st"> </span>swe_max_not_growing <span class="op">+</span><span class="st"> </span>tavg_mean_growing<span class="op">+</span><span class="st">  </span>tavg_mean_not_growing)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="correlation-histograms" class="section level2">
+<h2>Correlation histograms</h2>
+<div id="growing-season-correlations" class="section level3">
+<h3>Growing season correlations</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>grow_corr &lt;-<span class="st"> </span>growing_season[,<span class="dv">3</span><span class="op">:</span><span class="dv">12</span>]</span>
+<span id="cb9-2"><a href="#cb9-2"></a>PerformanceAnalytics<span class="op">::</span><span class="kw">chart.Correlation</span>(grow_corr,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>                   <span class="dt">method=</span><span class="st">&quot;pearson&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>                   <span class="dt">histogram=</span><span class="ot">TRUE</span>,</span>
+<span id="cb9-5"><a href="#cb9-5"></a>                   <span class="dt">pch=</span><span class="dv">16</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="non-growing-season-correlations" class="section level3">
+<h3>Non growing season correlations</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>nongrow_corr &lt;-<span class="st"> </span>growing_season[,<span class="dv">13</span><span class="op">:</span><span class="dv">21</span>]</span>
+<span id="cb10-2"><a href="#cb10-2"></a>PerformanceAnalytics<span class="op">::</span><span class="kw">chart.Correlation</span>(nongrow_corr,</span>
+<span id="cb10-3"><a href="#cb10-3"></a>                   <span class="dt">method=</span><span class="st">&quot;pearson&quot;</span>,</span>
+<span id="cb10-4"><a href="#cb10-4"></a>                   <span class="dt">histogram=</span><span class="ot">TRUE</span>,</span>
+<span id="cb10-5"><a href="#cb10-5"></a>                   <span class="dt">pch=</span><span class="dv">16</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="linear-regression-model" class="section level1">
+<h1><em>Linear regression model</em></h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># linear model specifications</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>lm_fit &lt;-<span class="st"> </span><span class="kw">lm</span>(short_mean_growing<span class="op">~</span>., <span class="dt">data =</span> growing_season)</span></code></pre></div>
+<div id="extract-variable-importance-scores" class="section level2">
+<h2>Extract Variable importance scores</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>vip<span class="op">::</span><span class="kw">vip</span>(lm_fit, </span>
+<span id="cb12-2"><a href="#cb12-2"></a>          <span class="dt">mapping =</span> <span class="kw">aes_string</span>(<span class="dt">fill =</span> <span class="st">&quot;Sign&quot;</span>),</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="dt">aesthetics =</span> <span class="kw">list</span>(<span class="dt">color =</span> <span class="st">&quot;black&quot;</span>), <span class="dt">num_features =</span> <span class="dv">20</span>) </span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="coefficient-summary" class="section level2">
+<h2>Coefficient summary</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>jtools<span class="op">::</span><span class="kw">summ</span>(lm_fit, <span class="dt">scale=</span> <span class="ot">TRUE</span>, <span class="dt">center =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Observations
+</td>
+<td style="text-align:right;">
+363
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Dependent variable
+</td>
+<td style="text-align:right;">
+short_mean_growing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Type
+</td>
+<td style="text-align:right;">
+OLS linear regression
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+F(20,342)
+</td>
+<td style="text-align:right;">
+14.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+R²
+</td>
+<td style="text-align:right;">
+0.46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Adj. R²
+</td>
+<td style="text-align:right;">
+0.43
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Est.
+</th>
+<th style="text-align:right;">
+S.E.
+</th>
+<th style="text-align:right;">
+t val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+705.60
+</td>
+<td style="text-align:right;">
+37.08
+</td>
+<td style="text-align:right;">
+19.03
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+year
+</td>
+<td style="text-align:right;">
+12.13
+</td>
+<td style="text-align:right;">
+44.23
+</td>
+<td style="text-align:right;">
+0.27
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+district
+</td>
+<td style="text-align:right;">
+-80.32
+</td>
+<td style="text-align:right;">
+42.72
+</td>
+<td style="text-align:right;">
+-1.88
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+prcp_mean_growing
+</td>
+<td style="text-align:right;">
+-246.04
+</td>
+<td style="text-align:right;">
+214.25
+</td>
+<td style="text-align:right;">
+-1.15
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+soilm_mean_growing
+</td>
+<td style="text-align:right;">
+-127.85
+</td>
+<td style="text-align:right;">
+161.81
+</td>
+<td style="text-align:right;">
+-0.79
+</td>
+<td style="text-align:right;">
+0.43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+pdsi_mean_growing
+</td>
+<td style="text-align:right;">
+-81.21
+</td>
+<td style="text-align:right;">
+130.05
+</td>
+<td style="text-align:right;">
+-0.62
+</td>
+<td style="text-align:right;">
+0.53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+tavg_mean_growing
+</td>
+<td style="text-align:right;">
+811.90
+</td>
+<td style="text-align:right;">
+196.30
+</td>
+<td style="text-align:right;">
+4.14
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+swe_max_growing
+</td>
+<td style="text-align:right;">
+440.56
+</td>
+<td style="text-align:right;">
+188.20
+</td>
+<td style="text-align:right;">
+2.34
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+spi1_mean_growing
+</td>
+<td style="text-align:right;">
+-105.81
+</td>
+<td style="text-align:right;">
+84.47
+</td>
+<td style="text-align:right;">
+-1.25
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+spi12_mean_growing
+</td>
+<td style="text-align:right;">
+-69.33
+</td>
+<td style="text-align:right;">
+104.54
+</td>
+<td style="text-align:right;">
+-0.66
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+water_deficit_mean_growing
+</td>
+<td style="text-align:right;">
+-808.12
+</td>
+<td style="text-align:right;">
+224.26
+</td>
+<td style="text-align:right;">
+-3.60
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+aet_mean_growing
+</td>
+<td style="text-align:right;">
+-416.80
+</td>
+<td style="text-align:right;">
+190.86
+</td>
+<td style="text-align:right;">
+-2.18
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+prcp_mean_not_growing
+</td>
+<td style="text-align:right;">
+357.88
+</td>
+<td style="text-align:right;">
+157.95
+</td>
+<td style="text-align:right;">
+2.27
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+soilm_mean_not_growing
+</td>
+<td style="text-align:right;">
+207.98
+</td>
+<td style="text-align:right;">
+108.82
+</td>
+<td style="text-align:right;">
+1.91
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+pdsi_mean_not_growing
+</td>
+<td style="text-align:right;">
+-42.38
+</td>
+<td style="text-align:right;">
+128.31
+</td>
+<td style="text-align:right;">
+-0.33
+</td>
+<td style="text-align:right;">
+0.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+tavg_mean_not_growing
+</td>
+<td style="text-align:right;">
+402.90
+</td>
+<td style="text-align:right;">
+128.17
+</td>
+<td style="text-align:right;">
+3.14
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+swe_max_not_growing
+</td>
+<td style="text-align:right;">
+-458.81
+</td>
+<td style="text-align:right;">
+192.86
+</td>
+<td style="text-align:right;">
+-2.38
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+spi1_mean_not_growing
+</td>
+<td style="text-align:right;">
+21.58
+</td>
+<td style="text-align:right;">
+51.15
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+<td style="text-align:right;">
+0.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+spi12_mean_not_growing
+</td>
+<td style="text-align:right;">
+-84.44
+</td>
+<td style="text-align:right;">
+98.66
+</td>
+<td style="text-align:right;">
+-0.86
+</td>
+<td style="text-align:right;">
+0.39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+water_deficit_mean_not_growing
+</td>
+<td style="text-align:right;">
+-119.20
+</td>
+<td style="text-align:right;">
+113.22
+</td>
+<td style="text-align:right;">
+-1.05
+</td>
+<td style="text-align:right;">
+0.29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+aet_mean_not_growing
+</td>
+<td style="text-align:right;">
+-270.36
+</td>
+<td style="text-align:right;">
+101.95
+</td>
+<td style="text-align:right;">
+-2.65
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: OLS; Continuous predictors are mean-centered and scaled by 1 s.d.
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="effect-plots-regression-estimates" class="section level2">
+<h2><strong>Effect plots:</strong> regression estimates</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>p1 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> spi1_mean_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>p2 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> spi1_mean_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a>p3 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> tavg_mean_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a>p4 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> tavg_mean_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a>p5 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> spi12_mean_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-6"><a href="#cb14-6"></a>p6 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> spi12_mean_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-7"><a href="#cb14-7"></a>p7 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> swe_max_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-8"><a href="#cb14-8"></a>p8 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> swe_max_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-9"><a href="#cb14-9"></a>p9 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> prcp_mean_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-10"><a href="#cb14-10"></a>p10 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> prcp_mean_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-11"><a href="#cb14-11"></a>p11 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> pdsi_mean_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-12"><a href="#cb14-12"></a>p12 &lt;-<span class="st"> </span>jtools<span class="op">::</span><span class="kw">effect_plot</span>(lm_fit, <span class="dt">pred =</span> pdsi_mean_not_growing,  <span class="dt">interval =</span> <span class="ot">TRUE</span>, <span class="dt">plot.points =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb14-13"><a href="#cb14-13"></a>cowplot<span class="op">::</span><span class="kw">plot_grid</span>(p1, p2, p3, p4, p5, p6,  <span class="dt">label_size =</span> <span class="dv">10</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>cowplot<span class="op">::</span><span class="kw">plot_grid</span>(p7, p8, p9, p10, p11, p12, <span class="dt">label_size =</span> <span class="dv">10</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+</div>
+<div id="regression-coefficient-plots" class="section level1">
+<h1>Regression coefficient plots</h1>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">plot_summs</span>(lm_fit, <span class="dt">plot.distributions =</span> <span class="ot">TRUE</span>, <span class="dt">scale =</span> <span class="ot">TRUE</span>, <span class="dt">colors =</span> <span class="st">&#39;Rainbow&#39;</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># plot_coefs(lm_fit, scale = TRUE)</span></span></code></pre></div>
+</div>
+<div id="coefficient-uncertainty-as-normal-distributions" class="section level1">
+<h1>Coefficient uncertainty as normal distributions</h1>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">plot_summs</span>(lm_fit, <span class="dt">scale =</span> <span class="ot">TRUE</span>, <span class="dt">plot.distributions =</span> <span class="ot">TRUE</span>, <span class="dt">inner_ci_level =</span> <span class="fl">.9</span>)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="sensitivity-analysis" class="section level1">
+<h1>Sensitivity analysis</h1>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>short_sensitivity &lt;-<span class="st"> </span>sensemakr<span class="op">::</span><span class="kw">sensemakr</span>(<span class="dt">model =</span> lm_fit, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>                                <span class="dt">treatment =</span> <span class="st">&quot;spi1_mean_growing&quot;</span>,</span>
+<span id="cb19-3"><a href="#cb19-3"></a>                                <span class="dt">benchmark_covariates =</span> <span class="st">&quot;district&quot;</span>,</span>
+<span id="cb19-4"><a href="#cb19-4"></a>                                <span class="dt">kd =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,</span>
+<span id="cb19-5"><a href="#cb19-5"></a>                                <span class="dt">ky =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, </span>
+<span id="cb19-6"><a href="#cb19-6"></a>                                <span class="dt">q =</span> <span class="dv">1</span>,</span>
+<span id="cb19-7"><a href="#cb19-7"></a>                                <span class="dt">alpha =</span> <span class="fl">0.05</span>, </span>
+<span id="cb19-8"><a href="#cb19-8"></a>                                <span class="dt">reduce =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="kw">plot</span>(short_sensitivity)</span></code></pre></div>
+<p><img src="eda_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+
+
+
+&nbsp;
+<hr />
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+&nbsp;
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>
