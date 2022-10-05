@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-
-<!-- Github Logo -->
-
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
 <title>Resume</title>
 
-<script src="CV_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="CV_files/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
-<script src="CV_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="CV_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="CV_files/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="CV_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="CV_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="CV_files/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="CV_files/navigation-1.1/tabsets.js"></script>
-<script src="CV_files/navigation-1.1/codefolding.js"></script>
-<script src="CV_files/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="CV_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="CV_files/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="CV_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="CV_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-
-
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
-<link rel="stylesheet" href="C:/Users/angus/OneDrive/Documents/R/win-library/4.0/mikedown/rmarkdown/templates/ucsb/resources/style.css" type="text/css" />
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
-</head>
 
-<body>
+
+
+
+
+
+
 
 <style type = "text/css">
 .main-container {
@@ -75,58 +72,71 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
 }
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 54px;
-  padding-bottom: 40px;
+.dropdown-submenu {
+  position: relative;
 }
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
 }
-
-.section h2 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
 }
-.section h3 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
 }
-.section h4 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
 }
-.section h5 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu.pull-left {
+  float: none;
 }
-.section h6 {
-  padding-top: 59px;
-  margin-top: -59px;
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -137,62 +147,85 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
-
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
-
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -206,6 +239,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -241,8 +280,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -252,11 +289,20 @@ div.tocify {
 
 </style>
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
-    <img style="margin-bottom: 20px" src="https://github.com/mikejohnson51/mikedown/raw/master/inst/rmarkdown/templates/ucsb/resources/ucsb-navy-white.png" alt="logo">
 </div>
 </div>
 
@@ -268,32 +314,32 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Angus Watters</a>
+      <a class="navbar-brand" href="index.html"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
     Home
   </a>
 </li>
 <li>
   <a href="projects.html">
-    <span class="fas fa-globe-americas"></span>
+    <span class="fa fa-globe"></span>
      
     Projects
   </a>
 </li>
 <li>
   <a href="CV.html">
-    <span class="fas fa-leaf"></span>
+    <span class="fa fa-leaf"></span>
      
     Resume
   </a>
@@ -306,15 +352,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
-
-<div class="btn-group pull-right">
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-</ul>
-</div>
+<div id="header">
 
 
 
@@ -326,128 +364,220 @@ div.tocify {
 <hr />
 <div id="angus-watters" class="section level1">
 <h1><strong>ANGUS WATTERS</strong></h1>
-<div id="ben-lomond-dr.-santa-barbara-ca-93105-805.895.1590-adwattersgrubsteinucsb.edu" class="section level4">
-<h4>2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| <a href="mailto:adwattersgrubstein@ucsb.edu" class="email">adwattersgrubstein@ucsb.edu</a></h4>
-<p><br> <br></p>
+<div
+id="ben-lomond-dr.-santa-barbara-ca-93105-805.895.1590-anguswattersgmail.com"
+class="section level4">
+<h4>2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| <a
+href="mailto:anguswatters@gmail.com"
+class="email">anguswatters@gmail.com</a></h4>
+<p><br></p>
 </div>
 <div id="work-objective" class="section level2">
 <h2><strong>WORK OBJECTIVE</strong></h2>
-<hr />
-<div id="i-am-a-senior-expecting-to-graduate-in-the-spring-of-2021-with-a-b.a.-in-geography-with-an-emphasis-on-gis-at-the-university-of-california-santa-barbara.-i-am-looking-for-a-position-to-utilize-my-responsible-work-ethic-and-enthusiasm-for-learning.-i-am-a-quick-learner-ready-and-willing-to-take-training-for-any-position.-i-have-a-thirst-for-knowledge-and-look-forward-to-continued-growth-after-graduation.-i-believe-to-be-a-responsible-employee-one-must-tackle-every-task-with-diligence-and-care." class="section level4">
-<h4>I am a senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.</h4>
-<p><br> <br><br />
+<p>I am a data scientists and data engineer, working remotely for Lynker
+Technologies out of Santa Barbara, CA. I am passionate about all things
+data science, programming, and machine learning. I specialize in spatial
+data collection, aggregation, statistical analysis, and visualization. I
+have experience creating interactive R Shiny Dashboards, R packages,
+implementing machine learning model workflows, and deploying software
+solutions for clients through REST API services. I have a thirst for
+knowledge and try to continue my growth and education each day. I
+believe to be a responsible employee one must tackle every task with
+diligence and care.<br />
 <br></p>
-</div>
 </div>
 <div id="education" class="section level2">
 <h2><strong>EDUCATION</strong></h2>
-<hr />
-<div id="university-of-california-santa-barbara-2019-present-expected-graduation-spring-2021" class="section level4">
-<h4><strong>UNIVERSITY OF CALIFORNIA, SANTA BARBARA –</strong> (2019 – present | Expected graduation Spring 2021)</h4>
-<ul>
-<li><h5 id="b.a.-in-geography-with-an-emphasis-in-geographic-information-science-gpa-3.624.0"><em>B.A. in Geography with an Emphasis in Geographic Information Science (GPA: 3.62/4.0)</em></h5></li>
-</ul>
+<div id="university-of-california-santa-barbara-2019-2021"
+class="section level4">
+<h4><strong>UNIVERSITY OF CALIFORNIA, SANTA BARBARA –</strong> (2019 –
+2021)</h4>
+<div
+id="b.a.-in-geography-with-an-emphasis-in-geographic-information-science-gpa-3.624.0"
+class="section level5">
+<h5><em>B.A. in Geography with an Emphasis in Geographic Information
+Science (GPA: 3.62/4.0)</em></h5>
 <p><br></p>
+</div>
 </div>
 <div id="santa-barbara-city-college-2016--2018" class="section level4">
 <h4><strong>SANTA BARBARA CITY COLLEGE –</strong> (2016- 2018)</h4>
-<p><br> <br><br />
-<br></p>
+<p><br></p>
 </div>
 </div>
 <div id="relevant-experience" class="section level2">
 <h2><strong>RELEVANT EXPERIENCE</strong></h2>
-<hr />
-<div id="us-groundwater-research-university-of-california-santa-barbara-ca-research-assistant-professor-perrone-debra-2019---present" class="section level4">
-<h4><strong>US GROUNDWATER RESEARCH</strong>, University of California, Santa Barbara, CA<br/><strong><em>Research assistant</em></strong>, <a href="https://www.es.ucsb.edu/debra-perrone">Professor Perrone, Debra</a> <strong>(2019 - present)</strong></h4>
+<div
+id="lynker-technologies-remote-out-of-santa-barbara-ca-spatial-data-scientist-2021---present"
+class="section level4">
+<h4><strong>Lynker Technologies</strong>, Remote out of Santa Barbara,
+CA<br/> <strong><em>Spatial Data Scientist</em></strong>, <strong>(2021
+- present)</strong></h4>
 <ul>
-<li>Analyzing spatial and non-spatial US Geological Survey and state groundwater data in R</li>
+<li>Wrangling, cleaning, and management of client data</li>
+<li>Developing hydrologic/spatial machine learning model workflows,
+starting with data acquisition and ending with a production ready
+analytic model that meets client needs</li>
+<li>Developing and deploying interactive data visualization technologies
+(R Shiny) to view incremental progress on tasks or as a final product to
+clients.</li>
+<li>Creating REST API services for clients</li>
+<li>R Package development</li>
+<li>Creating and maintaining project code bases through GitHub</li>
+<li>Presenting technical write ups and documentation for the client to
+convey results or work in progress</li>
+</ul>
+<p><br></p>
+</div>
+<div
+id="us-groundwater-research-university-of-california-santa-barbara-ca-research-assistant-professor-perrone-debra-2019---2021"
+class="section level4">
+<h4><strong>US GROUNDWATER RESEARCH</strong>, University of California,
+Santa Barbara, CA<br/><strong><em>Research assistant</em></strong>, <a
+href="https://www.es.ucsb.edu/debra-perrone">Professor Perrone,
+Debra</a> <strong>(2019 - 2021)</strong></h4>
+<ul>
+<li>Analyzing spatial and non-spatial US Geological Survey and state
+groundwater data in R</li>
 <li>Focus on the analysis of groundwater well depths and pumping</li>
-<li>Analysis of the results of different state level sustainable groundwater management approaches</li>
+<li>Analysis of the results of different state level sustainable
+groundwater management approaches</li>
 </ul>
 <p><br></p>
 </div>
-<div id="flood-mapping-research-university-of-california-santa-barbara-ca-research-assistant-mike-johnson-ucsb-phd-candidate-2020---present" class="section level4">
-<h4><strong>FLOOD MAPPING RESEARCH</strong>, University of California, Santa Barbara, CA<br/><strong><em>Research assistant</em></strong>, <a href="https://mikejohnson51.github.io/">Mike Johnson, UCSB PhD candidate</a> <strong>(2020 - present)</strong></h4>
+<div
+id="flood-mapping-research-university-of-california-santa-barbara-ca-research-assistant-mike-johnson-ucsb-phd-candidate-2020---present"
+class="section level4">
+<h4><strong>FLOOD MAPPING RESEARCH</strong>, University of California,
+Santa Barbara, CA<br/><strong><em>Research assistant</em></strong>, <a
+href="https://mikejohnson51.github.io/">Mike Johnson, UCSB PhD
+candidate</a> <strong>(2020 - present)</strong></h4>
 <ul>
-<li>Mapping terrain-based flood extents, with the goal of produce a continental flood map that can be used in real time for Emergency Medical Services specifically comparing known FEMA flood extents with a ‘bucket’, Height Above Nearest Drainage model</li>
-<li>Comparison of known FEMA flood extents with a ‘bucket’ HAND model using raster data</li>
+<li>Mapping terrain-based flood extents, with the goal of produce a
+continental flood map that can be used in real time for Emergency
+Medical Services specifically comparing known FEMA flood extents with a
+‘bucket’, Height Above Nearest Drainage model</li>
+<li>Comparison of known FEMA flood extents with a ‘bucket’ HAND model
+using raster data</li>
 </ul>
 <p><br></p>
 </div>
-<div id="instructional-assistant-university-of-california-santa-barbara-ca-envs-193-profesor-perrone-debra-winter-quarter-2021" class="section level4">
-<h4><strong>INSTRUCTIONAL ASSISTANT</strong>, University of California, Santa Barbara, CA<br/><strong><em>ENVS 193</em></strong> <a href="https://www.es.ucsb.edu/debra-perrone">Profesor Perrone, Debra</a> <strong>(Winter Quarter 2021)</strong></h4>
+<div
+id="instructional-assistant-university-of-california-santa-barbara-ca-envs-193-profesor-perrone-debra-winter-quarter-2021"
+class="section level4">
+<h4><strong>INSTRUCTIONAL ASSISTANT</strong>, University of California,
+Santa Barbara, CA<br/><strong><em>ENVS 193</em></strong> <a
+href="https://www.es.ucsb.edu/debra-perrone">Profesor Perrone, Debra</a>
+<strong>(Winter Quarter 2021)</strong></h4>
 <ul>
-<li>I am an instructional assistant in a class focused on teaching students how to organize, clean, manipulate and analyze large hydrological data sets using R</li>
-<li>With my expertise in R, I provide technical programming support, contribute to writing labs, and leading portions of labs <br><br />
+<li>I am an instructional assistant in a class focused on teaching
+students how to organize, clean, manipulate and analyze large
+hydrological data sets using R</li>
+<li>With my expertise in R, I provide technical programming support,
+contribute to writing labs, and leading portions of labs <br><br />
 <br> <br> <br></li>
 </ul>
 </div>
 </div>
 <div id="skills-interests" class="section level2">
 <h2><strong>SKILLS + INTERESTS</strong></h2>
-<hr />
 <div id="skills" class="section level5">
 <h5><strong>Skills:</strong></h5>
 <ul>
-<li>Experienced using R as a platform for GIS and data analysis:
+<li><a href="https://anguswg-ucsb.github.io/projects.html"><strong>Data
+Science Portfolio</strong></a></li>
+<li>Highly proficient using R as a tool for data science and GIS:
 <ul>
-<li>Using <strong>dplyr</strong>, <strong>tidyr</strong>, <strong>ggplot2</strong>, <strong>sp</strong>, <strong>sf</strong>, <strong>shiny</strong>, and <strong>leaflet</strong> packages</li>
-<li>Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data</li>
-<li>Creating visualization of spatial data in R</li>
+<li>Cleaning, organizing, aggregating, and analyzing both spatial and
+non-spatial data</li>
+<li>Implementing Machine Learning Models from data ingestion to
+deployment</li>
+<li>Using various ML modeling frameworks (Decision trees, SVMs, Neural
+Networks, etc.)</li>
+<li>Processing text data for use in NLP ML models</li>
+<li>Creating R Shiny interactive dashboards</li>
+<li>Creating data visualizations in R</li>
+<li>REST API Development</li>
+<li>R package development</li>
 <li>Creating reproducible code and workflow in R</li>
-<li>Working with large, ‘messy’ government data sets, shape files, and time series data</li>
-<li>Scrapping data from the web</li>
-<li>Working in GitHub repositories<br />
-</li>
-<li>Experienced working with large, ‘messy’ government data sets, shape files, and time series data</li>
-<li>Creating web sites in R using rmarkdown format and hosting by GitHub pages</li>
-<li>Creating Shiny dashboard apps</li>
-<li><a href="https://anguswg-ucsb.github.io/projects.html"><strong>Data science portfolio</strong></a></li>
+<li>Working in GitHub repositories and maintaining clean and up-to-date
+code bases.</li>
+<li>Web scraping</li>
+<li>Working with large, ‘messy’ government data sets, shape files, and
+time series data</li>
 </ul></li>
-<li>Proficient in Microsoft Word and Excel</li>
+<li>Experienced using SQL</li>
+<li>Proficient in Python</li>
+<li>Experienced working and creating Docker images</li>
+<li>Experienced deploying docker images as containers within virtual
+machines onto a Cloud Infrastructure Provider (AWS, DigitalOcean).</li>
+<li>Working within cloud service environments</li>
+<li>Progressing through AWS Solutions Architect certificate</li>
+<li>Able to work with CSS and HTML code</li>
+<li>Proficient in Microsoft Office</li>
 <li>Experienced using ArcGIS Pro</li>
 </ul>
 </div>
 <div id="interests" class="section level5">
 <h5><strong>Interests:</strong></h5>
 <ul>
-<li>I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach</li>
+<li>I enjoy an active lifestyle (running, biking, swimming, rowing,
+kayaking), gardening, playing card/board games, drawing, and spending
+time with friends and family.</li>
 </ul>
 <p><br> <br> <br></p>
 </div>
 </div>
-<div id="work-experience" class="section level2">
-<h2><strong>WORK EXPERIENCE</strong></h2>
-<hr />
-<div id="santa-barbara-running-santa-barbara-ca-sales-representative-2019---present" class="section level4">
-<h4><strong>SANTA BARBARA RUNNING</strong>, Santa Barbara, CA<br/><em>Sales Representative</em> <strong>(2019 - present)</strong></h4>
+<div id="other-work-experience" class="section level2">
+<h2><strong>OTHER WORK EXPERIENCE</strong></h2>
+<div
+id="santa-barbara-running-santa-barbara-ca-sales-representative-2019---present"
+class="section level4">
+<h4><strong>SANTA BARBARA RUNNING</strong>, Santa Barbara,
+CA<br/><em>Sales Representative</em> <strong>(2019 -
+present)</strong></h4>
 <ul>
-<li>Provided information and options on shoes based on an individual’s goals and needs</li>
-<li>Comfortably multitask, ensuring optimal response to customers’ requests</li>
+<li>Provided information and options on shoes based on an individual’s
+goals and needs</li>
+<li>Comfortably multitask, ensuring optimal response to customers’
+requests</li>
 </ul>
 <p><br></p>
 </div>
-<div id="gallup-stribling-orchids-carpinteria-ca-sales-representative-2018" class="section level4">
-<h4><strong>GALLUP &amp; STRIBLING ORCHIDS</strong>, Carpinteria, CA<br/><em>Sales Representative</em> <strong>(2018)</strong></h4>
+<div
+id="gallup-stribling-orchids-carpinteria-ca-sales-representative-2018"
+class="section level4">
+<h4><strong>GALLUP &amp; STRIBLING ORCHIDS</strong>, Carpinteria,
+CA<br/><em>Sales Representative</em> <strong>(2018)</strong></h4>
 <ul>
-<li>Provided exceptional customer service while processing phone orders</li>
+<li>Provided exceptional customer service while processing phone
+orders</li>
 <li>Provided support during hectic Mother’s Day season</li>
-<li>Collaborated with the flower production floor and truck drivers receiving orders, maintaining clear communication between all parties</li>
+<li>Collaborated with the flower production floor and truck drivers
+receiving orders, maintaining clear communication between all
+parties</li>
 </ul>
 <p><br></p>
 </div>
-<div id="the-garden-market-carpinteria-ca-cashier-server-2017" class="section level4">
-<h4><strong>THE GARDEN MARKET</strong>, Carpinteria, CA<br/><em>Cashier &amp; Server</em> <strong>(2017)</strong></h4>
+<div id="the-garden-market-carpinteria-ca-cashier-server-2017"
+class="section level4">
+<h4><strong>THE GARDEN MARKET</strong>, Carpinteria, CA<br/><em>Cashier
+&amp; Server</em> <strong>(2017)</strong></h4>
 <ul>
-<li>Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically</li>
+<li>Provided friendly and efficient customer service; striving to give
+customers a positive dining experience by attending to their needs
+promptly and enthusiastically</li>
 </ul>
 <p><br></p>
 </div>
-<div id="soraa-inc.-goleta-ca-intern-spring-2015" class="section level4">
-<h4><strong>SORAA INC.</strong>, Goleta, CA<br/><em>Intern</em> <strong>(Spring 2015)</strong></h4>
+<div id="soraa-inc.-goleta-ca-intern-spring-2015"
+class="section level4">
+<h4><strong>SORAA INC.</strong>, Goleta, CA<br/><em>Intern</em>
+<strong>(Spring 2015)</strong></h4>
 <ul>
-<li>Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs in Excel files.</li>
+<li>Gained an introduction into the production of GaN crystals used in
+LEDs and contributed in organizing data collected from GaN production
+runs in Excel files.</li>
 </ul>
 <p><br><br />
 <br> <br></p>
@@ -456,17 +586,26 @@ div.tocify {
 <div id="volunteer-experience" class="section level2">
 <h2><strong>VOLUNTEER EXPERIENCE</strong></h2>
 <hr />
-<div id="santa-barbara-foodbanks-backyard-bounty-community-outreach-volunteer-fundraiser-2014-2018" class="section level4">
-<h4><strong>SANTA BARBARA FOODBANK’S BACKYARD BOUNTY</strong><br/><em>Community Outreach &amp; volunteer fundraiser</em> <strong>(2014 – 2018)</strong></h4>
+<div
+id="santa-barbara-foodbanks-backyard-bounty-community-outreach-volunteer-fundraiser-2014-2018"
+class="section level4">
+<h4><strong>SANTA BARBARA FOODBANK’S BACKYARD
+BOUNTY</strong><br/><em>Community Outreach &amp; volunteer
+fundraiser</em> <strong>(2014 – 2018)</strong></h4>
 <ul>
-<li>tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank.</li>
+<li>tasked with leading groups into local residences to harvest fruits
+and vegetables which are then distributed back to the community by the
+Foodbank.</li>
 </ul>
 <p><br></p>
 </div>
-<div id="laguna-blanca-sports-drive-volunteer-2011-2015" class="section level4">
-<h4><strong>LAGUNA BLANCA SPORTS DRIVE</strong><br/><em>Volunteer</em> <strong>(2011-2015)</strong></h4>
+<div id="laguna-blanca-sports-drive-volunteer-2011-2015"
+class="section level4">
+<h4><strong>LAGUNA BLANCA SPORTS DRIVE</strong><br/><em>Volunteer</em>
+<strong>(2011-2015)</strong></h4>
 <ul>
-<li>Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys &amp; Girls Club.</li>
+<li>Organized and oversaw the collection of used sports equipment which
+were donated to the Goleta Boys &amp; Girls Club.</li>
 </ul>
 <p><br> <br> <br></p>
 </div>
@@ -475,43 +614,33 @@ div.tocify {
 <h2><strong>REFERENCES</strong></h2>
 <hr />
 <ul>
-<li>Debra Perrone, UCSB Bren School of ESM, Assistant Professor - <a href="mailto:perrone@ucsb.edu" class="email">perrone@ucsb.edu</a><br />
+<li>Mike Johnson, coworker, Lead Data Scientist at Lynker - <a
+href="mailto:mike.johnson@noaa.gov"
+class="email">mike.johnson@noaa.gov</a></li>
+<li>Debra Perrone, UCSB Bren School of ESM, Assistant Professor - <a
+href="mailto:perrone@ucsb.edu" class="email">perrone@ucsb.edu</a><br />
 </li>
-<li>Mike Johnson, UCSB phD candidate, GIS instructor + Research Partner - <a href="mailto:jmj00@ucsb.edu" class="email">jmj00@ucsb.edu</a></li>
+<li>Dan Brown, personal reference, Supply Chain Automation at AWS - <a
+href="mailto:dbrwnib@amazon.com"
+class="email">dbrwnib@amazon.com</a></li>
 <li>Joe DeVreese, Santa Barbara Running – (805) 729-0138</li>
 <li>Sherrie Todd, The Garden Market – (805) 708-6428</li>
-<li>Wayne Shizuman, Gallup &amp; Stribling Orchids LLC – <a href="mailto:wayne@gallup-stribling.com" class="email">wayne@gallup-stribling.com</a> – (805) 620-8443<br />
-</li>
-<li>Cate Hogan, Ripley Waterfowl Conservancy – <a href="mailto:chogan@ripleyconservancy.org" class="email">chogan@ripleyconservancy.org</a> – (860) 567-2062</li>
-<li>Alexa Senter, Backyard Bounty – (805) 403-8327</li>
 </ul>
 </div>
 </div>
 
 
 
-&nbsp;
-<hr />
-
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-&nbsp;
-
-
 </div>
 </div>
 
 </div>
-
-
-
-
 
 <script>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -520,6 +649,61 @@ $(document).ready(function () {
 
 </script>
 
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 </body>
 </html>

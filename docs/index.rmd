@@ -1,0 +1,356 @@
+---
+title: "[ORZ](index.html)"
+author: "Fetch analysis"
+date: "[Angus Watters](https://github.com/anguswg-ucsb)"
+mail: "awatters@lynker.com"
+github: "anguswg-ucsb"
+output:
+  rmdformats::downcute
+subtitle: 'CPRA'
+---
+
+# **Calculating fetch using fetchR R package**
+
+***
+
+<br>
+
+## **Libraries**
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+library(rmarkdown)
+library(tidyverse)
+library(rasterVis)
+library(raster)
+library(sf)
+library(rgdal)
+library(fetchR)
+
+path <- "C:/Users/angus/OneDrive/Desktop/lynker/CPRA/data/land_water_MP17_FWOA_Medium_Yr_10/"
+```
+
+```{r, echo = FALSE, warning = FALSE, message= FALSE}
+dist <- readRDS("dist.rds") %>% 
+  tibble() %>% 
+  set_names(c("distance")) %>% 
+  mutate(distance = as.numeric(distance))
+
+point_distance<- readRDS("point_distance.rds")
+```
+
+### **Load land water raster**
+```{r, eval = FALSE, warning = FALSE, message= FALSE}
+# Read in land water raster
+land_water <- readGDAL(paste0(path, "MPM2017_S04_G300_C000_U00_V00_SLA_O_10_10_W_landw.img")) %>%
+  raster()
+```
+
+<br>
+<br>
+
+![](land_water_raster.jpg)
+
+<br>
+
+
+### **Load land water polygon**
+```{r, eval = FALSE, warning = FALSE, message= FALSE}
+# Read in landcover polygon
+landcover_shp <- readRDS("C:/Users/angus/OneDrive/Desktop/lynker/CPRA/data/landcover/landcover_polygons.rds")
+```
+
+<br>
+
+![](land_water_polygon.jpg)
+<br>
+<br>
+
+## **Binary raster**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# Set raster values to binary, values less than 2 represent land, anything else is 0
+land_water <- setValues(
+  land_water, ifelse(getValues(land_water) < 2, 1, 0)
+)
+
+```
+
+<br>
+
+<center>
+![](binary_landwater_raster.jpg)
+</center>
+
+<br>
+<br>
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# # AGGREGATE RESOLUTION BY FACTOR OF 2 (From 30m to 60m)
+water_raster <- raster::aggregate(land_water, fact = 50)
+
+water_raster <- ratify(water_raster)
+```
+
+<br>
+<center>
+![](land_water_1500m.jpg)
+</center>
+<br>
+<br>
+
+## **Seperate water pixels from land**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# Set water values to 1 and all other cells to NA
+water_raster2 <- setValues(
+  water_raster2, ifelse(getValues(water_raster2) == 0, 1, NA)
+  )
+```
+
+<br>
+<center>
+![](water_raster_1500m.jpg)
+</center>
+
+<br>
+<br>
+
+## **Union all water and land polygons into seperate shapes**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# GET WATER BODY POLYGONS
+water_union <- landcover_shp %>%
+    filter(value == 0) %>%
+    st_cast("POLYGON") %>%
+    st_make_valid() %>%
+    group_by(section) %>%
+    summarise(geometry = sf::st_union(geometry)) %>%
+    ungroup()
+
+
+# GET LAND POLYGONS
+land_union <- landcover_shp %>%
+    filter(value == 1) %>%
+    st_cast("POLYGON") %>%
+    st_make_valid() %>%
+    group_by(section) %>%
+    summarise(geometry = sf::st_union(geometry)) %>%
+    ungroup()
+```
+
+
+## **Simplyifing land geometries**
+Simplify land polygon geometries to improve computations, decreasing the number of total points making up the land polygon.
+
+***
+
+**number of points before simplifying:** 877,460
+
+**number of points after simplyifying:** 208,232
+
+<br>
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# Simplify land polygon to improve computations
+land_union <- st_simplify(land_union, dTolerance = 65)
+
+# # mapview::npts(land_union)
+# print(paste0("number of points before simplifying: 877,460"))
+# # mapview::npts(land_union2)
+# print(paste0("number of points after simplyifying: 208,232"))
+```
+
+
+## **Make fetch points**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+water_pts <-
+  water_raster %>%
+    raster::rasterToPoints() %>%  # convert gridcells to x, y points
+    data.frame() %>%
+    st_as_sf(
+      coords = c("x", "y"),
+      crs = crs(water_union) # assign same CRS as polygogon
+    )
+```
+
+
+<br>
+
+<center>
+![](water_pts_1500m.jpg)
+</center>
+
+<br>
+<br>
+
+<center>
+</center>
+
+<br>
+
+
+## **Calculate distance from points to land**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# calculate distance from every point to land
+dist <- st_distance(water_pts, land_union_all)
+```
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+point_distance <- data.frame(
+  distance = dist[,1],
+  geometry = water_pts$geometry
+  ) %>%
+  st_as_sf() %>%
+  mutate(
+    distance = as.numeric(distance)
+  )
+
+# point_distance <- data.frame(
+#   distance = dist,
+#   geometry = water_pts$geometry
+# ) %>%
+#   janitor::clean_names() %>% 
+#   st_as_sf() %>% 
+#   mutate_at(
+#     vars(contains("distance")), funs(as.numeric)
+#     ) 
+```
+
+```{r, eval=T, echo = F, warning = FALSE, message= FALSE}
+head(tibble(point_distance), 5)
+```
+
+<br>
+
+## **Trim down number of total points for fetch calculations**
+I used the sequencing to start because it returns far **less total points (faster run times)** and I was still working on getting the entire process to run correctly. 
+
+<br>
+
+### **Select points within certain distance from land**
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+point_distance2 <- point_distance %>% 
+  filter(distance <= 5000)
+```
+
+<br>
+
+<center>
+![](filter_pts_dist.jpeg)
+</center>
+
+<br>
+<br>
+<br>
+
+### **Select every nth point**
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# Select every 10th point from all points
+point_distance2 <- point_distance[seq(1, nrow(point_distance), 20), ]
+```
+
+<br>
+
+<center>
+![](filter_pts_seq.jpeg)
+</center>
+
+<br>
+
+## **Transform SF data to SP**
+Data needs to be transformed to SP type to work with `fetchR` package
+
+<br>
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# transform SF land polygon to SP
+la_poly <- land_union_all %>%
+  as("Spatial") %>%
+  as("SpatialPolygonsDataFrame") %>%
+  spTransform(CRS("+init=epsg:5070"))
+
+
+# transform SF water points to SP points 
+fetch_pts <- point_distance2 %>%
+  as("Spatial") %>%
+  as("SpatialPoints") %>%
+  spTransform(CRS("+init=epsg:5070"))
+```
+
+
+
+
+## **Calculate fetch**
+For loop process I came up with for looping through the 11 individual land polygons, and then calculating the fetch from all the points with respect to that land polygon. From the fetch() function, I converted the output to a spatial object (MULTILINESTRING).
+Because I was running the fetch calculations using ALL of the points, there will be repeated points from each additional iteration. 
+To save computation time, I filtered out the the fetch outputs in which the fetch was maximized in every direction. 
+The results of each iteration are then added to a final list.
+
+**Run time: 1 hour 53 mins**
+
+<br>
+
+```{r, eval=FALSE, warning = FALSE, message= FALSE}
+# empty list for fetch outputs
+fetch_lst <- list()
+
+for (i in 1:11){
+    # transform SF polygon to SP for fetch() function
+    land_poly <- land_union2[i,] %>%
+      as("Spatial") %>%
+      as("SpatialPolygonsDataFrame") %>%
+      spTransform(CRS("+init=epsg:5070"))
+  
+    # run fetch function 
+    get_fetch <- fetchR::fetch(land_poly, fetch_pts, max_dist = 10, n_directions = 4)
+  
+    # convert fetch list output to SF spatial object
+    fetch_df <- lapply(X = get_fetch, function(x)
+      fetch = st_as_sf(x)
+      ) %>%
+      bind_rows()
+    
+    # filter out points where all fetch lines were at maximum 
+    fetch_df <- fetch_df %>%
+      group_by(site) %>%
+      filter(sum(fetch) < 159) %>%
+      ungroup()
+    
+    # add fetch output to final list
+    fetch_lst[[i]] <- fetch_df
+}
+
+# Bind rows from final list of fetch points
+fetch_df <- bind_rows(fetch_lst)
+
+# Remove 0 from beginning of site column 
+fetch_df$site  <- as.numeric(gsub("^.{4} ", "", fetch_df$site))
+
+# Retrieve only the minimum lines from each site, thus removing the duplicate outputs from iterating through all points for each polygon
+fetch_df2 <- fetch_df %>%
+  group_by(site, quadrant, direction) %>%
+  slice(which.min(fetch))
+```
+
+<br>
+<br>
+
+<center>
+![](fetch_lines_map.jpeg)
+</center>
+
+<br>
+
+*** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

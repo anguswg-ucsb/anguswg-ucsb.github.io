@@ -1,19 +1,18 @@
-name: "Angus Watters"
+name: ""
 output_dir: '.'
 navbar:
-  title: "Angus Watters"
+  title: ""
   left:
     - text: "Home"
       icon: fa-home
       href: index.html
     - text: "Projects"
-      icon: fa-globe-americas
+      icon: fa-globe
       href: projects.html
     - text: "Resume"
       icon: fa-leaf
       href: CV.html
 output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
+  html_document:
+    theme: lumen
+

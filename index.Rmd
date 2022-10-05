@@ -1,38 +1,32 @@
 ---
-title: ""
+title: ''
 output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
+  html_document:
+    theme: flatly
 ---
+
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
 library(rmarkdown)     # You need this library to run this template.
 library(mikedown)   
 ```
 
+#  **Welcome!**
 
+------------------------------------------------------------------------
 
-# ANGUS WATTERS
+###
 
-***
+My name is Angus Watters and I'm a data scientists and geospatial data engineer at Lynker Technologies. I specialize in geospatial data collection, aggregation, statistical analysis, modeling, and visualization. I am passionate about all things data science and programming, and I try my best each day to improve myself and my technical skills.
+ 
+In my free time I enjoy spending my time running, biking, working on puzzles, gardening, and cooking.
 
-### **Welcome to my website!**
-My name is Angus Watters. I am a senior at the University of California, Santa Barbara. I am majoring in Geography with an emphasis on GIS and I expect to graduate in the Spring of 2021. I am able to code in both Python and R. Within R I am proficient in cleaning, organizing, and analyzing spatial and non-spatial data. I am currently most interested in working in the field of water resources and environmental conservation, but I keep an open mind with the primary goal to continue growing.
+------------------------------------------------------------------------
 
- As I near graduation, I am searching for opportunities where I can both apply and improve my skills in cleaning, organizing, and analyzing spatial and non-spatial data. I hope to find a position which matches my interest in environmental conservation, resource management, and data curation.
+#### **Email:** [anguswatters\@gmail.com](mailto:anguswatters@gmail.com){.email}<br>
 
-In my free time I enjoy spending time running, biking, drawing, gardening, and cooking.
+#### **GitHub:**https://github.com/anguswg-ucsb
 
-***  
+#### **LinkedIn:** https://www.linkedin.com/in/angus-watters-0521a7209/<br>
 
-#### **`Email:` **adwattersgrubstein@umail.ucsb.edu**<br>
-<br>
-`GitHub:` https://github.com/anguswg-ucsb**
-
-<br>
-
-<center>
-![](UCSB-about-me.jpg)
-</center>
+<center>![](UCSB-about-me.jpg)</center>

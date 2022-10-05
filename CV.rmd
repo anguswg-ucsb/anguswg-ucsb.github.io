@@ -1,158 +1,194 @@
 ---
 title: 'Resume'
 output:
-  mikedown::ucsb:
-    toc: TRUE
-    number_sections: FALSE
-    code_folding: "hide"
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
 ---
+
 ```{r, message= FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
 library(rmarkdown)     # You need this library to run this template.
-library(mikedown)   
+library(mikedown)
+
 ```
 
-----
+------------------------------------------------------------------------
 
 # **ANGUS WATTERS**
-#### 2786 Ben Lomond Dr. Santa Barbara, CA 93105| 805.895.1590| adwattersgrubstein@ucsb.edu
 
-<br>
-<br>
-
-## **WORK OBJECTIVE**
-
-----
-
-#### I am a senior expecting to graduate in the Spring of 2021 with a B.A. in Geography with an emphasis on GIS at the University of California, Santa Barbara. I am looking for a position to utilize my responsible work ethic and enthusiasm for learning. I am a quick learner; ready and willing to take training for any position. I have a thirst for knowledge and look forward to continued growth after graduation. I believe to be a responsible employee one must tackle every task with diligence and care.
-
-<br>
-<br>  
-<br>  
-
-## **EDUCATION**
-
-----
-
-#### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA –** (2019 – present | Expected graduation Spring 2021)
-  - ##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA:  3.62/4.0)*
+#### 2786 Ben Lomond Dr. Santa Barbara, CA 93105\| 805.895.1590\| [anguswatters\@gmail.com](mailto:anguswatters@gmail.com){.email}
 
 <br>
 
-#### **SANTA BARBARA CITY COLLEGE –** (2016- 2018)	
+**WORK OBJECTIVE**
+------------------------------------------------------------------------
 
+I am a data scientists and data engineer, working remotely for Lynker Technologies out of Santa Barbara, CA. I am passionate about all things data science, programming, and machine learning. I specialize in spatial data collection, aggregation, statistical analysis, and visualization. I have experience creating interactive R Shiny Dashboards, R packages, implementing machine learning model workflows, and deploying software solutions for clients through REST API services. I have a thirst for knowledge and try to continue my growth and education each day. I believe to be a responsible employee one must tackle every task with diligence and care.  
+<br> 
 
+**EDUCATION** 
+------------------------------------------------------------------------
 
-<br>
-<br>  
-<br>
+#### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA --** (2019 -- 2021)
 
-## **RELEVANT EXPERIENCE**
-
-----
-
-#### **US GROUNDWATER RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, [Professor Perrone, Debra](https://www.es.ucsb.edu/debra-perrone) **(2019 - present)**
-  -	Analyzing spatial and non-spatial US Geological Survey and state groundwater data in R 
-  -	Focus on the analysis of groundwater well depths and pumping 
-  - Analysis of the results of different state level sustainable groundwater management approaches
+##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA: 3.62/4.0)*
 
 <br>
 
+#### **SANTA BARBARA CITY COLLEGE --** (2016- 2018)
+
+<br>
+
+**RELEVANT EXPERIENCE**
+------------------------------------------------------------------------
+
+#### **Lynker Technologies**, Remote out of Santa Barbara, CA<br/> ***Spatial Data Scientist***, **(2021 - present)**
+
+-   Wrangling, cleaning, and management of client data
+-   Developing hydrologic/spatial machine learning model workflows,
+    starting with data acquisition and ending with a production ready
+    analytic model that meets client needs
+-   Developing and deploying interactive data visualization technologies (R Shiny) to view incremental progress on tasks or as a final product to clients.
+-   Creating REST API services for clients
+-   R Package development
+-   Creating and maintaining project code bases through GitHub
+-   Presenting technical write ups and documentation for the client to
+    convey results or work in progress
+
+<br>
+
+#### **US GROUNDWATER RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, [Professor Perrone, Debra](https://www.es.ucsb.edu/debra-perrone) **(2019 - 2021)**
+
+-   Analyzing spatial and non-spatial US Geological Survey and state
+    groundwater data in R
+-   Focus on the analysis of groundwater well depths and pumping
+-   Analysis of the results of different state level sustainable
+    groundwater management approaches
+
+<br>
 
 #### **FLOOD MAPPING RESEARCH**, University of California, Santa Barbara, CA<br/>***Research assistant***, [Mike Johnson, UCSB PhD candidate](https://mikejohnson51.github.io/) **(2020 - present)**
-  -	Mapping terrain-based flood extents, with the goal of produce a continental flood map that can be used in real time for Emergency Medical Services specifically comparing known FEMA flood extents with a 'bucket', Height Above Nearest Drainage model 
-  - Comparison of known FEMA flood extents with a 'bucket' HAND model using raster data 
+
+-   Mapping terrain-based flood extents, with the goal of produce a
+    continental flood map that can be used in real time for Emergency
+    Medical Services specifically comparing known FEMA flood extents
+    with a 'bucket', Height Above Nearest Drainage model
+-   Comparison of known FEMA flood extents with a 'bucket' HAND model
+    using raster data
 
 <br>
 
 #### **INSTRUCTIONAL ASSISTANT**, University of California, Santa Barbara, CA<br/>***ENVS 193*** [Profesor Perrone, Debra](https://www.es.ucsb.edu/debra-perrone) **(Winter Quarter 2021)**
-  -	I am an instructional assistant in a class focused on teaching students how to organize, clean, manipulate and analyze large hydrological data sets using R
-  - With my expertise in R, I provide technical programming support, contribute to writing labs, and leading portions of labs
-<br>  
-<br>
-<br>
-<br>  
 
-## **SKILLS + INTERESTS**
+-   I am an instructional assistant in a class focused on teaching
+    students how to organize, clean, manipulate and analyze large
+    hydrological data sets using R
+-   With my expertise in R, I provide technical programming support,
+    contribute to writing labs, and leading portions of labs <br>\
+    <br> <br> <br>
 
-----
+**SKILLS + INTERESTS**
+------------------------------------------------------------------------
 
 ##### **Skills:**
-  -	Experienced using R as a platform for GIS and data analysis:
-    - Using **dplyr**, **tidyr**, **ggplot2**, **sp**, **sf**, **shiny**, and **leaflet** packages
-    - Cleaning, organizing, aggregating, and analyzing both spatial and non-spatial data 
-    - Creating visualization of spatial data in R 
-    - Creating reproducible code and workflow in R 
-    - Working with large, 'messy' government data sets, shape files, and time series data
-    - Scrapping data from the web
-    - Working in GitHub repositories  
-    - Experienced working with large, 'messy' government data sets, shape files, and time series data
-    - Creating web sites in R using rmarkdown format and hosting by GitHub pages 
-    - Creating Shiny dashboard apps
-    - [**Data science portfolio**](https://anguswg-ucsb.github.io/projects.html)
-  -	Proficient in Microsoft Word and Excel
-  - Experienced using ArcGIS Pro
-  
+-   [**Data Science Portfolio**](https://anguswg-ucsb.github.io/projects.html)
+-   Highly proficient using R as a tool for data science and GIS:
+    -   Cleaning, organizing, aggregating, and analyzing both spatial
+        and non-spatial data
+    -   Implementing Machine Learning Models from data ingestion to deployment
+    -   Using various ML modeling frameworks (Decision trees, SVMs, Neural Networks, etc.)
+    -   Processing text data for use in NLP ML models
+    -   Creating R Shiny interactive dashboards
+    -   Creating data visualizations in R
+    -   REST API Development
+    -   R package development
+    -   Creating reproducible code and workflow in R
+    -   Working in GitHub repositories and maintaining clean and up-to-date code bases.
+    -   Web scraping
+    -   Working with large, 'messy' government data sets, shape files,
+        and time series data
+-   Experienced using SQL
+-   Proficient in Python
+-   Experienced working and creating Docker images
+-   Experienced deploying docker images as containers within virtual machines onto a Cloud Infrastructure Provider (AWS, DigitalOcean). 
+-   Working within cloud service environments
+-   Progressing through AWS Solutions Architect certificate
+-   Able to work with CSS and HTML code
+-   Proficient in Microsoft Office
+-   Experienced using ArcGIS Pro
+
 ##### **Interests:**
-  -	I enjoy an active lifestyle (running, biking, swimming, rowing, kayaking), gardening, weeding, drawing, painting, spending time with animals, long walks on the beach
-  
-<br>
-<br>
-<br>  
 
-## **WORK EXPERIENCE**
+-   I enjoy an active lifestyle (running, biking, swimming, rowing,
+    kayaking), gardening, playing card/board games, drawing, and spending time with friends and family.
 
-----
+<br> <br> <br>
 
+**OTHER WORK EXPERIENCE**
+------------------------------------------------------------------------
 #### **SANTA BARBARA RUNNING**, Santa Barbara, CA<br/>*Sales Representative* **(2019 - present)**
-  -	Provided information and options on shoes based on an individual’s goals and needs 
-  -	Comfortably multitask, ensuring optimal response to customers’ requests
+
+-   Provided information and options on shoes based on an individual's
+    goals and needs
+-   Comfortably multitask, ensuring optimal response to customers'
+    requests
 
 <br>
 
 #### **GALLUP & STRIBLING ORCHIDS**, Carpinteria, CA<br/>*Sales Representative* **(2018)**
-  -	Provided exceptional customer service while processing phone orders
-  -	Provided support during hectic Mother’s Day season
-  -	Collaborated with the flower production floor and truck drivers receiving orders, maintaining clear communication between all parties
+
+-   Provided exceptional customer service while processing phone orders
+-   Provided support during hectic Mother's Day season
+-   Collaborated with the flower production floor and truck drivers
+    receiving orders, maintaining clear communication between all
+    parties
 
 <br>
 
 #### **THE GARDEN MARKET**, Carpinteria, CA<br/>*Cashier & Server* **(2017)**
-  - Provided friendly and efficient customer service; striving to give customers a positive dining experience by attending to their needs promptly and enthusiastically
+
+-   Provided friendly and efficient customer service; striving to give
+    customers a positive dining experience by attending to their needs
+    promptly and enthusiastically
 
 <br>
 
 #### **SORAA INC.**, Goleta, CA<br/>*Intern* **(Spring 2015)**
-  - Gained an introduction into the production of GaN crystals used in LEDs and contributed in organizing data collected from GaN production runs in Excel files.
 
-<br>  
-<br>
-<br>  
+-   Gained an introduction into the production of GaN crystals used in
+    LEDs and contributed in organizing data collected from GaN
+    production runs in Excel files.
+
+<br>\
+<br> <br>
 
 ## **VOLUNTEER EXPERIENCE**
 
-----
+------------------------------------------------------------------------
 
-#### **SANTA BARBARA FOODBANK’S BACKYARD BOUNTY**<br/>*Community Outreach & volunteer fundraiser* **(2014 – 2018)**
-  - tasked with leading groups into local residences to harvest fruits and vegetables which are then distributed back to the community by the Foodbank.
-    
+#### **SANTA BARBARA FOODBANK'S BACKYARD BOUNTY**<br/>*Community Outreach & volunteer fundraiser* **(2014 -- 2018)**
+
+-   tasked with leading groups into local residences to harvest fruits
+    and vegetables which are then distributed back to the community by
+    the Foodbank.
+
 <br>
-    
+
 #### **LAGUNA BLANCA SPORTS DRIVE**<br/>*Volunteer* **(2011-2015)**
-  -	Organized and oversaw the collection of used sports equipment which were donated to the Goleta Boys & Girls Club.
-  
-<br>
-<br>
-<br>
+
+-   Organized and oversaw the collection of used sports equipment which
+    were donated to the Goleta Boys & Girls Club.
+
+<br> <br> <br>
 
 ## **REFERENCES**
 
-----
-
-  - Debra Perrone, UCSB Bren School of ESM, Assistant Professor - perrone@ucsb.edu  
-  - Mike Johnson, UCSB phD candidate, GIS instructor + Research Partner - jmj00@ucsb.edu
-  - Joe DeVreese, Santa Barbara Running – (805) 729-0138
-  - Sherrie Todd, The Garden Market – (805) 708-6428
-  - Wayne Shizuman, Gallup & Stribling Orchids LLC  – wayne@gallup-stribling.com – (805) 620-8443  
-  - Cate Hogan, Ripley Waterfowl Conservancy – chogan@ripleyconservancy.org – (860) 567-2062
-  - Alexa Senter, Backyard Bounty – (805) 403-8327
+------------------------------------------------------------------------
+-   Mike Johnson, coworker, Lead Data Scientist at Lynker - [mike.johnson\@noaa.gov](mailto:mike.johnson@noaa.gov){.email}
+-   Debra Perrone, UCSB Bren School of ESM, Assistant Professor -
+    [perrone\@ucsb.edu](mailto:perrone@ucsb.edu){.email}\
+-   Dan Brown, personal reference, Supply Chain Automation at AWS - [dbrwnib\@amazon.com](mailto:dbrwnib@amazon.com){.email}
+-   Joe DeVreese, Santa Barbara Running -- (805) 729-0138
+-   Sherrie Todd, The Garden Market -- (805) 708-6428
