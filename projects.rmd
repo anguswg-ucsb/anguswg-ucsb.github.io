@@ -29,15 +29,15 @@ library(mikedown)
 
 ------------------------------------------------------------------------
 
-### [**cdssr**](https://github.com/anguswg-ucsb/cdssr)
+### [**cdssr**](https://github.com/anguswg-ucsb/cdssr) + [**cdsspy**](https://github.com/anguswg-ucsb/cdsspy) 
 
--   A R package for exploring and requesting resources from the [CDSS REST API](https://dwr.state.co.us/Rest/GET/Help).
+-   **R (cdssr)** and **Python (cdsspy)** packages for exploring and requesting resources from the [CDSS REST API](https://dwr.state.co.us/Rest/GET/Help).
+
+-   [cdssr vignette](https://anguswg-ucsb.github.io/cdssr/)
+
+-   [cdsspy PyPI](https://pypi.org/project/cdsspy/)
 
 -   Author and maintainer
-
--   [Package vignette](https://anguswg-ucsb.github.io/cdssr/)
-
--   [CDSS](https://dwr.state.co.us/Tools) 
 <img src="img/cdss_logo2.png" align="right" width="50%"/>
 
 <br> <br> <br>
