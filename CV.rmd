@@ -33,7 +33,7 @@ I am a data scientists and data engineer, working remotely for Lynker Technologi
 
 #### **UNIVERSITY OF CALIFORNIA, SANTA BARBARA --** (2019 -- 2021)
 
-##### *B.A. in Geography with an Emphasis in Geographic Information Science (GPA: 3.62/4.0)*
+##### *B.A. in Geography with an Emphasis in Geographic Information Science*
 
 <br>
 
@@ -52,7 +52,7 @@ I am a data scientists and data engineer, working remotely for Lynker Technologi
     analytic model that meets client needs
 -   Developing and deploying interactive data visualization technologies (R Shiny) to view incremental progress on tasks or as a final product to clients.
 -   Creating REST API services for clients
--   R Package development
+-   R/Python Package development
 -   Creating and maintaining project code bases through GitHub
 -   Presenting technical write ups and documentation for the client to
     convey results or work in progress
@@ -94,30 +94,29 @@ I am a data scientists and data engineer, working remotely for Lynker Technologi
 
 ##### **Skills:**
 -   [**Data Science Portfolio**](https://anguswg-ucsb.github.io/projects.html)
--   Highly proficient using R as a tool for data science and GIS:
+-   Highly proficient using R/Python as a tool for data science and GIS:
     -   Cleaning, organizing, aggregating, and analyzing both spatial
         and non-spatial data
     -   Implementing Machine Learning Models from data ingestion to deployment
     -   Using various ML modeling frameworks (Decision trees, SVMs, Neural Networks, etc.)
     -   Processing text data for use in NLP ML models
     -   Creating R Shiny interactive dashboards
-    -   Creating data visualizations in R
+    -   Creating data visualizations in R/Python
     -   REST API Development
-    -   R package development
-    -   Creating reproducible code and workflow in R
+    -   R/Python package development
+    -   Creating reproducible code and workflows in R/Python
     -   Working in GitHub repositories and maintaining clean and up-to-date code bases.
     -   Web scraping
     -   Working with large, 'messy' government data sets, shape files,
         and time series data
 -   Experienced using SQL
--   Proficient in Python
--   Experienced working and creating Docker images
--   Experienced deploying docker images as containers within virtual machines onto a Cloud Infrastructure Provider (AWS, DigitalOcean). 
--   Working within cloud service environments
+-   Proficiency in AWS core services (S3, EC2, Lambda, DynamoDB, SQS, SNS, IAM, API Gateway)
+-   Experienced in creating Docker images
+-   Experienced deploying docker containers to Cloud Infrastructure Providers (AWS, DigitalOcean). 
 -   Progressing through AWS Solutions Architect certificate
 -   Able to work with CSS and HTML code
 -   Proficient in Microsoft Office
--   Experienced using ArcGIS Pro
+-   Experienced using QGIS, ArcGIS Pro, ArcGIS Online
 
 ##### **Interests:**
 
